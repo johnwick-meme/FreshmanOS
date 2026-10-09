@@ -1,0 +1,4050 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Campus Guide — FreshmanOS</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+<style>
+
+/* =========================================================
+   FRESHMANOS — CAMPUS GUIDE
+========================================================= */
+
+:root {
+
+    --bg: #ffffff;
+    --surface: #f8faff;
+    --surface2: #eef4ff;
+
+    --text: #172033;
+    --muted: #687286;
+
+    --border: #e3e8f0;
+
+    --blue: #1a73e8;
+    --green: #34a853;
+    --yellow: #fbbc04;
+    --red: #ea4335;
+
+    --shadow:
+        0 12px 35px rgba(36,54,86,.08);
+}
+
+
+body.dark {
+
+    --bg: #101217;
+    --surface: #171a21;
+    --surface2: #1d2330;
+
+    --text: #f5f7fb;
+    --muted: #a3abba;
+
+    --border: #292f3a;
+
+    --blue: #8ab4f8;
+
+    --shadow:
+        0 15px 40px rgba(0,0,0,.35);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family:
+        "Google Sans",
+        "Inter",
+        Arial,
+        sans-serif;
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    overflow-x: hidden;
+
+    transition:
+        background .3s ease,
+        color .3s ease;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+button,
+input {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+
+    position: fixed;
+
+    top: 14px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: calc(100% - 40px);
+
+    max-width: 1380px;
+
+    z-index: 1000;
+
+    background: var(--bg);
+
+    background: color-mix(
+        in srgb,
+        var(--bg) 90%,
+        transparent
+    );
+
+    backdrop-filter: blur(18px);
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.nav-inner {
+
+    height: 64px;
+
+    padding: 0 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* BRAND */
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    letter-spacing: -.6px;
+
+    white-space: nowrap;
+}
+
+
+.brand-mark {
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #4285f4,
+            #1a73e8
+        );
+
+    color: white;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 5px 14px
+        rgba(26,115,232,.25);
+}
+
+
+.blue {
+    color: var(--blue);
+}
+
+
+/* NAV LINKS */
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+}
+
+
+.nav-links a {
+
+    padding: 9px 10px;
+
+    border-radius: 9px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    transition: .2s ease;
+}
+
+
+.nav-links a:hover {
+
+    color: var(--text);
+
+    background: var(--surface);
+}
+
+
+.nav-links a.active {
+
+    color: var(--text);
+
+    background: var(--surface2);
+
+    font-weight: 600;
+}
+
+
+/* ACTIONS */
+
+.nav-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.theme-toggle {
+
+    width: 50px;
+    height: 29px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 999px;
+
+    background: var(--surface);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-around;
+
+    color: var(--muted);
+
+    cursor: pointer;
+}
+
+
+.theme-toggle span:first-child {
+    color: #f9ab00;
+}
+
+
+.theme-toggle span:last-child {
+    color: #4285f4;
+}
+
+
+.mobile-menu-btn {
+
+    display: none;
+
+    width: 34px;
+    height: 34px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 9px;
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+
+/* MOBILE NAV */
+
+.mobile-nav {
+
+    display: none;
+
+    padding: 10px 18px 18px;
+
+    border-top: 1px solid var(--border);
+
+    flex-direction: column;
+}
+
+
+.mobile-nav.active {
+    display: flex;
+}
+
+
+.mobile-nav a {
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+.mobile-nav a.active {
+
+    color: var(--blue);
+
+    background: var(--surface2);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.campus-hero {
+
+    max-width: 1250px;
+
+    min-height: 800px;
+
+    margin: auto;
+
+    padding:
+        155px 30px
+        80px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    align-items: center;
+
+    gap: 35px;
+}
+
+
+/* LEFT */
+
+.hero-copy {
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+.eyebrow {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 13px;
+
+    border: 1px solid
+        color-mix(
+            in srgb,
+            var(--blue) 20%,
+            var(--border)
+        );
+
+    border-radius: 999px;
+
+    color: var(--blue);
+
+    background:
+        color-mix(
+            in srgb,
+            var(--blue) 6%,
+            transparent
+        );
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+.live-dot {
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(52,168,83,.1);
+}
+
+
+.hero-copy h1 {
+
+    max-width: 650px;
+
+    margin-top: 25px;
+
+    font-size:
+        clamp(
+            48px,
+            6vw,
+            74px
+        );
+
+    line-height: 1.02;
+
+    letter-spacing: -4px;
+
+    font-weight: 700;
+}
+
+
+.hero-copy h1 span {
+
+    display: block;
+
+    color: var(--blue);
+}
+
+
+.hero-copy > p {
+
+    max-width: 560px;
+
+    margin-top: 25px;
+
+    color: var(--muted);
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.hero-search {
+
+    width: 100%;
+
+    max-width: 550px;
+
+    height: 56px;
+
+    margin-top: 28px;
+
+    padding: 0 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    background: var(--surface);
+
+    box-shadow:
+        0 10px 30px
+        rgba(30,50,80,.06);
+
+    transition: .2s ease;
+}
+
+
+.hero-search:focus-within {
+
+    border-color: var(--blue);
+
+    box-shadow:
+        0 10px 30px
+        rgba(26,115,232,.12);
+}
+
+
+.search-icon {
+
+    width: 20px;
+
+    color: var(--muted);
+
+    font-size: 24px;
+
+    line-height: 1;
+}
+
+
+.hero-search input {
+
+    flex: 1;
+
+    min-width: 0;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: var(--text);
+
+    font-size: 13px;
+}
+
+
+.hero-search input::placeholder {
+    color: var(--muted);
+}
+
+
+.hero-search kbd {
+
+    padding: 4px 7px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 6px;
+
+    background: var(--surface2);
+
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+
+/* QUICK TAGS */
+
+.quick-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 13px;
+}
+
+
+.quick-tags button {
+
+    appearance: none;
+
+    border: 1px solid var(--border);
+
+    border-radius: 999px;
+
+    background: var(--surface);
+
+    color: var(--muted);
+
+    padding: 8px 12px;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+
+.quick-tags button:hover {
+
+    border-color: var(--blue);
+
+    color: var(--blue);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   MAP AREA
+========================================================= */
+
+.hero-map-wrap {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.map-scene {
+
+    position: relative;
+
+    width: 560px;
+
+    height: 500px;
+
+    perspective: 1000px;
+
+    transform-style: preserve-3d;
+
+    transition:
+        transform .15s ease-out;
+}
+
+
+.map-glow {
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(66,133,244,.18),
+            transparent 68%
+        );
+
+    filter: blur(15px);
+}
+
+
+/* MAP CARD */
+
+.map-card {
+
+    position: absolute;
+
+    width: 470px;
+
+    height: 390px;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%,-50%)
+        rotateX(8deg)
+        rotateY(-7deg);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 24px;
+
+    background: var(--surface);
+
+    box-shadow:
+        0 30px 70px
+        rgba(30,55,90,.15);
+
+    overflow: hidden;
+
+    z-index: 3;
+}
+
+
+/* MAP HEADER */
+
+.map-top {
+
+    height: 68px;
+
+    padding: 0 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+.map-label {
+
+    display: block;
+
+    color: var(--blue);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+.map-top strong {
+
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 17px;
+}
+
+
+.map-location {
+
+    padding: 6px 9px;
+
+    border-radius: 999px;
+
+    background:
+        rgba(52,168,83,.10);
+
+    color: var(--green);
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   ACTUAL MAP
+========================================================= */
+
+.campus-map {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 272px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef6ee,
+            #e5efe7
+        );
+}
+
+
+body.dark .campus-map {
+
+    background:
+        linear-gradient(
+            135deg,
+            #1a2420,
+            #18201d
+        );
+}
+
+
+/* ROADS */
+
+.road {
+
+    position: absolute;
+
+    height: 13px;
+
+    border-radius: 999px;
+
+    background: white;
+
+    z-index: 1;
+}
+
+
+body.dark .road {
+    background: #2b3531;
+}
+
+
+.road-a {
+
+    width: 120%;
+
+    left: -10%;
+
+    top: 48%;
+
+    transform: rotate(-17deg);
+}
+
+
+.road-b {
+
+    width: 100%;
+
+    left: 0;
+
+    top: 72%;
+
+    transform: rotate(18deg);
+}
+
+
+.road-c {
+
+    width: 90%;
+
+    left: 5%;
+
+    top: 25%;
+
+    transform: rotate(30deg);
+}
+
+
+.road-d {
+
+    width: 70%;
+
+    left: 38%;
+
+    top: -5%;
+
+    transform: rotate(90deg);
+}
+
+
+/* BUILDINGS */
+
+.map-building {
+
+    position: absolute;
+
+    z-index: 4;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 7px;
+
+    color: #26344a;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 7px 15px
+        rgba(30,50,60,.12);
+
+    transition: .2s;
+}
+
+
+body.dark .map-building {
+    color: #edf2f7;
+}
+
+
+.map-building:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.04);
+}
+
+
+.main-building {
+
+    width: 135px;
+
+    height: 68px;
+
+    left: 36%;
+
+    top: 38%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #dceaff,
+            #9fc5ff
+        );
+}
+
+
+.library-building {
+
+    width: 78px;
+
+    height: 48px;
+
+    left: 10%;
+
+    top: 18%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ddf5e5,
+            #a8ddb7
+        );
+}
+
+
+.hostel-building {
+
+    width: 90px;
+
+    height: 52px;
+
+    right: 9%;
+
+    top: 18%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff1ca,
+            #f5d477
+        );
+}
+
+
+.food-building {
+
+    width: 78px;
+
+    height: 48px;
+
+    left: 10%;
+
+    bottom: 12%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffe2e6,
+            #f4abb7
+        );
+}
+
+
+.sports-building {
+
+    width: 85px;
+
+    height: 50px;
+
+    right: 9%;
+
+    bottom: 11%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #e8ddff,
+            #c4b2f4
+        );
+}
+
+
+/* TREES */
+
+.map-tree {
+
+    position: absolute;
+
+    z-index: 3;
+
+    font-size: 16px;
+}
+
+
+.tree-one {
+    left: 29%;
+    top: 12%;
+}
+
+
+.tree-two {
+    right: 27%;
+    top: 49%;
+}
+
+
+.tree-three {
+    left: 28%;
+    bottom: 7%;
+}
+
+
+.tree-four {
+    right: 29%;
+    bottom: 7%;
+}
+
+
+/* PINS */
+
+.map-pin {
+
+    position: absolute;
+
+    z-index: 8;
+
+    width: 28px;
+
+    height: 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow:
+        0 7px 16px
+        rgba(20,40,70,.2);
+
+    animation:
+        pulse 2s infinite;
+}
+
+
+.map-pin span {
+    font-size: 13px;
+}
+
+
+.pin-one {
+
+    left: 43%;
+
+    top: 25%;
+}
+
+
+.pin-two {
+
+    right: 23%;
+
+    top: 52%;
+
+    animation-delay: -.7s;
+}
+
+
+.pin-three {
+
+    left: 19%;
+
+    bottom: 17%;
+
+    animation-delay: -1.4s;
+}
+
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+
+/* MAP FOOTER */
+
+.map-bottom {
+
+    height: 50px;
+
+    padding: 0 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    color: var(--muted);
+
+    font-size: 9px;
+}
+
+
+/* FLOATING LABELS */
+
+.floating-location {
+
+    position: absolute;
+
+    z-index: 20;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 9px 12px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.8);
+
+    border-radius: 13px;
+
+    background:
+        rgba(255,255,255,.82);
+
+    backdrop-filter: blur(12px);
+
+    color: #27324a;
+
+    box-shadow:
+        0 15px 35px
+        rgba(39,73,120,.12);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    animation:
+        float 5s ease-in-out infinite;
+}
+
+
+body.dark .floating-location {
+
+    background:
+        rgba(28,32,42,.92);
+
+    border-color:
+        rgba(255,255,255,.08);
+
+    color: white;
+}
+
+
+.location-icon {
+
+    width: 30px;
+
+    height: 30px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 9px;
+
+    background: #edf4ff;
+
+    font-size: 16px;
+}
+
+
+.location-one {
+
+    left: 0;
+
+    top: 95px;
+}
+
+
+.location-two {
+
+    right: 0;
+
+    bottom: 105px;
+
+    animation-delay: -1.5s;
+}
+
+
+.location-three {
+
+    left: 30px;
+
+    bottom: 52px;
+
+    animation-delay: -2.5s;
+}
+
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats-section {
+
+    max-width: 1180px;
+
+    margin: auto;
+
+    padding:
+        0 30px 80px;
+}
+
+
+.stats-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap: 12px;
+}
+
+
+.stat-card {
+
+    min-height: 105px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    background: var(--surface);
+
+    transition: .25s;
+}
+
+
+.stat-card:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.stat-icon {
+
+    width: 46px;
+
+    height: 46px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 13px;
+
+    font-size: 20px;
+}
+
+
+.blue-icon {
+    background: #e8f0fe;
+}
+
+
+.green-icon {
+    background: #e7f6eb;
+}
+
+
+.yellow-icon {
+    background: #fff5d6;
+}
+
+
+.red-icon {
+    background: #fde9eb;
+}
+
+
+body.dark .blue-icon,
+body.dark .green-icon,
+body.dark .yellow-icon,
+body.dark .red-icon {
+    background: var(--surface2);
+}
+
+
+.stat-card strong {
+
+    display: block;
+
+    font-size: 22px;
+}
+
+
+.stat-card span {
+
+    display: block;
+
+    margin-top: 2px;
+
+    color: var(--muted);
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   PLACES
+========================================================= */
+
+.places-section {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding:
+        80px 30px
+        110px;
+}
+
+
+.section-header {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+.section-label {
+
+    color: var(--blue);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.3px;
+
+    margin-bottom: 13px;
+}
+
+
+.section-header h2 {
+
+    font-size:
+        clamp(
+            38px,
+            5vw,
+            58px
+        );
+
+    line-height: 1.05;
+
+    letter-spacing: -2.8px;
+}
+
+
+.section-header h2 span {
+
+    display: block;
+
+    color: var(--muted);
+}
+
+
+.section-header p {
+
+    margin-top: 17px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* FILTERS */
+
+.filter-bar {
+
+    margin-top: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+
+.filter-btn {
+
+    appearance: none;
+
+    border: 1px solid var(--border);
+
+    border-radius: 999px;
+
+    background: var(--surface);
+
+    color: var(--muted);
+
+    padding: 9px 15px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+
+.filter-btn:hover {
+
+    color: var(--blue);
+
+    border-color: var(--blue);
+}
+
+
+.filter-btn.active {
+
+    background: var(--blue);
+
+    border-color: var(--blue);
+
+    color: white;
+}
+
+
+/* GRID */
+
+.place-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+
+/* CARD */
+
+.place-card {
+
+    min-height: 190px;
+
+    padding: 22px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 20px;
+
+    background: var(--surface);
+
+    transition:
+        transform .2s ease,
+        box-shadow .25s ease;
+}
+
+
+.place-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 22px 45px
+        rgba(35,55,85,.11);
+}
+
+
+/* FEATURED */
+
+.featured-place {
+
+    grid-column: span 2;
+
+    min-height: 235px;
+
+    padding: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        35% 65%;
+
+    overflow: hidden;
+}
+
+
+/* VISUAL */
+
+.place-visual {
+
+    position: relative;
+
+    min-height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.library-visual {
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            white,
+            #d9eaff 35%,
+            #8ab4f8
+        );
+}
+
+
+body.dark .library-visual {
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            #3c4f70,
+            #243653 55%,
+            #172438
+        );
+}
+
+
+.big-icon {
+
+    width: 105px;
+
+    height: 105px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,.72);
+
+    box-shadow:
+        0 20px 45px
+        rgba(30,70,130,.16);
+
+    font-size: 50px;
+}
+
+
+.visual-label {
+
+    position: absolute;
+
+    left: 18px;
+
+    top: 18px;
+
+    padding: 6px 9px;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255,255,255,.65);
+
+    color: #31527f;
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+/* ICONS */
+
+.place-icon-wrap {
+
+    width: 58px;
+
+    height: 58px;
+
+    flex-shrink: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 16px;
+
+    font-size: 25px;
+}
+
+
+.blue-bg {
+    background: #e8f0fe;
+}
+
+
+.green-bg {
+    background: #e8f6eb;
+}
+
+
+.yellow-bg {
+    background: #fff4d3;
+}
+
+
+.red-bg {
+    background: #fde9eb;
+}
+
+
+.purple-bg {
+    background: #eee8ff;
+}
+
+
+.health-bg {
+    background: #e4f8f4;
+}
+
+
+.orange-bg {
+    background: #fff0e3;
+}
+
+
+body.dark .blue-bg,
+body.dark .green-bg,
+body.dark .yellow-bg,
+body.dark .red-bg,
+body.dark .purple-bg,
+body.dark .health-bg,
+body.dark .orange-bg {
+    background: var(--surface2);
+}
+
+
+/* CONTENT */
+
+.place-content {
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.featured-place .place-content {
+
+    padding: 28px;
+}
+
+
+.small-label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--blue);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+.place-title-row {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+
+.place-content h3 {
+
+    font-size: 18px;
+
+    letter-spacing: -.5px;
+}
+
+
+.place-content > p {
+
+    max-width: 450px;
+
+    margin-top: 8px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+
+.place-meta {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-top: 15px;
+
+    color: var(--muted);
+
+    font-size: 9px;
+}
+
+
+.place-status {
+
+    padding: 5px 8px;
+
+    border-radius: 999px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+.place-status.open {
+
+    color: var(--green);
+
+    background:
+        rgba(52,168,83,.10);
+}
+
+
+/* NO RESULTS */
+
+.no-results {
+
+    display: none;
+
+    padding: 60px 20px;
+
+    text-align: center;
+}
+
+
+.no-results > div {
+
+    font-size: 35px;
+
+    margin-bottom: 12px;
+}
+
+
+.no-results h3 {
+    font-size: 20px;
+}
+
+
+.no-results p {
+
+    margin-top: 7px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   TIP
+========================================================= */
+
+.campus-tip {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding:
+        70px 30px
+        110px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1.15fr;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+
+.tip-visual {
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+.compass {
+
+    position: relative;
+
+    width: 300px;
+
+    height: 300px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            var(--surface2),
+            var(--surface)
+        );
+
+    border:
+        1px solid var(--border);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.compass-ring {
+
+    position: absolute;
+
+    width: 225px;
+
+    height: 225px;
+
+    border:
+        1px dashed
+        rgba(26,115,232,.35);
+
+    border-radius: 50%;
+}
+
+
+.compass-arrow {
+
+    width: 80px;
+
+    height: 80px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #4285f4,
+            #1a73e8
+        );
+
+    color: white;
+
+    font-size: 42px;
+
+    box-shadow:
+        0 20px 40px
+        rgba(26,115,232,.25);
+}
+
+
+.north {
+
+    position: absolute;
+
+    top: 30px;
+
+    color: var(--blue);
+
+    font-size: 10px;
+
+    font-weight: 800;
+}
+
+
+.tip-content h2 {
+
+    max-width: 560px;
+
+    font-size:
+        clamp(
+            38px,
+            5vw,
+            54px
+        );
+
+    line-height: 1.05;
+
+    letter-spacing: -2.8px;
+}
+
+
+.tip-content h2 span {
+
+    display: block;
+
+    color: var(--blue);
+}
+
+
+.tip-content p {
+
+    max-width: 500px;
+
+    margin:
+        20px 0 28px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* BUTTON */
+
+.primary-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 20px;
+
+    border-radius: 10px;
+
+    background: var(--blue);
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition:
+        transform .25s ease;
+}
+
+
+.primary-button:hover {
+
+    transform:
+        translateY(-3px);
+}
+
+
+.primary-button span {
+
+    font-size: 17px;
+
+    transition: .25s;
+}
+
+
+.primary-button:hover span {
+
+    transform:
+        translateX(4px);
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.campus-cta {
+
+    position: relative;
+
+    max-width: 1150px;
+
+    min-height: 390px;
+
+    margin:
+        30px auto
+        100px;
+
+    border-radius: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(66,133,244,.16),
+            transparent 45%
+        ),
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+}
+
+
+.cta-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 600px;
+}
+
+
+.cta-star {
+
+    margin-bottom: 15px;
+
+    color: var(--blue);
+
+    font-size: 28px;
+}
+
+
+.cta-content h2 {
+
+    font-size:
+        clamp(
+            40px,
+            5vw,
+            58px
+        );
+
+    letter-spacing: -3px;
+
+    line-height: 1;
+}
+
+
+.cta-content h2 span {
+
+    color: var(--blue);
+}
+
+
+.cta-content p {
+
+    max-width: 450px;
+
+    margin:
+        17px auto
+        27px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+.cta-orb {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+.orb-one {
+
+    width: 180px;
+    height: 180px;
+
+    left: -60px;
+    bottom: -70px;
+
+    background:
+        rgba(66,133,244,.13);
+}
+
+
+.orb-two {
+
+    width: 220px;
+    height: 220px;
+
+    right: -80px;
+    top: -90px;
+
+    background:
+        rgba(52,168,83,.09);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    border-top:
+        1px solid var(--border);
+
+    background: var(--surface);
+}
+
+
+.footer-inner {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding:
+        40px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.footer-brand p {
+
+    margin-top: 10px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+.footer-right {
+
+    display: flex;
+
+    gap: 30px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .nav-links a {
+        padding: 8px 5px;
+        font-size: 10px;
+    }
+
+    .campus-hero {
+        gap: 10px;
+    }
+
+    .map-scene {
+        transform: scale(.82);
+    }
+
+    .stats-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+}
+
+
+@media (max-width: 850px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .campus-hero {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding-top: 135px;
+    }
+
+    .hero-copy {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .hero-copy > p {
+        max-width: 600px;
+    }
+
+    .hero-map-wrap {
+        margin-top: 20px;
+    }
+
+    .place-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-place {
+
+        grid-column: span 1;
+
+        grid-template-columns: 1fr;
+    }
+
+    .featured-place .place-visual {
+        min-height: 190px;
+    }
+
+    .campus-tip {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        gap: 50px;
+    }
+
+    .tip-content {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+}
+
+
+@media (max-width: 560px) {
+
+    .navbar {
+
+        width:
+            calc(100% - 20px);
+
+        top: 8px;
+    }
+
+    .nav-inner {
+        height: 58px;
+    }
+
+    .campus-hero {
+
+        padding:
+            120px 18px
+            40px;
+    }
+
+    .hero-copy h1 {
+
+        font-size: 45px;
+
+        letter-spacing: -2.5px;
+    }
+
+    .hero-copy > p {
+        font-size: 14px;
+    }
+
+    .hero-search {
+        height: 54px;
+    }
+
+    .hero-search kbd {
+        display: none;
+    }
+
+    .quick-tags {
+        justify-content: center;
+    }
+
+    .map-scene {
+
+        width: 360px;
+
+        height: 400px;
+
+        transform: scale(.70);
+    }
+
+    .stats-section {
+
+        padding:
+            0 18px
+            60px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .places-section {
+
+        padding:
+            70px 18px
+            80px;
+    }
+
+    .section-header h2 {
+        letter-spacing: -2px;
+    }
+
+    .filter-bar {
+
+        justify-content: flex-start;
+
+        overflow-x: auto;
+
+        flex-wrap: nowrap;
+
+        padding-bottom: 5px;
+    }
+
+    .filter-btn {
+        flex-shrink: 0;
+    }
+
+    .place-card {
+
+        padding: 18px;
+
+        gap: 13px;
+    }
+
+    .place-content h3 {
+        font-size: 16px;
+    }
+
+    .place-content > p {
+        font-size: 10px;
+    }
+
+    .featured-place .place-content {
+        padding: 22px;
+    }
+
+    .campus-tip {
+
+        padding:
+            60px 18px
+            80px;
+    }
+
+    .compass {
+
+        width: 270px;
+
+        height: 270px;
+    }
+
+    .campus-cta {
+
+        margin:
+            30px 15px
+            70px;
+
+        min-height: 330px;
+
+        padding: 30px;
+    }
+
+    .footer-inner {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+    }
+
+    .footer-right {
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="nav-inner">
+
+        <a
+            href="../index.html"
+            class="brand"
+        >
+
+            <div class="brand-mark">
+                F
+            </div>
+
+            <span>
+                Freshman<span class="blue">OS</span>
+            </span>
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="../academic/index.html">
+                Academic Hub
+            </a>
+
+            <a
+                href="index.html"
+                class="active"
+            >
+                Campus Guide
+            </a>
+
+            <a href="../student/index.html">
+                Student Hub
+            </a>
+
+            <a href="../events/index.html">
+                Events
+            </a>
+
+            <a href="../lost-found/index.html">
+                Lost & Found
+            </a>
+
+            <a href="../help/index.html">
+                Help
+            </a>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+            <button
+                class="theme-toggle"
+                id="themeToggle"
+                aria-label="Toggle theme"
+            >
+                <span>☀</span>
+                <span>☾</span>
+            </button>
+
+
+            <button
+                class="mobile-menu-btn"
+                id="menuButton"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="mobile-nav"
+        id="mobileNav"
+    >
+
+        <a href="../index.html">
+            Home
+        </a>
+
+        <a href="../academic/index.html">
+            Academic Hub
+        </a>
+
+        <a
+            href="index.html"
+            class="active"
+        >
+            Campus Guide
+        </a>
+
+        <a href="../student/index.html">
+            Student Hub
+        </a>
+
+        <a href="../events/index.html">
+            Events
+        </a>
+
+        <a href="../lost-found/index.html">
+            Lost & Found
+        </a>
+
+        <a href="../help/index.html">
+            Help
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<main>
+
+
+<section class="campus-hero">
+
+
+    <div class="hero-copy">
+
+
+        <div class="eyebrow">
+
+            <span class="live-dot"></span>
+
+            YOUR CAMPUS, ONE MAP
+
+        </div>
+
+
+        <h1>
+
+            Find your way
+
+            <span>
+                around campus.
+            </span>
+
+        </h1>
+
+
+        <p>
+
+            Everything you need to know about your campus —
+            departments, hostels, food, libraries, labs and
+            the places you'll visit every day.
+
+        </p>
+
+
+        <div class="hero-search">
+
+            <span class="search-icon">
+                ⌕
+            </span>
+
+            <input
+                id="searchInput"
+                type="text"
+                placeholder="Search a place, department, hostel..."
+                autocomplete="off"
+            >
+
+            <kbd>/</kbd>
+
+        </div>
+
+
+        <div class="quick-tags">
+
+            <button data-search="library">
+                📚 Library
+            </button>
+
+            <button data-search="hostel">
+                🛏️ Hostels
+            </button>
+
+            <button data-search="food">
+                🍴 Food
+            </button>
+
+            <button data-search="department">
+                🏫 Departments
+            </button>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- MAP -->
+
+    <div class="hero-map-wrap">
+
+        <div
+            class="map-scene"
+            id="mapScene"
+        >
+
+            <div class="map-glow"></div>
+
+
+            <div class="map-card">
+
+
+                <div class="map-top">
+
+                    <div>
+
+                        <span class="map-label">
+                            CAMPUS MAP
+                        </span>
+
+                        <strong>
+                            Explore
+                        </strong>
+
+                    </div>
+
+
+                    <div class="map-location">
+                        ● LIVE
+                    </div>
+
+                </div>
+
+
+
+                <div class="campus-map">
+
+
+                    <div class="road road-a"></div>
+
+                    <div class="road road-b"></div>
+
+                    <div class="road road-c"></div>
+
+                    <div class="road road-d"></div>
+
+
+                    <div
+                        class="map-building main-building"
+                    >
+                        Academic
+                    </div>
+
+
+                    <div
+                        class="map-building library-building"
+                    >
+                        Library
+                    </div>
+
+
+                    <div
+                        class="map-building hostel-building"
+                    >
+                        Hostel
+                    </div>
+
+
+                    <div
+                        class="map-building food-building"
+                    >
+                        Food
+                    </div>
+
+
+                    <div
+                        class="map-building sports-building"
+                    >
+                        Sports
+                    </div>
+
+
+                    <div class="map-tree tree-one">
+                        🌳
+                    </div>
+
+                    <div class="map-tree tree-two">
+                        🌳
+                    </div>
+
+                    <div class="map-tree tree-three">
+                        🌳
+                    </div>
+
+                    <div class="map-tree tree-four">
+                        🌳
+                    </div>
+
+
+                    <div class="map-pin pin-one">
+                        📍
+                    </div>
+
+                    <div class="map-pin pin-two">
+                        📍
+                    </div>
+
+                    <div class="map-pin pin-three">
+                        📍
+                    </div>
+
+
+                </div>
+
+
+                <div class="map-bottom">
+
+                    <span>
+                        ✦ 12 important places
+                    </span>
+
+                    <span>
+                        Freshman guide
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="floating-location location-one">
+
+                <span class="location-icon">
+                    📚
+                </span>
+
+                Library
+
+            </div>
+
+
+            <div class="floating-location location-two">
+
+                <span class="location-icon">
+                    🍴
+                </span>
+
+                Canteen
+
+            </div>
+
+
+            <div class="floating-location location-three">
+
+                <span class="location-icon">
+                    🛏️
+                </span>
+
+                Hostels
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<section class="stats-section">
+
+    <div class="stats-grid">
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon blue-icon">
+                📍
+            </div>
+
+            <div>
+
+                <strong>
+                    12+
+                </strong>
+
+                <span>
+                    Important places
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon green-icon">
+                🏫
+            </div>
+
+            <div>
+
+                <strong>
+                    8
+                </strong>
+
+                <span>
+                    Campus zones
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon yellow-icon">
+                🍴
+            </div>
+
+            <div>
+
+                <strong>
+                    6+
+                </strong>
+
+                <span>
+                    Food spots
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon red-icon">
+                🧭
+            </div>
+
+            <div>
+
+                <strong>
+                    1
+                </strong>
+
+                <span>
+                    Simple guide
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PLACES
+===================================================== -->
+
+<section class="places-section">
+
+
+    <div class="section-header">
+
+        <div class="section-label">
+            EXPLORE YOUR CAMPUS
+        </div>
+
+        <h2>
+
+            Where do you
+
+            <span>
+                need to go?
+            </span>
+
+        </h2>
+
+        <p>
+            Search or browse the places you'll need
+            during your first year.
+        </p>
+
+    </div>
+
+
+
+    <div class="filter-bar">
+
+        <button
+            class="filter-btn active"
+            data-category="all"
+        >
+            All
+        </button>
+
+        <button
+            class="filter-btn"
+            data-category="academic"
+        >
+            Academic
+        </button>
+
+        <button
+            class="filter-btn"
+            data-category="living"
+        >
+            Living
+        </button>
+
+        <button
+            class="filter-btn"
+            data-category="food"
+        >
+            Food
+        </button>
+
+        <button
+            class="filter-btn"
+            data-category="sports"
+        >
+            Sports
+        </button>
+
+        <button
+            class="filter-btn"
+            data-category="services"
+        >
+            Services
+        </button>
+
+    </div>
+
+
+
+    <div
+        class="place-grid"
+        id="placeGrid"
+    >
+
+
+        <!-- LIBRARY -->
+
+        <article
+            class="place-card featured-place"
+            data-category="academic"
+            data-search="library central library books study reading"
+        >
+
+            <div
+                class="place-visual library-visual"
+            >
+
+                <div class="big-icon">
+                    📚
+                </div>
+
+                <span class="visual-label">
+                    ACADEMIC
+                </span>
+
+            </div>
+
+
+            <div class="place-content">
+
+                <div class="place-title-row">
+
+                    <h3>
+                        Central Library
+                    </h3>
+
+                    <span class="place-status open">
+                        Open
+                    </span>
+
+                </div>
+
+
+                <p>
+                    Your go-to place for books, quiet study,
+                    references and last-minute exam preparation.
+                </p>
+
+
+                <div class="place-meta">
+
+                    <span>
+                        📍 Academic Zone
+                    </span>
+
+                    <span>
+                        🕐 8 AM – 10 PM
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ACADEMIC -->
+
+        <article
+            class="place-card"
+            data-category="academic"
+            data-search="department academic block classrooms labs faculty"
+        >
+
+            <div class="place-icon-wrap blue-bg">
+                🏫
+            </div>
+
+            <div class="place-content">
+
+                <span class="small-label">
+                    ACADEMIC
+                </span>
+
+                <h3>
+                    Academic Blocks
+                </h3>
+
+                <p>
+                    Classrooms, departments, labs and faculty offices.
+                </p>
+
+                <div class="place-meta">
+
+                    <span>
+                        📍 Main Campus
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- HOSTELS -->
+
+        <article
+            class="place-card"
+            data-category="living"
+            data-search="hostel boys girls accommodation room mess"
+        >
+
+            <div class="place-icon-wrap green-bg">
+                🛏️
+            </div>
+
+            <div class="place-content">
+
+                <span class="small-label">
+                    LIVING
+                </span>
+
+                <h3>
+                    Hostels
+                </h3>
+
+                <p>
+                    Find your hostel, mess, common areas and facilities.
+                </p>
+
+                <div class="place-meta">
+
+                    <span>
+                        📍 Residential Zone
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- FOOD -->
+
+        <article
+            class="place-card"
+            data-category="food"
+            data-search="canteen mess food restaurant cafe eating"
+        >
+
+            <div class="place-icon-wrap yellow-bg">
+                🍴
+            </div>
+
+            <div class="place-content">
+
+                <span class="small-label">
+                    FOOD
+                </span>
+
+                <h3>
+                    Canteen & Food Court
+                </h3>
+
+                <p>
+                    Meals, snacks, drinks and late-night food.
+                </p>
+
+                <div class="place-meta">
+
+                    <span>
+                        📍 Student Zone
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- SPORTS -->
+
+        <article
+            class="place-card"
+            data-category="sports"
+            data-search="sports ground gym football cricket basketball"
+        >
+
+            <div class="place-icon-wrap red-bg">
+                ⚽
+            </div>
+
+            <div class="place-content">
+
+                <span class="small-label">
+                    SPORTS
+                </span>
+
+                <h3>
+                    Sports Complex
+                </h3>
+
+                <p>
+                    Grounds, courts, gym and recreational spaces.
+                </p>
+
+                <div class="place-meta">
+
+                    <span>
+                        📍 Sports Zone
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ADMIN -->
+
+        <article
+            class="place-card"
+            data-category="services"
+            data-search="administration office registrar dean accounts documents"
+        >
+
+            <div class="place-icon-wrap purple-bg">
+                🗂️
+            </div>
+
+            <div class="place-content">
+
+                <span class="small-label">
+                    SERVICES
+                </span>
+
+                <h3>
+                    Administration
+                </h3>
+
+                <p>
+                    Forms, documents, fees and official college work.
+                </p>
+
+                <div class="place-meta">
+
+                    <span>
+                        📍 Admin Zone
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- HEALTH -->
+
+        <article
+            class="place-card"
+            data-category="services"
+            data-search="health center medical doctor hospital clinic"
+        >
+
+            <div class="place-icon-wrap health-bg">
+                🏥
+            </div>
+
+            <div class="place-content">
+
+                <span class="small-label">
+                    SERVICES
+                </span>
+
+                <h3>
+                    Health Centre
+                </h3>
+
+                <p>
+                    Medical assistance and basic healthcare.
+                </p>
+
+                <div class="place-meta">
+
+                    <span>
+                        📍 Residential Zone
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- AUDITORIUM -->
+
+        <article
+            class="place-card"
+            data-category="services"
+            data-search="auditorium seminar hall events workshop fest"
+        >
+
+            <div class="place-icon-wrap orange-bg">
+                🎤
+            </div>
+
+            <div class="place-content">
+
+                <span class="small-label">
+                    EVENTS
+                </span>
+
+                <h3>
+                    Auditorium
+                </h3>
+
+                <p>
+                    Seminars, orientation, cultural events and workshops.
+                </p>
+
+                <div class="place-meta">
+
+                    <span>
+                        📍 Central Zone
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+
+
+    <div
+        class="no-results"
+        id="noResults"
+    >
+
+        <div>
+            🔎
+        </div>
+
+        <h3>
+            Couldn't find that place.
+        </h3>
+
+        <p>
+            Try searching for library, hostel or canteen.
+        </p>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     TIP
+===================================================== -->
+
+<section class="campus-tip">
+
+
+    <div class="tip-visual">
+
+        <div class="compass">
+
+            <div class="compass-ring"></div>
+
+            <div class="compass-arrow">
+                ↑
+            </div>
+
+            <span class="north">
+                N
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="tip-content">
+
+        <div class="section-label">
+            FRESHER TIP
+        </div>
+
+        <h2>
+
+            Lost on your first day?
+
+            <span>
+                That's completely normal.
+            </span>
+
+        </h2>
+
+
+        <p>
+
+            Save the places you visit most often and
+            you'll have your campus figured out before
+            you know it.
+
+        </p>
+
+
+        <a
+            href="../help/index.html"
+            class="primary-button"
+        >
+
+            Need help?
+
+            <span>
+                →
+            </span>
+
+        </a>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="campus-cta">
+
+
+    <div class="cta-orb orb-one"></div>
+
+    <div class="cta-orb orb-two"></div>
+
+
+    <div class="cta-content">
+
+        <div class="cta-star">
+            ✦
+        </div>
+
+        <h2>
+
+            Your campus.
+
+            <span>
+                Your way.
+            </span>
+
+        </h2>
+
+
+        <p>
+            Everything gets easier when you know
+            where everything is.
+        </p>
+
+
+        <a
+            href="../index.html"
+            class="primary-button"
+        >
+
+            Back to FreshmanOS
+
+            <span>
+                →
+            </span>
+
+        </a>
+
+    </div>
+
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-inner">
+
+
+        <div class="footer-brand">
+
+            <a
+                href="../index.html"
+                class="brand"
+            >
+
+                <div class="brand-mark">
+                    F
+                </div>
+
+                <span>
+                    Freshman<span class="blue">OS</span>
+                </span>
+
+            </a>
+
+
+            <p>
+                Your college. Your resources.
+                Your community.
+            </p>
+
+        </div>
+
+
+        <div class="footer-right">
+
+            <span>
+                Open source • Student built
+            </span>
+
+            <span>
+                © 2026 FreshmanOS
+            </span>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<script>
+
+/* =========================================================
+   THEME
+========================================================= */
+
+const themeToggle =
+    document.getElementById("themeToggle");
+
+const savedTheme =
+    localStorage.getItem("freshmanos-theme");
+
+
+if (savedTheme === "dark") {
+
+    document.body.classList.add("dark");
+
+}
+
+
+themeToggle?.addEventListener(
+    "click",
+    () => {
+
+        document.body.classList.toggle("dark");
+
+        const isDark =
+            document.body.classList.contains("dark");
+
+        localStorage.setItem(
+            "freshmanos-theme",
+            isDark
+                ? "dark"
+                : "light"
+        );
+
+    }
+);
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menuButton =
+    document.getElementById("menuButton");
+
+const mobileNav =
+    document.getElementById("mobileNav");
+
+
+menuButton?.addEventListener(
+    "click",
+    () => {
+
+        mobileNav.classList.toggle(
+            "active"
+        );
+
+    }
+);
+
+
+mobileNav
+    ?.querySelectorAll("a")
+    .forEach(link => {
+
+        link.addEventListener(
+            "click",
+            () => {
+
+                mobileNav.classList.remove(
+                    "active"
+                );
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   MAP 3D
+========================================================= */
+
+const mapScene =
+    document.getElementById("mapScene");
+
+
+mapScene?.addEventListener(
+    "mousemove",
+    event => {
+
+        const rect =
+            mapScene.getBoundingClientRect();
+
+        const x =
+            event.clientX - rect.left;
+
+        const y =
+            event.clientY - rect.top;
+
+        const centerX =
+            rect.width / 2;
+
+        const centerY =
+            rect.height / 2;
+
+        const rotateY =
+            ((x - centerX) / centerX) * 6;
+
+        const rotateX =
+            ((centerY - y) / centerY) * 5;
+
+
+        mapScene.style.transform =
+            `
+            rotateX(${rotateX}deg)
+            rotateY(${rotateY}deg)
+            `;
+
+    }
+);
+
+
+mapScene?.addEventListener(
+    "mouseleave",
+    () => {
+
+        mapScene.style.transform =
+            "rotateX(0deg) rotateY(0deg)";
+
+    }
+);
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+const searchInput =
+    document.getElementById("searchInput");
+
+const placeCards =
+    document.querySelectorAll(".place-card");
+
+const noResults =
+    document.getElementById("noResults");
+
+
+function searchPlaces(query) {
+
+    const text =
+        query.toLowerCase().trim();
+
+    let count = 0;
+
+
+    placeCards.forEach(card => {
+
+        const searchable =
+            (
+                card.dataset.search ||
+                ""
+            )
+            .toLowerCase();
+
+
+        const matches =
+            searchable.includes(text);
+
+
+        card.style.display =
+            matches
+                ? ""
+                : "none";
+
+
+        if (matches) {
+            count++;
+        }
+
+    });
+
+
+    if (noResults) {
+
+        noResults.style.display =
+            count === 0
+                ? "block"
+                : "none";
+
+    }
+
+}
+
+
+searchInput?.addEventListener(
+    "input",
+    () => {
+
+        searchPlaces(
+            searchInput.value
+        );
+
+    }
+);
+
+
+/* =========================================================
+   QUICK TAGS
+========================================================= */
+
+document
+    .querySelectorAll(
+        ".quick-tags button"
+    )
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                const query =
+                    button.dataset.search;
+
+                searchInput.value =
+                    query;
+
+                searchPlaces(query);
+
+                document
+                    .querySelector(
+                        ".places-section"
+                    )
+                    .scrollIntoView({
+                        behavior: "smooth"
+                    });
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   KEYBOARD SEARCH
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if (
+            event.key === "/" &&
+            document.activeElement !== searchInput
+        ) {
+
+            event.preventDefault();
+
+            searchInput.focus();
+
+        }
+
+
+        if (
+            event.key === "Escape" &&
+            document.activeElement === searchInput
+        ) {
+
+            searchInput.value = "";
+
+            searchPlaces("");
+
+            searchInput.blur();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   CATEGORY FILTER
+========================================================= */
+
+document
+    .querySelectorAll(".filter-btn")
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                document
+                    .querySelectorAll(
+                        ".filter-btn"
+                    )
+                    .forEach(btn => {
+
+                        btn.classList.remove(
+                            "active"
+                        );
+
+                    });
+
+
+                button.classList.add(
+                    "active"
+                );
+
+
+                const category =
+                    button.dataset.category;
+
+
+                let count = 0;
+
+
+                placeCards.forEach(card => {
+
+                    const matches =
+                        category === "all" ||
+                        card.dataset.category === category;
+
+
+                    card.style.display =
+                        matches
+                            ? ""
+                            : "none";
+
+
+                    if (matches) {
+                        count++;
+                    }
+
+                });
+
+
+                if (noResults) {
+
+                    noResults.style.display =
+                        count === 0
+                            ? "block"
+                            : "none";
+
+                }
+
+
+                searchInput.value = "";
+
+            }
+        );
+
+    });
+
+</script>
+
+</body>
+</html>

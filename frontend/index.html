@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8faf7" />
+    <meta name="description" content="FreshmanOS brings academic resources, campus information and student services together for college freshmen." />
+    <title>FreshmanOS — Find your footing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="nav wrap" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="FreshmanOS home">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+          <span>Freshman<span class="brand-light">OS</span></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
+          <span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a class="nav-link active" href="#home">Home</a>
+          <a class="nav-link" href="#academic-hub">Academic Hub</a>
+          <a class="nav-link" href="#campus-guide">Campus Guide</a>
+          <a class="nav-link" href="#student-hub">Student Hub</a>
+          <a class="nav-link" href="#events">Events</a>
+          <a class="nav-link" href="#lost-found">Lost &amp; Found</a>
+          <a class="nav-link" href="#help">Help</a>
+        </div>
+        <a class="nav-cta" href="#features">Get started <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero wrap" id="home" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR FIRST YEAR, FIGURED OUT</div>
+          <h1 id="hero-title">Find your<br /><span>footing.</span> Find your people.</h1>
+          <p class="hero-tagline">Your college. Your resources. Your community.</p>
+          <p class="hero-description">Everything you need to make college feel a little more like home. Find your notes, your way around campus, and the people who make it yours.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#features">Explore FreshmanOS <span aria-hidden="true">→</span></a>
+            <a class="text-link" href="#features">See what’s inside <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-proof"><div class="avatar-stack" aria-hidden="true"><span>R</span><span>A</span><span>M</span><span>+</span></div><span>Made for the first-year experience</span></div>
+        </div>
+        <div class="hero-art" aria-label="A preview of FreshmanOS campus resources">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="sun-shape"></div>
+          <div class="campus-card">
+            <div class="campus-top"><span class="mini-mark"><i></i><i></i><i></i><i></i></span><span>YOUR CAMPUS, CONNECTED</span><span class="live-dot"></span></div>
+            <div class="campus-map" aria-hidden="true">
+              <div class="map-path path-a"></div><div class="map-path path-b"></div><div class="map-path path-c"></div>
+              <div class="map-block block-a"></div><div class="map-block block-b"></div><div class="map-block block-c"></div><div class="map-block block-d"></div>
+              <div class="map-tree tree-a">✳</div><div class="map-tree tree-b">✳</div><div class="map-tree tree-c">✳</div><div class="map-tree tree-d">✳</div>
+              <div class="map-pin pin-library"><span>▤</span></div><div class="map-pin pin-you"><span>●</span></div>
+              <span class="map-label label-library">LIBRARY</span><span class="map-label label-you">YOU ARE HERE</span>
+            </div>
+            <div class="campus-bottom"><div><span class="bottom-label">UP NEXT</span><strong>Find your first class</strong></div><span class="arrow-circle">↗</span></div>
+          </div>
+          <div class="float-card float-resource"><span class="float-icon book-icon">▤</span><span><strong>Study materials</strong><small>Ready when you are</small></span><span class="float-check">✓</span></div>
+          <div class="float-card float-event"><span class="event-date"><b>18</b><small>SEP</small></span><span><strong>Club fair</strong><small>Meet your people</small></span></div>
+          <span class="sparkle sparkle-a">✳</span><span class="sparkle sparkle-b">✦</span>
+        </div>
+        <div class="hero-bottom-note"><span class="note-line"></span><span>LESS GUESSWORK. MORE GREAT DAYS.</span><span class="note-line"></span></div>
+      </section>
+
+      <section class="features-section" id="features" aria-labelledby="features-title">
+        <div class="wrap">
+          <div class="section-heading">
+            <div><div class="eyebrow"><span class="eyebrow-dot"></span> YOUR COLLEGE TOOLKIT</div><h2 id="features-title">The good stuff,<br /><span>all in one place.</span></h2></div>
+            <p>Six little shortcuts to feeling right at home. Pick what you need and get on with the good part.</p>
+          </div>
+          <div class="feature-grid">
+            <a class="feature-card card-sage" id="academic-hub" href="#academic-hub">
+              <div class="card-top"><span class="feature-icon">📚</span><span class="card-arrow" aria-hidden="true">↗</span></div><span class="card-index">01 / LEARN</span><h3>Academic Hub</h3><p>Notes, PYQs, lab resources and academic material.</p><span class="card-foot">Make studying a little easier <span aria-hidden="true">→</span></span>
+            </a>
+            <a class="feature-card card-lilac" id="campus-guide" href="#campus-guide">
+              <div class="card-top"><span class="feature-icon">🗺️</span><span class="card-arrow" aria-hidden="true">↗</span></div><span class="card-index">02 / EXPLORE</span><h3>Campus Guide</h3><p>Find departments, labs, hostels, library and important campus locations.</p><span class="card-foot">Know where you’re going <span aria-hidden="true">→</span></span>
+            </a>
+            <a class="feature-card card-peach" id="student-hub" href="#student-hub">
+              <div class="card-top"><span class="feature-icon">👥</span><span class="card-arrow" aria-hidden="true">↗</span></div><span class="card-index">03 / CONNECT</span><h3>Student Hub</h3><p>Connect with students, find teammates and ask questions.</p><span class="card-foot">Your people are out there <span aria-hidden="true">→</span></span>
+            </a>
+            <a class="feature-card card-yellow" id="events" href="#events">
+              <div class="card-top"><span class="feature-icon">🎉</span><span class="card-arrow" aria-hidden="true">↗</span></div><span class="card-index">04 / SHOW UP</span><h3>Events</h3><p>Discover upcoming college events and activities.</p><span class="card-foot">There’s always something on <span aria-hidden="true">→</span></span>
+            </a>
+            <a class="feature-card card-blue" id="lost-found" href="#lost-found">
+              <div class="card-top"><span class="feature-icon">🔍</span><span class="card-arrow" aria-hidden="true">↗</span></div><span class="card-index">05 / LOOK OUT</span><h3>Lost &amp; Found</h3><p>Report and find lost belongings.</p><span class="card-foot">Good things find their way back <span aria-hidden="true">→</span></span>
+            </a>
+            <a class="feature-card card-rose" id="help" href="#help">
+              <div class="card-top"><span class="feature-icon">🆘</span><span class="card-arrow" aria-hidden="true">↗</span></div><span class="card-index">06 / WE’RE HERE</span><h3>Help &amp; Support</h3><p>Important college contacts and emergency information.</p><span class="card-foot">A hand when you need one <span aria-hidden="true">→</span></span>
+            </a>
+          </div>
+          <div class="section-signoff"><span class="signoff-star">✳</span><span>Built for the beginning of something good.</span><span class="signoff-star">✳</span></div>
+        </div>
+      </section>
+
+      <section class="closing wrap">
+        <div><div class="eyebrow"><span class="eyebrow-dot"></span> YOU’VE GOT THIS</div><h2>First year is a lot.<br /><span>It’s also yours.</span></h2></div>
+        <a class="button button-light" href="#home">Start exploring <span aria-hidden="true">↑</span></a>
+        <span class="closing-doodle" aria-hidden="true">✳</span>
+      </section>
+    </main>
+    <footer class="footer wrap"><a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span><span>Freshman<span class="brand-light">OS</span></span></a><p>Your college. Your resources. Your community.</p><span>Made for the first days and all the ones after. © <span id="year"></span> FreshmanOS</span></footer>
+  </body>
+</html>
