@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Freshers Meetup",
+    "category": "Social",
+    "date": "2026-10-15",
+    "location": "NIT Hamirpur Campus",
+    "description": "A sample meetup for first-year students."
+  },
+  {
+    "id": 2,
+    "title": "Coding Workshop",
+    "category": "Technical",
+    "date": "2026-10-18",
+    "location": "Computer Science Department",
+    "description": "An introductory coding workshop for beginners."
+  }
+]

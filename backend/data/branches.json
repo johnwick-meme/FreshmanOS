@@ -1,0 +1,46 @@
+{
+  "CSE": {
+    "name": "Computer Science and Engineering",
+    "group": "A"
+  },
+  "ECE": {
+    "name": "Electronics and Communication Engineering",
+    "group": "A"
+  },
+  "Chemical": {
+    "name": "Chemical Engineering",
+    "group": "A"
+  },
+  "ECE-Dual": {
+    "name": "Electronics and Communication Engineering Dual Degree",
+    "group": "A"
+  },
+  "CSE-Dual": {
+    "name": "Computer Science and Engineering Dual Degree",
+    "group": "A"
+  },
+  "Electrical": {
+    "name": "Electrical Engineering",
+    "group": "A"
+  },
+  "MnC": {
+    "name": "Mathematics and Computing",
+    "group": "B"
+  },
+  "Civil": {
+    "name": "Civil Engineering",
+    "group": "B"
+  },
+  "Mechanical": {
+    "name": "Mechanical Engineering",
+    "group": "B"
+  },
+  "Engineering-Physics": {
+    "name": "Engineering Physics",
+    "group": "B"
+  },
+  "Materials-Science": {
+    "name": "Materials Science",
+    "group": "B"
+  }
+}

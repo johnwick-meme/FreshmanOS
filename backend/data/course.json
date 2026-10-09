@@ -1,0 +1,101 @@
+{
+  "A": [
+    {
+      "code": "MA-111",
+      "name": "Linear Algebra & Calculus",
+      "credits": 3
+    },
+    {
+      "code": "PH-101",
+      "name": "Engineering Physics",
+      "credits": 3
+    },
+    {
+      "code": "CS-111",
+      "name": "Introduction to Computer and C Programming",
+      "credits": 3
+    },
+    {
+      "code": "ME-101",
+      "name": "Basics of Mechanical Engineering",
+      "credits": 3
+    },
+    {
+      "code": "HS-101",
+      "name": "Communication Skills",
+      "credits": 2
+    },
+    {
+      "code": "HS-103",
+      "name": "Human Values and Ethical Mindfulness",
+      "credits": 2
+    },
+    {
+      "code": "PH-102",
+      "name": "Physics Lab",
+      "credits": 1
+    },
+    {
+      "code": "HS-102",
+      "name": "Communication Skills Lab",
+      "credits": 1
+    },
+    {
+      "code": "ME-102",
+      "name": "Engineering Workshop Practice",
+      "credits": 2
+    }
+  ],
+  "B": [
+    {
+      "code": "MA-121",
+      "name": "Differential Equations",
+      "credits": 3
+    },
+    {
+      "code": "CY-101",
+      "name": "Engineering Chemistry",
+      "credits": 3
+    },
+    {
+      "code": "CS-121",
+      "name": "Introduction to Python and Data Structures",
+      "credits": 3
+    },
+    {
+      "code": "EE-101",
+      "name": "Basic Electrical Engineering",
+      "credits": 2
+    },
+    {
+      "code": "EC-101",
+      "name": "Basic Electronics Engineering",
+      "credits": 2
+    },
+    {
+      "code": "EN-101",
+      "name": "Energy, Environment & Life Science",
+      "credits": 2
+    },
+    {
+      "code": "MB-101",
+      "name": "Entrepreneurship & Marketing Dynamics",
+      "credits": 1
+    },
+    {
+      "code": "CY-102",
+      "name": "Engineering Chemistry Lab",
+      "credits": 1
+    },
+    {
+      "code": "EE-102",
+      "name": "Electrical & Electronics Engineering Lab",
+      "credits": 1
+    },
+    {
+      "code": "CE-101",
+      "name": "Engineering Graphics",
+      "credits": 2
+    }
+  ]
+}

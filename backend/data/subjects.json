@@ -1,0 +1,110 @@
+[
+  {
+    "id": "maths",
+    "name": "Mathematics",
+    "description": "Engineering Mathematics for first-year students.",
+    "resources": {
+      "notes": [
+        "Unit 1 - Differential Calculus",
+        "Unit 2 - Integral Calculus",
+        "Unit 3 - Differential Equations"
+      ],
+      "pyqs": [
+        "Mid Term 2025",
+        "End Term 2025"
+      ],
+      "labs": [],
+      "viva": []
+    }
+  },
+  {
+    "id": "physics",
+    "name": "Physics",
+    "description": "Engineering Physics covering mechanics, optics and modern physics.",
+    "resources": {
+      "notes": [
+        "Unit 1 - Quantum Mechanics",
+        "Unit 2 - Optics",
+        "Unit 3 - Electromagnetism"
+      ],
+      "pyqs": [
+        "Mid Term 2025",
+        "End Term 2025"
+      ],
+      "labs": [
+        "Newton's Rings",
+        "Diffraction"
+      ],
+      "viva": [
+        "Important Physics Viva Questions"
+      ]
+    }
+  },
+  {
+    "id": "bee",
+    "name": "Basic Electrical Engineering",
+    "description": "Fundamentals of electrical circuits and electrical systems.",
+    "resources": {
+      "notes": [
+        "Unit 1 - DC Circuits",
+        "Unit 2 - AC Circuits",
+        "Unit 3 - Electrical Machines"
+      ],
+      "pyqs": [
+        "Mid Term 2025",
+        "End Term 2025"
+      ],
+      "labs": [
+        "Ohm's Law",
+        "KCL",
+        "KVL",
+        "Superposition Theorem"
+      ],
+      "viva": [
+        "Basic Electrical Engineering Viva Questions"
+      ]
+    }
+  },
+  {
+    "id": "programming",
+    "name": "Programming",
+    "description": "Introduction to programming, algorithms and problem solving.",
+    "resources": {
+      "notes": [
+        "C++ Basics",
+        "Conditional Statements",
+        "Loops",
+        "Arrays",
+        "Functions"
+      ],
+      "pyqs": [
+        "Mid Term 2025",
+        "End Term 2025"
+      ],
+      "labs": [
+        "Programming Lab Exercises"
+      ],
+      "viva": [
+        "Programming Viva Questions"
+      ]
+    }
+  },
+  {
+    "id": "engineering-graphics",
+    "name": "Engineering Graphics",
+    "description": "Technical drawing and graphical representation for engineers.",
+    "resources": {
+      "notes": [
+        "Projection of Points",
+        "Projection of Lines",
+        "Orthographic Projection"
+      ],
+      "pyqs": [
+        "Mid Term 2025",
+        "End Term 2025"
+      ],
+      "labs": [],
+      "viva": []
+    }
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "admin-block",
+    "name": "Administrative Block",
+    "category": "Administration",
+    "description": "Main administrative offices of the institute."
+  },
+  {
+    "id": "central-library",
+    "name": "Central Library",
+    "category": "Academic",
+    "description": "Central library and study resources."
+  },
+  {
+    "id": "main-canteen",
+    "name": "Main Canteen",
+    "category": "Food",
+    "description": "Main campus food and refreshment area."
+  },
+  {
+    "id": "hostels",
+    "name": "Hostels",
+    "category": "Accommodation",
+    "description": "Student residential area."
+  }
+]
