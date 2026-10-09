@@ -1,108 +1,1466 @@
 [
   {
-    "id": "maths",
-    "name": "Mathematics",
-    "description": "Engineering Mathematics for first-year students.",
+    "id": "ma-111",
+    "code": "MA-111",
+    "name": "Engineering Mathematics-I",
+    "semester": 1,
+    "cycle": "A",
+    "description": "Linear algebra, calculus and vector calculus.",
+    "units": [
+      {
+        "unit_number": 1,
+        "unit_name": "Matrices and Linear Systems",
+        "topics": [
+          "Matrices and elementary operations",
+          "Rank of a matrix",
+          "Consistency of linear systems",
+          "Gauss-Jordan method"
+        ],
+        "youtube_links": [
+          {
+            "title": "Matrices, rank and Gauss-Jordan method — Dr Gajendra Purohit search",
+            "url": "https://www.youtube.com/results?search_query=Dr+Gajendra+Purohit+matrices+rank+Gauss+Jordan"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 2,
+        "unit_name": "Eigenvalues and Eigenvectors",
+        "topics": [
+          "Eigenvalues and eigenvectors",
+          "Cayley-Hamilton theorem"
+        ],
+        "youtube_links": [
+          {
+            "title": "Eigenvalues and Cayley-Hamilton — Dr Gajendra Purohit search",
+            "url": "https://www.youtube.com/results?search_query=Dr+Gajendra+Purohit+eigenvalues+Cayley+Hamilton"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 3,
+        "unit_name": "Differential Calculus",
+        "topics": [
+          "Partial derivatives",
+          "Jacobian",
+          "Taylor expansion",
+          "Maxima and minima",
+          "Curve tracing"
+        ],
+        "youtube_links": [
+          {
+            "title": "Partial derivatives and Jacobian — Dr Gajendra Purohit search",
+            "url": "https://www.youtube.com/results?search_query=Dr+Gajendra+Purohit+partial+derivatives+Jacobian+maxima+minima"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 4,
+        "unit_name": "Multiple Integrals",
+        "topics": [
+          "Double integrals",
+          "Triple integrals",
+          "Change of order of integration"
+        ],
+        "youtube_links": [
+          {
+            "title": "Double and triple integrals — Dr Gajendra Purohit search",
+            "url": "https://www.youtube.com/results?search_query=Dr+Gajendra+Purohit+double+triple+integrals+change+order"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 5,
+        "unit_name": "Vector Calculus I",
+        "topics": [
+          "Vector differentiation",
+          "Gradient, divergence and curl",
+          "Line integrals"
+        ],
+        "youtube_links": [
+          {
+            "title": "Vector calculus — Dr Gajendra Purohit search",
+            "url": "https://www.youtube.com/results?search_query=Dr+Gajendra+Purohit+vector+calculus"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 6,
+        "unit_name": "Vector Calculus II",
+        "topics": [
+          "Green's theorem",
+          "Stokes' theorem",
+          "Gauss divergence theorem"
+        ],
+        "youtube_links": [
+          {
+            "title": "Green, Stokes and Gauss theorems search",
+            "url": "https://www.youtube.com/results?search_query=Dr+Gajendra+Purohit+Green+Stokes+Gauss+theorem"
+          }
+        ],
+        "notes_pdf": null
+      }
+    ],
     "resources": {
-      "notes": [
-        "Unit 1 - Differential Calculus",
-        "Unit 2 - Integral Calculus",
-        "Unit 3 - Differential Equations"
+      "pyqs": [],
+      "labs": [],
+      "viva": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "ph-101",
+    "code": "PH-101",
+    "name": "Engineering Physics",
+    "semester": 1,
+    "cycle": "A",
+    "description": "Electromagnetism, lasers, optical fibres, quantum mechanics and solid-state physics.",
+    "units": [
+      {
+        "unit_number": 1,
+        "unit_name": "Electromagnetic Theory",
+        "topics": [
+          "Maxwell's equations",
+          "Electromagnetic waves",
+          "Poynting theorem"
+        ],
+        "youtube_links": [
+          {
+            "title": "Maxwell equations and Poynting theorem search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+engineering+physics+Maxwell+equations+Poynting+theorem"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 2,
+        "unit_name": "Laser Physics",
+        "topics": [
+          "Laser principles",
+          "Three-level and four-level lasers"
+        ],
+        "youtube_links": [
+          {
+            "title": "Laser physics search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+engineering+physics+laser+physics+three+four+level+laser"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 3,
+        "unit_name": "Optical Fibres",
+        "topics": [
+          "Optical fibre principle",
+          "Modes and losses"
+        ],
+        "youtube_links": [
+          {
+            "title": "Optical fibre search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+optical+fiber+engineering+physics+modes+losses"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 4,
+        "unit_name": "Quantum Mechanics",
+        "topics": [
+          "Basic quantum mechanics",
+          "Particle in a one-dimensional box"
+        ],
+        "youtube_links": [
+          {
+            "title": "Quantum mechanics and particle in a box search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+quantum+mechanics+particle+in+one+dimensional+box"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 5,
+        "unit_name": "Free Electron Theory and Energy Bands",
+        "topics": [
+          "Free electron theory",
+          "Bloch theorem",
+          "Kronig-Penney model",
+          "Energy bands"
+        ],
+        "youtube_links": [
+          {
+            "title": "Kronig-Penney model and energy bands search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+solid+state+physics+Kronig+Penney+energy+bands"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 6,
+        "unit_name": "Superconductivity",
+        "topics": [
+          "Superconductivity",
+          "Meissner effect"
+        ],
+        "youtube_links": [
+          {
+            "title": "Superconductivity search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+engineering+physics+superconductivity+Meissner+effect"
+          }
+        ],
+        "notes_pdf": null
+      }
+    ],
+    "resources": {
+      "pyqs": [],
+      "labs": [
+        "Physics Lab (PH-102) is listed separately in course data"
       ],
-      "pyqs": [
-        "Mid Term 2025",
-        "End Term 2025"
+      "viva": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "cs-111",
+    "code": "CS-111",
+    "name": "Introduction to Computer and C Programming",
+    "semester": 1,
+    "cycle": "A",
+    "description": "Computer fundamentals, algorithms and C programming.",
+    "units": [
+      {
+        "unit_number": 1,
+        "unit_name": "Computer Fundamentals and Algorithms",
+        "topics": [
+          "Computer fundamentals",
+          "Number systems",
+          "Algorithms",
+          "Flowcharts and pseudocode"
+        ],
+        "youtube_links": [
+          {
+            "title": "Computer fundamentals and flowcharts — Jenny's Lectures search",
+            "url": "https://www.youtube.com/results?search_query=Jenny%27s+Lectures+computer+fundamentals+number+system+algorithm+flowchart"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 2,
+        "unit_name": "C Programming Basics",
+        "topics": [
+          "C program structure",
+          "Data types and variables",
+          "Input/output",
+          "Operators",
+          "Conditional statements"
+        ],
+        "youtube_links": [
+          {
+            "title": "C programming basics — Jenny's Lectures search",
+            "url": "https://www.youtube.com/results?search_query=Jenny%27s+Lectures+C+programming+basics+data+types+operators+if+else"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 3,
+        "unit_name": "Loops, Arrays, Strings and Pointers",
+        "topics": [
+          "Loops",
+          "Arrays",
+          "Strings",
+          "Pointers"
+        ],
+        "youtube_links": [
+          {
+            "title": "C loops, arrays, strings and pointers search",
+            "url": "https://www.youtube.com/results?search_query=Jenny%27s+Lectures+C+loops+arrays+strings+pointers"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 4,
+        "unit_name": "Functions and Advanced C Topics",
+        "topics": [
+          "Functions",
+          "Recursion",
+          "Structures and unions",
+          "File handling",
+          "Preprocessor directives"
+        ],
+        "youtube_links": [
+          {
+            "title": "C functions, recursion and file handling search",
+            "url": "https://www.youtube.com/results?search_query=Jenny%27s+Lectures+C+functions+recursion+file+handling+preprocessor"
+          }
+        ],
+        "notes_pdf": null
+      }
+    ],
+    "resources": {
+      "pyqs": [],
+      "labs": [],
+      "viva": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "me-101",
+    "code": "ME-101",
+    "name": "Basics of Mechanical Engineering",
+    "semester": 1,
+    "cycle": "A",
+    "description": "Thermodynamics, engines, materials, manufacturing and mechanics.",
+    "units": [
+      {
+        "unit_number": 1,
+        "unit_name": "Thermodynamics",
+        "topics": [
+          "Thermodynamic systems",
+          "First and second laws",
+          "Steam tables"
+        ],
+        "youtube_links": [
+          {
+            "title": "Thermodynamics and steam tables search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+engineering+thermodynamics+steam+tables+first+second+law"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 2,
+        "unit_name": "Thermodynamic Cycles and Engines",
+        "topics": [
+          "Carnot cycle",
+          "Otto cycle",
+          "Diesel cycle",
+          "Internal combustion engines"
+        ],
+        "youtube_links": [
+          {
+            "title": "Carnot, Otto and Diesel cycles search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+Otto+Diesel+Carnot+cycle+IC+engines"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 3,
+        "unit_name": "Engineering Materials",
+        "topics": [
+          "Metals and alloys",
+          "Ceramics",
+          "Polymers",
+          "Material properties"
+        ],
+        "youtube_links": [
+          {
+            "title": "Engineering materials search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+engineering+materials+metals+ceramics+polymers+alloys"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 4,
+        "unit_name": "Manufacturing Processes",
+        "topics": [
+          "Casting",
+          "Forging and rolling",
+          "Extrusion",
+          "Welding",
+          "Machining",
+          "CAD/CAM and additive manufacturing"
+        ],
+        "youtube_links": [
+          {
+            "title": "Manufacturing processes search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+manufacturing+processes+casting+forging+welding+machining"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 5,
+        "unit_name": "Engineering Mechanics: Statics",
+        "topics": [
+          "Equilibrium",
+          "Trusses",
+          "Shear force diagrams",
+          "Bending moment diagrams"
+        ],
+        "youtube_links": [
+          {
+            "title": "Statics, trusses and SFD/BMD search",
+            "url": "https://www.youtube.com/results?search_query=engineering+mechanics+shear+force+bending+moment+diagrams+NPTEL"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 6,
+        "unit_name": "Strength of Materials",
+        "topics": [
+          "Stress and strain",
+          "Bending equation",
+          "Torsion equation"
+        ],
+        "youtube_links": [
+          {
+            "title": "Stress, strain, bending and torsion search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+stress+strain+bending+equation+torsion+equation"
+          }
+        ],
+        "notes_pdf": null
+      }
+    ],
+    "resources": {
+      "pyqs": [],
+      "labs": [
+        "Engineering Workshop Practice (ME-102) is listed separately"
       ],
+      "viva": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "hs-101",
+    "code": "HS-101",
+    "name": "Communication Skills",
+    "semester": 1,
+    "cycle": "A",
+    "description": "Communication, listening, speaking, reading and professional writing.",
+    "units": [
+      {
+        "unit_number": 1,
+        "unit_name": "Communication Fundamentals",
+        "topics": [
+          "Communication process",
+          "Listening skills",
+          "Body language",
+          "Communication barriers"
+        ],
+        "youtube_links": [
+          {
+            "title": "Communication skills search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+communication+skills+listening+nonverbal+communication"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 2,
+        "unit_name": "Speaking and Interview Skills",
+        "topics": [
+          "Group discussion",
+          "Interviews",
+          "Public speaking",
+          "SWOT analysis"
+        ],
+        "youtube_links": [
+          {
+            "title": "Public speaking and interview skills search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+public+speaking+group+discussion+interview+skills"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 3,
+        "unit_name": "Reading and Study Skills",
+        "topics": [
+          "Reading comprehension",
+          "Vocabulary",
+          "Referencing",
+          "Note-making"
+        ],
+        "youtube_links": [
+          {
+            "title": "Reading comprehension and note-making search",
+            "url": "https://www.youtube.com/results?search_query=communication+skills+reading+comprehension+note+making+engineering"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 4,
+        "unit_name": "Professional Writing",
+        "topics": [
+          "Statement of purpose",
+          "Resume and cover letter",
+          "Report writing"
+        ],
+        "youtube_links": [
+          {
+            "title": "Resume, SOP and report writing search",
+            "url": "https://www.youtube.com/results?search_query=technical+communication+resume+SOP+report+writing+engineering"
+          }
+        ],
+        "notes_pdf": null
+      }
+    ],
+    "resources": {
+      "pyqs": [],
+      "labs": [
+        "Communication Skills Lab (HS-102) is listed separately"
+      ],
+      "viva": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "hs-103",
+    "code": "HS-103",
+    "name": "Human Values and Ethical Mindfulness",
+    "semester": 1,
+    "cycle": "A",
+    "description": "Ethical frameworks, mindfulness and responsible decision-making.",
+    "units": [
+      {
+        "unit_number": 1,
+        "unit_name": "Ethics and Human Values",
+        "topics": [
+          "Ethics",
+          "Human values",
+          "Personal and professional values"
+        ],
+        "youtube_links": [
+          {
+            "title": "Ethics and human values search",
+            "url": "https://www.youtube.com/results?search_query=engineering+ethics+human+values+introduction+lecture"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 2,
+        "unit_name": "Ethical Theories",
+        "topics": [
+          "Utilitarianism",
+          "Kantian ethics",
+          "Kohlberg's theory",
+          "Piaget's theory"
+        ],
+        "youtube_links": [
+          {
+            "title": "Ethical theories search",
+            "url": "https://www.youtube.com/results?search_query=engineering+ethics+utilitarianism+Kant+Kohlberg+Piaget"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 3,
+        "unit_name": "Mindfulness and Social Responsibility",
+        "topics": [
+          "Emotional intelligence",
+          "Mindfulness",
+          "CSR",
+          "Environmental ethics",
+          "Privacy"
+        ],
+        "youtube_links": [
+          {
+            "title": "Mindfulness, CSR and environmental ethics search",
+            "url": "https://www.youtube.com/results?search_query=engineering+ethics+emotional+intelligence+CSR+environmental+ethics"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 4,
+        "unit_name": "Ethical Decision-Making",
+        "topics": [
+          "Ethical decision-making",
+          "Responsibility",
+          "Fairness and integrity",
+          "Citizenship"
+        ],
+        "youtube_links": [
+          {
+            "title": "Ethical decision-making search",
+            "url": "https://www.youtube.com/results?search_query=ethical+decision+making+human+values+engineering"
+          }
+        ],
+        "notes_pdf": null
+      }
+    ],
+    "resources": {
+      "pyqs": [],
+      "labs": [],
+      "viva": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "me-102",
+    "code": "ME-102",
+    "name": "Engineering Workshop Practice",
+    "semester": 1,
+    "cycle": "A",
+    "description": "Hands-on workshop tools, manufacturing and fabrication processes.",
+    "units": [
+      {
+        "unit_number": 1,
+        "unit_name": "Workshop Introduction and Smithy",
+        "topics": [
+          "Workshop safety and tools",
+          "Materials",
+          "Smithy operations"
+        ],
+        "youtube_links": [
+          {
+            "title": "Workshop and smithy search",
+            "url": "https://www.youtube.com/results?search_query=engineering+workshop+smithy+tools+demonstration"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 2,
+        "unit_name": "Lathe and Joining Processes",
+        "topics": [
+          "Lathe operations",
+          "Welding",
+          "Soldering",
+          "Brazing"
+        ],
+        "youtube_links": [
+          {
+            "title": "Lathe and welding workshop search",
+            "url": "https://www.youtube.com/results?search_query=engineering+workshop+lathe+operations+arc+welding+soldering+brazing"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 3,
+        "unit_name": "Foundry and Fitting",
+        "topics": [
+          "Foundry and green-sand moulding",
+          "Fitting operations",
+          "Drilling and reaming",
+          "Thread cutting"
+        ],
+        "youtube_links": [
+          {
+            "title": "Foundry and fitting search",
+            "url": "https://www.youtube.com/results?search_query=engineering+workshop+foundry+green+sand+moulding+fitting+operations"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 4,
+        "unit_name": "Carpentry and Sheet Metal",
+        "topics": [
+          "Carpentry tools and joints",
+          "Sheet-metal operations"
+        ],
+        "youtube_links": [
+          {
+            "title": "Carpentry and sheet-metal workshop search",
+            "url": "https://www.youtube.com/results?search_query=engineering+workshop+carpentry+joints+sheet+metal+shop"
+          }
+        ],
+        "notes_pdf": null
+      }
+    ],
+    "resources": {
+      "pyqs": [],
+      "labs": [],
+      "viva": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "ma-121",
+    "code": "MA-121",
+    "name": "Differential Equations",
+    "semester": 2,
+    "cycle": "B",
+    "description": "Ordinary and partial differential equations and transforms.",
+    "units": [
+      {
+        "unit_number": 1,
+        "unit_name": "First-Order Differential Equations",
+        "topics": [
+          "Exact and reducible equations",
+          "Nonlinear equations",
+          "Clairaut's equation"
+        ],
+        "youtube_links": [
+          {
+            "title": "First-order differential equations search",
+            "url": "https://www.youtube.com/results?search_query=Dr+Gajendra+Purohit+first+order+differential+equations"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 2,
+        "unit_name": "Higher-Order Differential Equations",
+        "topics": [
+          "Complementary function and particular integral",
+          "Variation of parameters",
+          "Cauchy-Euler equations",
+          "Legendre equations"
+        ],
+        "youtube_links": [
+          {
+            "title": "Higher-order differential equations search",
+            "url": "https://www.youtube.com/results?search_query=Dr+Gajendra+Purohit+higher+order+differential+equations"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 3,
+        "unit_name": "Laplace Transforms",
+        "topics": [
+          "Laplace transform",
+          "Inverse Laplace transform"
+        ],
+        "youtube_links": [
+          {
+            "title": "Laplace transforms search",
+            "url": "https://www.youtube.com/results?search_query=Dr+Gajendra+Purohit+Laplace+transform"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 4,
+        "unit_name": "First-Order Partial Differential Equations",
+        "topics": [
+          "Lagrange's method",
+          "Nonlinear first-order PDEs",
+          "Charpit method"
+        ],
+        "youtube_links": [
+          {
+            "title": "First-order PDE search",
+            "url": "https://www.youtube.com/results?search_query=Dr+Gajendra+Purohit+Lagrange+PDE+Charpit"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 5,
+        "unit_name": "Higher-Order Partial Differential Equations",
+        "topics": [
+          "Linear PDEs with constant coefficients",
+          "Monge's method"
+        ],
+        "youtube_links": [
+          {
+            "title": "Higher-order PDE and Monge method search",
+            "url": "https://www.youtube.com/results?search_query=engineering+mathematics+higher+order+PDE+Monge"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 6,
+        "unit_name": "Applications of Partial Differential Equations",
+        "topics": [
+          "Classification of PDEs",
+          "Separation of variables",
+          "Wave equation",
+          "Heat equation",
+          "Laplace equation"
+        ],
+        "youtube_links": [
+          {
+            "title": "Wave, heat and Laplace equations search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+wave+heat+Laplace+equation"
+          }
+        ],
+        "notes_pdf": null
+      }
+    ],
+    "resources": {
+      "pyqs": [],
+      "labs": [],
+      "viva": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "cy-101",
+    "code": "CY-101",
+    "name": "Engineering Chemistry",
+    "semester": 2,
+    "cycle": "B",
+    "description": "Materials, spectroscopy, thermal analysis, phase rule, electrochemistry and green chemistry.",
+    "units": [
+      {
+        "unit_number": 1,
+        "unit_name": "Engineering Materials and Nanomaterials",
+        "topics": [
+          "Engineering materials",
+          "Nanomaterials"
+        ],
+        "youtube_links": [
+          {
+            "title": "Engineering materials and nanomaterials search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+engineering+chemistry+engineering+materials+nanomaterials"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 2,
+        "unit_name": "Spectroscopy",
+        "topics": [
+          "UV-Visible spectroscopy",
+          "IR spectroscopy",
+          "NMR spectroscopy"
+        ],
+        "youtube_links": [
+          {
+            "title": "UV-Visible, IR and NMR search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+engineering+chemistry+UV+Visible+IR+NMR+spectroscopy"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 3,
+        "unit_name": "Thermal and Surface Analysis",
+        "topics": [
+          "TGA",
+          "DTA and DSC",
+          "AFM and SEM"
+        ],
+        "youtube_links": [
+          {
+            "title": "TGA, DTA, DSC, AFM and SEM search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+TGA+DTA+DSC+AFM+SEM+engineering+chemistry"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 4,
+        "unit_name": "Phase Rule",
+        "topics": [
+          "Phase rule",
+          "One-component systems",
+          "Two-component systems"
+        ],
+        "youtube_links": [
+          {
+            "title": "Phase rule search",
+            "url": "https://www.youtube.com/results?search_query=engineering+chemistry+phase+rule+one+component+two+component+system"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 5,
+        "unit_name": "Electrochemistry",
+        "topics": [
+          "Batteries",
+          "Fuel cells",
+          "Corrosion"
+        ],
+        "youtube_links": [
+          {
+            "title": "Batteries, fuel cells and corrosion search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+electrochemistry+batteries+fuel+cells+corrosion"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 6,
+        "unit_name": "Green Chemistry and Solar Cells",
+        "topics": [
+          "Principles of green chemistry",
+          "Solar cells"
+        ],
+        "youtube_links": [
+          {
+            "title": "Green chemistry and solar cells search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+green+chemistry+twelve+principles+solar+cells"
+          }
+        ],
+        "notes_pdf": null
+      }
+    ],
+    "resources": {
+      "pyqs": [],
+      "labs": [
+        "Chemistry Lab (CY-102) is listed separately in course data"
+      ],
+      "viva": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "cs-121",
+    "code": "CS-121",
+    "name": "Introduction to Python and Data Structures",
+    "semester": 2,
+    "cycle": "B",
+    "description": "Python programming, object-oriented concepts and data structures.",
+    "units": [
+      {
+        "unit_number": 1,
+        "unit_name": "Python Fundamentals",
+        "topics": [
+          "Variables and data types",
+          "Strings",
+          "String formatting"
+        ],
+        "youtube_links": [
+          {
+            "title": "Python beginner course search",
+            "url": "https://www.youtube.com/results?search_query=CodeWithHarry+Python+tutorial+for+beginners+Hindi"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 2,
+        "unit_name": "Control Flow and Functions",
+        "topics": [
+          "Conditions and loops",
+          "Functions and modules",
+          "Exceptions"
+        ],
+        "youtube_links": [
+          {
+            "title": "Python functions, modules and exceptions search",
+            "url": "https://www.youtube.com/results?search_query=Python+functions+modules+exceptions+Hindi"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 3,
+        "unit_name": "Functions, Objects and Files",
+        "topics": [
+          "Function parameters and scope",
+          "Objects",
+          "File handling"
+        ],
+        "youtube_links": [
+          {
+            "title": "Python functions, objects and file handling search",
+            "url": "https://www.youtube.com/results?search_query=Python+functions+objects+file+handling+Hindi"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 4,
+        "unit_name": "Python Collections",
+        "topics": [
+          "Lists",
+          "Tuples",
+          "Dictionaries",
+          "Sets"
+        ],
+        "youtube_links": [
+          {
+            "title": "Python collections search",
+            "url": "https://www.youtube.com/results?search_query=Python+lists+tuples+dictionaries+sets+Hindi"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 5,
+        "unit_name": "OOP and Regular Expressions",
+        "topics": [
+          "Regular expressions",
+          "Classes and objects",
+          "Inheritance",
+          "Decorators"
+        ],
+        "youtube_links": [
+          {
+            "title": "Python OOP, inheritance and decorators search",
+            "url": "https://www.youtube.com/results?search_query=Python+OOP+inheritance+decorators+regular+expressions"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 6,
+        "unit_name": "Data Structures and Complexity",
+        "topics": [
+          "Time complexity",
+          "Arrays",
+          "Linked lists",
+          "Stacks and queues",
+          "Trees and graphs"
+        ],
+        "youtube_links": [
+          {
+            "title": "Data structures in Python search",
+            "url": "https://www.youtube.com/results?search_query=data+structures+in+Python+linked+list+stack+queue+trees+graphs"
+          }
+        ],
+        "notes_pdf": null
+      }
+    ],
+    "resources": {
+      "pyqs": [],
+      "labs": [],
+      "viva": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "ee-101",
+    "code": "EE-101",
+    "name": "Basic Electrical Engineering",
+    "semester": 2,
+    "cycle": "B",
+    "description": "Circuit analysis, AC systems, electrical machines and instruments.",
+    "units": [
+      {
+        "unit_number": 1,
+        "unit_name": "DC Circuits and Network Theorems",
+        "topics": [
+          "Circuit laws",
+          "Network theorems",
+          "Basic circuit analysis"
+        ],
+        "youtube_links": [
+          {
+            "title": "Circuit laws and network theorems search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+electrical+engineering+circuit+laws+network+theorems"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 2,
+        "unit_name": "AC Circuits and Electrical Installation",
+        "topics": [
+          "AC waveforms and phasors",
+          "RLC circuits",
+          "Three-phase systems",
+          "Power factor",
+          "Wiring and batteries"
+        ],
+        "youtube_links": [
+          {
+            "title": "AC circuits and RLC search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+AC+circuits+RLC+three+phase+power+factor"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 3,
+        "unit_name": "Magnetic Circuits and Machines",
+        "topics": [
+          "Magnetic circuits",
+          "Transformers",
+          "Electrical machines"
+        ],
+        "youtube_links": [
+          {
+            "title": "Transformers and electrical machines search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+transformers+electrical+machines"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 4,
+        "unit_name": "Electrical Measuring Instruments",
+        "topics": [
+          "Galvanometer",
+          "Ammeter and voltmeter",
+          "Wattmeter"
+        ],
+        "youtube_links": [
+          {
+            "title": "Electrical measuring instruments search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+electrical+measuring+instruments"
+          }
+        ],
+        "notes_pdf": null
+      }
+    ],
+    "resources": {
+      "pyqs": [],
+      "labs": [
+        "Electrical and Electronics Engineering Lab (EE-102) is listed separately"
+      ],
+      "viva": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "ec-101",
+    "code": "EC-101",
+    "name": "Basic Electronics Engineering",
+    "semester": 2,
+    "cycle": "B",
+    "description": "Semiconductor diodes, BJTs and field-effect transistors.",
+    "units": [
+      {
+        "unit_number": 1,
+        "unit_name": "Semiconductor Diodes and Applications",
+        "topics": [
+          "PN junction and Zener diodes",
+          "LED and photodiode",
+          "Rectifiers and filters",
+          "Clippers and clampers"
+        ],
+        "youtube_links": [
+          {
+            "title": "Diodes, rectifiers and filters — Neso Academy search",
+            "url": "https://www.youtube.com/results?search_query=Neso+Academy+diodes+rectifiers+filters"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 2,
+        "unit_name": "Bipolar Junction Transistors",
+        "topics": [
+          "BJT operation",
+          "Common-base, common-emitter and common-collector configurations",
+          "h-parameters"
+        ],
+        "youtube_links": [
+          {
+            "title": "BJT configurations — Neso Academy search",
+            "url": "https://www.youtube.com/results?search_query=Neso+Academy+BJT+CB+CE+CC+h+parameters"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 3,
+        "unit_name": "Transistor Biasing and Amplifiers",
+        "topics": [
+          "Biasing and stability",
+          "Compensation",
+          "Transistor as a switch",
+          "Amplifiers"
+        ],
+        "youtube_links": [
+          {
+            "title": "Transistor biasing and amplifiers — Neso Academy search",
+            "url": "https://www.youtube.com/results?search_query=Neso+Academy+transistor+biasing+amplifiers"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 4,
+        "unit_name": "Field-Effect Transistors",
+        "topics": [
+          "JFET",
+          "MOSFET"
+        ],
+        "youtube_links": [
+          {
+            "title": "JFET and MOSFET — Neso Academy search",
+            "url": "https://www.youtube.com/results?search_query=Neso+Academy+JFET+MOSFET"
+          }
+        ],
+        "notes_pdf": null
+      }
+    ],
+    "resources": {
+      "pyqs": [],
+      "labs": [
+        "Electrical and Electronics Engineering Lab (EE-102) is listed separately"
+      ],
+      "viva": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "en-101",
+    "code": "EN-101",
+    "name": "Energy, Environment and Life Science",
+    "semester": 2,
+    "cycle": "B",
+    "description": "Ecology, environmental resources, pollution and sustainability.",
+    "units": [
+      {
+        "unit_number": 1,
+        "unit_name": "Ecology and Biodiversity",
+        "topics": [
+          "Ecology and ecosystems",
+          "Biodiversity",
+          "Conservation"
+        ],
+        "youtube_links": [
+          {
+            "title": "Ecology and biodiversity search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+environmental+science+ecology+biodiversity+conservation"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 2,
+        "unit_name": "Environmental Resources",
+        "topics": [
+          "Natural resources",
+          "Global commons",
+          "Environmental movements"
+        ],
+        "youtube_links": [
+          {
+            "title": "Environmental resources search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+environmental+resources+global+commons+environmental+movements"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 3,
+        "unit_name": "Pollution and Environmental Issues",
+        "topics": [
+          "Pollution",
+          "Global warming",
+          "Ozone depletion",
+          "Waste management",
+          "Environmental laws"
+        ],
+        "youtube_links": [
+          {
+            "title": "Pollution and global warming search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+environmental+pollution+global+warming+ozone+depletion"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 4,
+        "unit_name": "Energy and Sustainability",
+        "topics": [
+          "Renewable energy",
+          "Climate change",
+          "Sustainability"
+        ],
+        "youtube_links": [
+          {
+            "title": "Renewable energy and sustainability search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+renewable+energy+climate+change+sustainability"
+          }
+        ],
+        "notes_pdf": null
+      }
+    ],
+    "resources": {
+      "pyqs": [],
+      "labs": [],
+      "viva": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "mb-101",
+    "code": "MB-101",
+    "name": "Entrepreneurship and Marketing Dynamics",
+    "semester": 2,
+    "cycle": "B",
+    "description": "Entrepreneurship fundamentals and marketing frameworks.",
+    "units": [
+      {
+        "unit_number": 1,
+        "unit_name": "Entrepreneurship Fundamentals",
+        "topics": [
+          "Entrepreneurship basics",
+          "Types of entrepreneurs",
+          "Entrepreneurial process"
+        ],
+        "youtube_links": [
+          {
+            "title": "Entrepreneurship basics search",
+            "url": "https://www.youtube.com/results?search_query=entrepreneurship+basics+types+of+entrepreneurs+NPTEL"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 2,
+        "unit_name": "Marketing Concepts and Strategies",
+        "topics": [
+          "Segmentation, targeting and positioning",
+          "BCG matrix",
+          "Ansoff matrix",
+          "Marketing mix",
+          "Product life cycle",
+          "Pricing"
+        ],
+        "youtube_links": [
+          {
+            "title": "Marketing frameworks search",
+            "url": "https://www.youtube.com/results?search_query=marketing+STP+BCG+Ansoff+matrix+product+life+cycle+lecture"
+          }
+        ],
+        "notes_pdf": null
+      }
+    ],
+    "resources": {
+      "pyqs": [],
+      "labs": [],
+      "viva": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "ce-101",
+    "code": "CE-101",
+    "name": "Engineering Graphics",
+    "semester": 2,
+    "cycle": "B",
+    "description": "Technical drawing, projections, solids and sectional views.",
+    "units": [
+      {
+        "unit_number": 1,
+        "unit_name": "Drawing Basics and Geometrical Construction",
+        "topics": [
+          "Drawing instruments",
+          "Lines and lettering",
+          "Dimensioning",
+          "Geometrical construction"
+        ],
+        "youtube_links": [
+          {
+            "title": "Engineering drawing basics — NPTEL course",
+            "url": "https://nptel.ac.in/courses/112103019"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 2,
+        "unit_name": "Orthographic and Isometric Projection",
+        "topics": [
+          "First-angle and third-angle projection",
+          "Orthographic projection",
+          "Isometric projection",
+          "Projection of points and lines"
+        ],
+        "youtube_links": [
+          {
+            "title": "Orthographic and isometric projection search",
+            "url": "https://www.youtube.com/results?search_query=engineering+graphics+orthographic+isometric+projection+NPTEL"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 3,
+        "unit_name": "Projection of Planes and Solids",
+        "topics": [
+          "Projection of planes",
+          "Projection of solids"
+        ],
+        "youtube_links": [
+          {
+            "title": "Projection of planes and solids search",
+            "url": "https://www.youtube.com/results?search_query=NPTEL+engineering+graphics+projection+planes+solids"
+          }
+        ],
+        "notes_pdf": null
+      },
+      {
+        "unit_number": 4,
+        "unit_name": "Section of Solids",
+        "topics": [
+          "Sectional views",
+          "Sections of prisms and pyramids"
+        ],
+        "youtube_links": [
+          {
+            "title": "Section of solids search",
+            "url": "https://www.youtube.com/results?search_query=engineering+graphics+section+of+solids+prism+pyramid"
+          }
+        ],
+        "notes_pdf": null
+      }
+    ],
+    "resources": {
+      "pyqs": [],
+      "labs": [],
+      "viva": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "ph-102",
+    "code": "PH-102",
+    "name": "Physics Lab",
+    "semester": 1,
+    "cycle": "A",
+    "description": "Practical course; add experiment resources when confirmed from the lab syllabus.",
+    "units": [],
+    "youtube_links": [],
+    "resources": {
+      "notes": [],
+      "pyqs": [],
       "labs": [],
       "viva": []
     }
   },
   {
-    "id": "physics",
-    "name": "Physics",
-    "description": "Engineering Physics covering mechanics, optics and modern physics.",
+    "id": "hs-102",
+    "code": "HS-102",
+    "name": "Communication Skills Lab",
+    "semester": 1,
+    "cycle": "A",
+    "description": "Practical communication activities; add experiment/activity resources when confirmed.",
+    "units": [],
+    "youtube_links": [],
     "resources": {
-      "notes": [
-        "Unit 1 - Quantum Mechanics",
-        "Unit 2 - Optics",
-        "Unit 3 - Electromagnetism"
-      ],
-      "pyqs": [
-        "Mid Term 2025",
-        "End Term 2025"
-      ],
-      "labs": [
-        "Newton's Rings",
-        "Diffraction"
-      ],
-      "viva": [
-        "Important Physics Viva Questions"
-      ]
+      "notes": [],
+      "pyqs": [],
+      "labs": [],
+      "viva": []
     }
   },
   {
-    "id": "bee",
-    "name": "Basic Electrical Engineering",
-    "description": "Fundamentals of electrical circuits and electrical systems.",
+    "id": "cy-102",
+    "code": "CY-102",
+    "name": "Engineering Chemistry Lab",
+    "semester": 2,
+    "cycle": "B",
+    "description": "Practical course; add experiment resources when confirmed from the lab syllabus.",
+    "units": [],
+    "youtube_links": [],
     "resources": {
-      "notes": [
-        "Unit 1 - DC Circuits",
-        "Unit 2 - AC Circuits",
-        "Unit 3 - Electrical Machines"
-      ],
-      "pyqs": [
-        "Mid Term 2025",
-        "End Term 2025"
-      ],
-      "labs": [
-        "Ohm's Law",
-        "KCL",
-        "KVL",
-        "Superposition Theorem"
-      ],
-      "viva": [
-        "Basic Electrical Engineering Viva Questions"
-      ]
+      "notes": [],
+      "pyqs": [],
+      "labs": [],
+      "viva": []
     }
   },
   {
-    "id": "programming",
-    "name": "Programming",
-    "description": "Introduction to programming, algorithms and problem solving.",
+    "id": "ee-102",
+    "code": "EE-102",
+    "name": "Electrical and Electronics Engineering Lab",
+    "semester": 2,
+    "cycle": "B",
+    "description": "Practical course; add experiment resources when confirmed from the lab syllabus.",
+    "units": [],
+    "youtube_links": [],
     "resources": {
-      "notes": [
-        "C++ Basics",
-        "Conditional Statements",
-        "Loops",
-        "Arrays",
-        "Functions"
-      ],
-      "pyqs": [
-        "Mid Term 2025",
-        "End Term 2025"
-      ],
-      "labs": [
-        "Programming Lab Exercises"
-      ],
-      "viva": [
-        "Programming Viva Questions"
-      ]
-    }
-  },
-  {
-    "id": "engineering-graphics",
-    "name": "Engineering Graphics",
-    "description": "Technical drawing and graphical representation for engineers.",
-    "resources": {
-      "notes": [
-        "Projection of Points",
-        "Projection of Lines",
-        "Orthographic Projection"
-      ],
-      "pyqs": [
-        "Mid Term 2025",
-        "End Term 2025"
-      ],
+      "notes": [],
+      "pyqs": [],
       "labs": [],
       "viva": []
     }
