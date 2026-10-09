@@ -1,5 +1,22 @@
+const express = require("express");
+const cors = require("cors");
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+
+const subjectsRouter = require("./routes/subjects");
+const academicRouter = require("./routes/academic");
+const campusRouter = require("./routes/campus");
+const postsRouter = require("./routes/posts");
+const eventsRouter = require("./routes/events");
+
+// Initialize Express app FIRST
+const app = express();
+
+const PORT = process.env.PORT || 5000;
+
+// Middleware
+app.use(cors());
+app.use(express.json());
 
 // In-memory user storage (for development - use a database in production)
 let users = [];
@@ -35,6 +52,8 @@ function isValidCollegeEmail(email) {
     
     return collegeDomains.some(domain => email.endsWith(domain));
 }
+
+// AUTH ROUTES (after app is initialized)
 
 // REGISTER endpoint
 app.post('/api/auth/register', async (req, res) => {
@@ -171,22 +190,7 @@ app.get('/api/auth/users', (req, res) => {
     res.json(safeUsers);
 });
 
-const express = require("express");
-const cors = require("cors");
-
-const subjectsRouter = require("./routes/subjects");
-const academicRouter = require("./routes/academic");
-const campusRouter = require("./routes/campus");
-const postsRouter = require("./routes/posts");
-const eventsRouter = require("./routes/events");
-
-const app = express();
-
-const PORT = 5000;
-
-app.use(cors());
-app.use(express.json());
-
+// Existing routes
 app.use("/api/subjects", subjectsRouter);
 app.use("/api/academic", academicRouter);
 app.use("/api/campus", campusRouter);
@@ -200,5 +204,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`FreshmanOS server running at http://localhost:${PORT}`);
+    console.log(`FreshmanOS server running on port ${PORT}`);
 });
