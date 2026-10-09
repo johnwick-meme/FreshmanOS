@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -3879,4 +3880,3887 @@ revealElements.forEach(
 </script>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Help & Support — FreshmanOS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+
+<style>
+
+/* =========================================================
+   FRESHMANOS — HELP & SUPPORT
+========================================================= */
+
+:root {
+
+    --bg: #ffffff;
+    --surface: #f8faff;
+    --surface2: #eef4ff;
+
+    --text: #172033;
+    --muted: #687286;
+
+    --border: #e3e8f0;
+
+    --blue: #1a73e8;
+    --green: #34a853;
+    --yellow: #fbbc04;
+    --red: #ea4335;
+    --purple: #8e63d2;
+
+    --shadow:
+        0 12px 35px rgba(36,54,86,.08);
+}
+
+
+body.dark {
+
+    --bg: #101217;
+    --surface: #171a21;
+    --surface2: #1d2330;
+
+    --text: #f5f7fb;
+    --muted: #a3abba;
+
+    --border: #292f3a;
+
+    --blue: #8ab4f8;
+    --green: #81c995;
+    --yellow: #fdd663;
+    --red: #f28b82;
+    --purple: #b99af7;
+
+    --shadow:
+        0 15px 40px rgba(0,0,0,.35);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+
+    font-family:
+        "Google Sans",
+        "Inter",
+        Arial,
+        sans-serif;
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    overflow-x: hidden;
+
+    transition:
+        background .3s ease,
+        color .3s ease;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+
+    position: fixed;
+
+    top: 14px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: calc(100% - 40px);
+
+    max-width: 1380px;
+
+    z-index: 1000;
+
+    background:
+        color-mix(
+            in srgb,
+            var(--bg) 90%,
+            transparent
+        );
+
+    backdrop-filter: blur(18px);
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.nav-inner {
+
+    height: 64px;
+
+    padding: 0 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* BRAND */
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    letter-spacing: -.6px;
+
+    white-space: nowrap;
+}
+
+
+.brand-mark {
+
+    width: 32px;
+    height: 32px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #4285f4,
+            #1a73e8
+        );
+
+    color: white;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 5px 14px
+        rgba(26,115,232,.25);
+}
+
+
+.blue {
+    color: var(--blue);
+}
+
+
+/* NAV LINKS */
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+}
+
+
+.nav-links a {
+
+    padding: 9px 10px;
+
+    border-radius: 9px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    transition: .2s ease;
+}
+
+
+.nav-links a:hover {
+
+    color: var(--text);
+
+    background: var(--surface);
+}
+
+
+.nav-links a.active {
+
+    color: var(--text);
+
+    background: var(--surface2);
+
+    font-weight: 600;
+}
+
+
+/* NAV ACTIONS */
+
+.nav-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.theme-toggle {
+
+    width: 50px;
+    height: 29px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 999px;
+
+    background: var(--surface);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-around;
+
+    color: var(--muted);
+
+    cursor: pointer;
+}
+
+
+.theme-toggle span:first-child {
+    color: #f9ab00;
+}
+
+
+.theme-toggle span:last-child {
+    color: #4285f4;
+}
+
+
+.mobile-menu-btn {
+
+    display: none;
+
+    width: 34px;
+    height: 34px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 9px;
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+
+/* MOBILE NAV */
+
+.mobile-nav {
+
+    display: none;
+
+    padding: 10px 18px 18px;
+
+    border-top: 1px solid var(--border);
+
+    flex-direction: column;
+}
+
+
+.mobile-nav.active {
+    display: flex;
+}
+
+
+.mobile-nav a {
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+.mobile-nav a.active {
+
+    color: var(--blue);
+
+    background: var(--surface2);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.help-hero {
+
+    max-width: 1250px;
+
+    min-height: 690px;
+
+    margin: auto;
+
+    padding:
+        155px 30px
+        70px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    align-items: center;
+
+    gap: 50px;
+}
+
+
+.hero-copy {
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+.eyebrow {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 13px;
+
+    border: 1px solid
+        color-mix(
+            in srgb,
+            var(--blue) 20%,
+            var(--border)
+        );
+
+    border-radius: 999px;
+
+    color: var(--blue);
+
+    background:
+        color-mix(
+            in srgb,
+            var(--blue) 6%,
+            transparent
+        );
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+.eyebrow-dot {
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(52,168,83,.1);
+}
+
+
+.hero-copy h1 {
+
+    max-width: 650px;
+
+    margin-top: 24px;
+
+    font-size:
+        clamp(
+            48px,
+            6vw,
+            74px
+        );
+
+    line-height: 1.02;
+
+    letter-spacing: -4px;
+
+    font-weight: 700;
+}
+
+
+.hero-copy h1 span {
+
+    display: block;
+
+    color: var(--blue);
+}
+
+
+.hero-copy > p {
+
+    max-width: 540px;
+
+    margin-top: 24px;
+
+    color: var(--muted);
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-top: 27px;
+}
+
+
+.primary-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 13px 18px;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    background: var(--blue);
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px
+        rgba(26,115,232,.18);
+
+    transition: .25s ease;
+}
+
+
+.primary-button:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 14px 28px
+        rgba(26,115,232,.25);
+}
+
+
+.primary-button span {
+
+    font-size: 16px;
+
+    transition: .25s;
+}
+
+
+.primary-button:hover span {
+    transform: translateX(4px);
+}
+
+
+.secondary-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 12px 17px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+
+.secondary-button:hover {
+
+    transform:
+        translateY(-3px);
+
+    border-color: var(--blue);
+}
+
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.hero-visual {
+
+    position: relative;
+
+    height: 450px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    perspective: 1200px;
+}
+
+
+.hero-glow {
+
+    position: absolute;
+
+    width: 440px;
+    height: 440px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(66,133,244,.16),
+            transparent 68%
+        );
+
+    filter: blur(10px);
+}
+
+
+/* SUPPORT PANEL */
+
+.support-panel {
+
+    position: relative;
+
+    width: 400px;
+
+    padding: 24px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 25px;
+
+    background: var(--surface);
+
+    box-shadow:
+        0 30px 70px
+        rgba(30,55,90,.14);
+
+    transform:
+        rotateX(7deg)
+        rotateY(-7deg);
+
+    transform-style: preserve-3d;
+
+    z-index: 3;
+
+    transition:
+        transform .2s ease;
+}
+
+
+.support-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-bottom: 17px;
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+.support-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.support-icon {
+
+    width: 43px;
+    height: 43px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 13px;
+
+    background: #e8f0fe;
+
+    font-size: 21px;
+}
+
+
+body.dark .support-icon {
+    background: var(--surface2);
+}
+
+
+.support-title strong {
+
+    display: block;
+
+    font-size: 13px;
+}
+
+
+.support-title span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--muted);
+
+    font-size: 8px;
+}
+
+
+.online-badge {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 6px 8px;
+
+    border-radius: 999px;
+
+    color: var(--green);
+
+    background:
+        rgba(52,168,83,.09);
+
+    font-size: 7px;
+
+    font-weight: 700;
+}
+
+
+.online-dot {
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+}
+
+
+/* HELP OPTIONS */
+
+.support-options {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 9px;
+
+    margin-top: 17px;
+}
+
+
+.support-option {
+
+    padding: 14px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 13px;
+
+    background:
+        color-mix(
+            in srgb,
+            var(--surface2) 45%,
+            var(--surface)
+        );
+
+    transition: .2s;
+}
+
+
+.support-option:hover {
+
+    transform:
+        translateY(-3px);
+
+    border-color:
+        color-mix(
+            in srgb,
+            var(--blue) 35%,
+            var(--border)
+        );
+}
+
+
+.support-option-icon {
+
+    font-size: 18px;
+}
+
+
+.support-option strong {
+
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 9px;
+}
+
+
+.support-option span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--muted);
+
+    font-size: 7px;
+}
+
+
+/* FLOATING CARDS */
+
+.floating-card {
+
+    position: absolute;
+
+    z-index: 10;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px 12px;
+
+    border:
+        1px solid rgba(255,255,255,.8);
+
+    border-radius: 13px;
+
+    background:
+        rgba(255,255,255,.88);
+
+    backdrop-filter: blur(12px);
+
+    color: #26344a;
+
+    box-shadow:
+        0 15px 35px
+        rgba(39,73,120,.12);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    animation:
+        float 5s ease-in-out infinite;
+}
+
+
+body.dark .floating-card {
+
+    background:
+        rgba(28,32,42,.94);
+
+    border-color:
+        rgba(255,255,255,.08);
+
+    color: white;
+}
+
+
+.float-icon {
+
+    width: 29px;
+    height: 29px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 9px;
+
+    background: #edf4ff;
+
+    font-size: 14px;
+}
+
+
+.float-one {
+
+    top: 65px;
+
+    left: -5px;
+}
+
+
+.float-two {
+
+    right: -5px;
+
+    bottom: 105px;
+
+    animation-delay: -1.5s;
+}
+
+
+.float-three {
+
+    left: 20px;
+
+    bottom: 35px;
+
+    animation-delay: -3s;
+}
+
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* =========================================================
+   SEARCH / FAQ
+========================================================= */
+
+.faq-section {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding:
+        60px 30px
+        100px;
+}
+
+
+.section-header {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+.section-label {
+
+    margin-bottom: 12px;
+
+    color: var(--blue);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.3px;
+}
+
+
+.section-header h2 {
+
+    font-size:
+        clamp(
+            38px,
+            5vw,
+            56px
+        );
+
+    line-height: 1.05;
+
+    letter-spacing: -2.8px;
+}
+
+
+.section-header h2 span {
+
+    display: block;
+
+    color: var(--muted);
+}
+
+
+.section-header p {
+
+    margin-top: 16px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* SEARCH */
+
+.faq-search {
+
+    max-width: 760px;
+
+    margin: 32px auto 0;
+
+    position: relative;
+}
+
+
+.faq-search span {
+
+    position: absolute;
+
+    left: 16px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    color: var(--muted);
+
+    pointer-events: none;
+}
+
+
+.faq-search input {
+
+    width: 100%;
+
+    height: 48px;
+
+    padding:
+        0 18px
+        0 43px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 13px;
+
+    outline: none;
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    font-size: 11px;
+
+    transition: .2s;
+}
+
+
+.faq-search input:focus {
+
+    border-color: var(--blue);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(26,115,232,.08);
+}
+
+
+/* FAQ GRID */
+
+.faq-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+
+.faq-card {
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 16px;
+
+    background: var(--surface);
+
+    overflow: hidden;
+
+    transition: .25s;
+}
+
+
+.faq-card:hover {
+
+    border-color:
+        color-mix(
+            in srgb,
+            var(--blue) 25%,
+            var(--border)
+        );
+
+    box-shadow: var(--shadow);
+}
+
+
+.faq-question {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 17px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: var(--text);
+
+    text-align: left;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+.faq-arrow {
+
+    flex-shrink: 0;
+
+    width: 24px;
+    height: 24px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 7px;
+
+    background: var(--surface2);
+
+    color: var(--muted);
+
+    transition: .25s;
+}
+
+
+.faq-card.open .faq-arrow {
+
+    transform: rotate(45deg);
+
+    background: var(--blue);
+
+    color: white;
+}
+
+
+.faq-answer {
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition:
+        max-height .3s ease;
+}
+
+
+.faq-answer p {
+
+    padding:
+        0 17px
+        17px;
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   HELP CATEGORIES
+========================================================= */
+
+.categories-section {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding:
+        0 30px
+        110px;
+}
+
+
+.category-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap: 12px;
+
+    margin-top: 38px;
+}
+
+
+.category-card {
+
+    padding: 22px 18px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 19px;
+
+    background: var(--surface);
+
+    transition: .25s;
+
+    cursor: pointer;
+}
+
+
+.category-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow: var(--shadow);
+
+    border-color:
+        color-mix(
+            in srgb,
+            var(--blue) 30%,
+            var(--border)
+        );
+}
+
+
+.category-icon {
+
+    width: 44px;
+    height: 44px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 13px;
+
+    background: var(--surface2);
+
+    font-size: 20px;
+}
+
+
+.category-card h3 {
+
+    margin-top: 17px;
+
+    font-size: 13px;
+}
+
+
+.category-card p {
+
+    margin-top: 6px;
+
+    color: var(--muted);
+
+    font-size: 8px;
+
+    line-height: 1.6;
+}
+
+
+.category-link {
+
+    display: inline-block;
+
+    margin-top: 13px;
+
+    color: var(--blue);
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   EMERGENCY / QUICK CONTACTS
+========================================================= */
+
+.contacts-section {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding:
+        0 30px
+        110px;
+}
+
+
+.contacts-box {
+
+    padding: 32px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 26px;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(234,67,53,.08),
+            transparent 32%
+        ),
+        var(--surface);
+}
+
+
+.contacts-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+.contacts-header h2 {
+
+    font-size: 28px;
+
+    letter-spacing: -1px;
+}
+
+
+.contacts-header p {
+
+    margin-top: 7px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+
+.emergency-badge {
+
+    padding: 9px 12px;
+
+    border-radius: 999px;
+
+    background:
+        rgba(234,67,53,.09);
+
+    color: var(--red);
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+.contacts-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+
+.contact-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 13px;
+
+    background: var(--bg);
+}
+
+
+.contact-icon {
+
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 10px;
+
+    background: var(--surface2);
+
+    font-size: 17px;
+}
+
+
+.contact-card strong {
+
+    display: block;
+
+    font-size: 10px;
+}
+
+
+.contact-card span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--muted);
+
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   SUPPORT CTA
+========================================================= */
+
+.support-cta {
+
+    max-width: 1150px;
+
+    min-height: 360px;
+
+    margin:
+        10px auto
+        100px;
+
+    padding: 35px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 10%,
+            rgba(66,133,244,.15),
+            transparent 48%
+        ),
+        var(--surface);
+}
+
+
+.cta-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 620px;
+}
+
+
+.cta-icon {
+
+    font-size: 31px;
+
+    color: var(--blue);
+
+    margin-bottom: 12px;
+}
+
+
+.cta-content h2 {
+
+    font-size:
+        clamp(
+            40px,
+            5vw,
+            58px
+        );
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+}
+
+
+.cta-content h2 span {
+
+    color: var(--blue);
+}
+
+
+.cta-content p {
+
+    max-width: 500px;
+
+    margin:
+        17px auto
+        25px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+.cta-orb {
+
+    position: absolute;
+
+    border-radius: 50%;
+}
+
+
+.cta-orb.one {
+
+    width: 190px;
+    height: 190px;
+
+    left: -65px;
+    bottom: -75px;
+
+    background:
+        rgba(66,133,244,.11);
+}
+
+
+.cta-orb.two {
+
+    width: 230px;
+    height: 230px;
+
+    right: -80px;
+    top: -100px;
+
+    background:
+        rgba(52,168,83,.08);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    border-top:
+        1px solid var(--border);
+
+    background: var(--surface);
+}
+
+
+.footer-inner {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding:
+        40px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.footer-brand p {
+
+    margin-top: 10px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+.footer-right {
+
+    display: flex;
+
+    gap: 30px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   SUPPORT MODAL
+========================================================= */
+
+.modal-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(10,15,25,.55);
+
+    backdrop-filter: blur(8px);
+}
+
+
+.modal-overlay.active {
+    display: flex;
+}
+
+
+.modal {
+
+    width:
+        min(
+            480px,
+            100%
+        );
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 25px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 23px;
+
+    background: var(--surface);
+
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,.25);
+}
+
+
+.modal-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+
+.modal-header h3 {
+
+    font-size: 20px;
+
+    letter-spacing: -.5px;
+}
+
+
+.close-modal {
+
+    width: 31px;
+    height: 31px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 9px;
+
+    background: var(--surface2);
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+
+.form-group {
+
+    margin-top: 14px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    font-weight: 600;
+}
+
+
+.form-group input,
+.form-group textarea {
+
+    width: 100%;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    padding: 11px;
+
+    font-size: 10px;
+
+    transition: .2s;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    border-color: var(--blue);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(26,115,232,.08);
+}
+
+
+.form-group textarea {
+
+    min-height: 100px;
+
+    resize: vertical;
+}
+
+
+.form-submit {
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 12px;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    background: var(--blue);
+
+    color: white;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .nav-links a {
+
+        padding:
+            8px 5px;
+
+        font-size: 10px;
+    }
+
+    .help-hero {
+
+        gap: 10px;
+    }
+
+    .support-panel {
+
+        transform:
+            scale(.88)
+            rotateX(7deg)
+            rotateY(-7deg);
+    }
+
+    .category-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+}
+
+
+@media (max-width: 850px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .help-hero {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding-top: 135px;
+    }
+
+    .hero-copy {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .hero-copy > p {
+        max-width: 600px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        margin-top: 10px;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contacts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contacts-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+@media (max-width: 560px) {
+
+    .navbar {
+
+        width:
+            calc(100% - 20px);
+
+        top: 8px;
+    }
+
+    .nav-inner {
+        height: 58px;
+    }
+
+    .help-hero {
+
+        padding:
+            120px 18px
+            40px;
+    }
+
+    .hero-copy h1 {
+
+        font-size: 45px;
+
+        letter-spacing: -2.5px;
+    }
+
+    .hero-copy > p {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .primary-button,
+    .secondary-button {
+
+        width: 100%;
+    }
+
+    .hero-visual {
+
+        height: 410px;
+
+        overflow: hidden;
+    }
+
+    .support-panel {
+
+        width: 365px;
+
+        transform:
+            scale(.72)
+            rotateX(6deg)
+            rotateY(-5deg);
+    }
+
+    .float-one {
+        left: -5px;
+    }
+
+    .float-two {
+        right: -5px;
+    }
+
+    .faq-section {
+
+        padding:
+            60px 18px
+            80px;
+    }
+
+    .categories-section,
+    .contacts-section {
+
+        padding:
+            0 18px
+            80px;
+    }
+
+    .category-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .contacts-box {
+
+        padding: 23px;
+    }
+
+    .support-cta {
+
+        margin:
+            10px 15px
+            70px;
+
+        min-height: 330px;
+
+        padding: 25px;
+    }
+
+    .footer-inner {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+    }
+
+    .footer-right {
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+<div class="nav-inner">
+
+
+<a
+    href="../index.html"
+    class="brand"
+>
+
+    <div class="brand-mark">
+        F
+    </div>
+
+    <span>
+        Freshman<span class="blue">OS</span>
+    </span>
+
+</a>
+
+
+
+<nav class="nav-links">
+
+    <a href="../index.html">
+        Home
+    </a>
+
+    <a href="../academic/index.html">
+        Academic Hub
+    </a>
+
+    <a href="../campus/index.html">
+        Campus Guide
+    </a>
+
+    <a href="../student/index.html">
+        Student Hub
+    </a>
+
+    <a href="../events/index.html">
+        Events
+    </a>
+
+    <a href="../lost-found/index.html">
+        Lost & Found
+    </a>
+
+    <a
+        href="index.html"
+        class="active"
+    >
+        Help
+    </a>
+
+</nav>
+
+
+
+<div class="nav-actions">
+
+    <button
+        class="theme-toggle"
+        id="themeToggle"
+    >
+
+        <span>☀</span>
+        <span>☾</span>
+
+    </button>
+
+
+    <button
+        class="mobile-menu-btn"
+        id="menuButton"
+    >
+        ☰
+    </button>
+
+</div>
+
+</div>
+
+
+
+<div
+    class="mobile-nav"
+    id="mobileNav"
+>
+
+    <a href="../index.html">
+        Home
+    </a>
+
+    <a href="../academic/index.html">
+        Academic Hub
+    </a>
+
+    <a href="../campus/index.html">
+        Campus Guide
+    </a>
+
+    <a href="../student/index.html">
+        Student Hub
+    </a>
+
+    <a href="../events/index.html">
+        Events
+    </a>
+
+    <a href="../lost-found/index.html">
+        Lost & Found
+    </a>
+
+    <a
+        href="index.html"
+        class="active"
+    >
+        Help
+    </a>
+
+</div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<main>
+
+
+<section class="help-hero">
+
+
+<div class="hero-copy">
+
+
+<div class="eyebrow">
+
+    <span class="eyebrow-dot"></span>
+
+    HELP & SUPPORT
+
+</div>
+
+
+<h1>
+
+    Stuck?
+
+    <span>
+        We've got you.
+    </span>
+
+</h1>
+
+
+<p>
+
+    Whether you're confused about academics,
+    campus life, technology or just don't know
+    who to ask — start here.
+
+</p>
+
+
+<div class="hero-buttons">
+
+    <a
+        href="#faq"
+        class="primary-button"
+    >
+
+        Find an answer
+
+        <span>
+            →
+        </span>
+
+    </a>
+
+
+    <button
+        class="secondary-button"
+        id="askButton"
+    >
+
+        Ask for help
+
+        <span>
+            ✦
+        </span>
+
+    </button>
+
+</div>
+
+
+</div>
+
+
+
+<!-- HERO VISUAL -->
+
+<div class="hero-visual">
+
+<div class="hero-glow"></div>
+
+
+<div
+    class="support-panel"
+    id="supportPanel"
+>
+
+
+<div class="support-header">
+
+
+<div class="support-title">
+
+    <div class="support-icon">
+        🛟
+    </div>
+
+    <div>
+
+        <strong>
+            Freshman Support
+        </strong>
+
+        <span>
+            What do you need help with?
+        </span>
+
+    </div>
+
+</div>
+
+
+<div class="online-badge">
+
+    <span class="online-dot"></span>
+
+    READY
+
+</div>
+
+
+</div>
+
+
+
+<div class="support-options">
+
+
+<div class="support-option">
+
+    <div class="support-option-icon">
+        📚
+    </div>
+
+    <strong>
+        Academics
+    </strong>
+
+    <span>
+        Courses & exams
+    </span>
+
+</div>
+
+
+
+<div class="support-option">
+
+    <div class="support-option-icon">
+        🏠
+    </div>
+
+    <strong>
+        Campus Life
+    </strong>
+
+    <span>
+        Hostel & facilities
+    </span>
+
+</div>
+
+
+
+<div class="support-option">
+
+    <div class="support-option-icon">
+        💻
+    </div>
+
+    <strong>
+        Tech Help
+    </strong>
+
+    <span>
+        Accounts & systems
+    </span>
+
+</div>
+
+
+
+<div class="support-option">
+
+    <div class="support-option-icon">
+        🧑‍🤝‍🧑
+    </div>
+
+    <strong>
+        Student Life
+    </strong>
+
+    <span>
+        Clubs & community
+    </span>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="floating-card float-one">
+
+    <span class="float-icon">
+        💡
+    </span>
+
+    Quick answers
+
+</div>
+
+
+<div class="floating-card float-two">
+
+    <span class="float-icon">
+        ✓
+    </span>
+
+    Problem solved
+
+</div>
+
+
+<div class="floating-card float-three">
+
+    <span class="float-icon">
+        💬
+    </span>
+
+    Ask the community
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FAQ
+===================================================== -->
+
+<section
+    class="faq-section"
+    id="faq"
+>
+
+
+<div class="section-header">
+
+    <div class="section-label">
+        FREQUENTLY ASKED
+    </div>
+
+    <h2>
+
+        Most questions.
+
+        <span>
+            Already answered.
+        </span>
+
+    </h2>
+
+    <p>
+
+        Search common freshman questions and get
+        quick answers without asking five people first.
+
+    </p>
+
+</div>
+
+
+
+<div class="faq-search">
+
+    <span>
+        🔎
+    </span>
+
+    <input
+        type="text"
+        id="faqSearch"
+        placeholder="Search questions..."
+    >
+
+</div>
+
+
+
+<div
+    class="faq-grid"
+    id="faqGrid"
+>
+
+
+<!-- FAQ 1 -->
+
+<div
+    class="faq-card"
+    data-search="how attendance calculated attendance classes percentage"
+>
+
+<button class="faq-question">
+
+    How is my attendance calculated?
+
+    <span class="faq-arrow">
+        +
+    </span>
+
+</button>
+
+
+<div class="faq-answer">
+
+    <p>
+
+        Attendance is generally based on the number
+        of classes attended compared with the total
+        classes conducted. Your institution's
+        attendance rules may differ, so check the
+        official academic guidelines.
+
+    </p>
+
+</div>
+
+</div>
+
+
+
+<!-- FAQ 2 -->
+
+<div
+    class="faq-card"
+    data-search="where find timetable schedule classes academic"
+>
+
+<button class="faq-question">
+
+    Where can I find my timetable?
+
+    <span class="faq-arrow">
+        +
+    </span>
+
+</button>
+
+
+<div class="faq-answer">
+
+    <p>
+
+        Your timetable can be kept inside the
+        Academic Hub so you can quickly check
+        classes, labs and upcoming sessions.
+
+    </p>
+
+</div>
+
+</div>
+
+
+
+<!-- FAQ 3 -->
+
+<div
+    class="faq-card"
+    data-search="lost found item belongings missing"
+>
+
+<button class="faq-question">
+
+    I lost something on campus. What do I do?
+
+    <span class="faq-arrow">
+        +
+    </span>
+
+</button>
+
+
+<div class="faq-answer">
+
+    <p>
+
+        Visit the Lost & Found section and search
+        recently reported items. If your item isn't
+        listed, create a lost-item report so other
+        students can help identify it.
+
+    </p>
+
+</div>
+
+</div>
+
+
+
+<!-- FAQ 4 -->
+
+<div
+    class="faq-card"
+    data-search="club society join student clubs"
+>
+
+<button class="faq-question">
+
+    How do I join a club?
+
+    <span class="faq-arrow">
+        +
+    </span>
+
+</button>
+
+
+<div class="faq-answer">
+
+    <p>
+
+        Check the Student Hub and Events sections
+        for active clubs, societies and recruitment
+        announcements. Most clubs announce their
+        recruitment during the beginning of the
+        academic year.
+
+    </p>
+
+</div>
+
+</div>
+
+
+
+<!-- FAQ 5 -->
+
+<div
+    class="faq-card"
+    data-search="exam dates schedule academic exams"
+>
+
+<button class="faq-question">
+
+    Where can I check exam information?
+
+    <span class="faq-arrow">
+        +
+    </span>
+
+</button>
+
+
+<div class="faq-answer">
+
+    <p>
+
+        Use the Academic Hub to keep important
+        academic information such as exams,
+        resources, subjects and schedules in one
+        place.
+
+    </p>
+
+</div>
+
+</div>
+
+
+
+<!-- FAQ 6 -->
+
+<div
+    class="faq-card"
+    data-search="technical problem website login account"
+>
+
+<button class="faq-question">
+
+    Something isn't working on the website.
+
+    <span class="faq-arrow">
+        +
+    </span>
+
+</button>
+
+
+<div class="faq-answer">
+
+    <p>
+
+        Try refreshing the page first. If the problem
+        continues, use the Ask for Help option and
+        describe what went wrong so it can be
+        reported to the project team.
+
+    </p>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div
+    id="noFaq"
+    style="
+        display:none;
+        text-align:center;
+        padding:45px 20px;
+    "
+>
+
+    <div style="font-size:32px;">
+        🔎
+    </div>
+
+    <h3 style="margin-top:10px;">
+        No questions found
+    </h3>
+
+    <p
+        style="
+            margin-top:6px;
+            color:var(--muted);
+            font-size:10px;
+        "
+    >
+        Try searching with different words.
+    </p>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     HELP CATEGORIES
+===================================================== -->
+
+<section class="categories-section">
+
+
+<div class="section-header">
+
+    <div class="section-label">
+        FIND THE RIGHT PLACE
+    </div>
+
+    <h2>
+
+        What do you
+
+        <span>
+            need help with?
+        </span>
+
+    </h2>
+
+</div>
+
+
+
+<div class="category-grid">
+
+
+<div
+    class="category-card"
+    data-category="academic"
+>
+
+    <div class="category-icon">
+        📚
+    </div>
+
+    <h3>
+        Academic Help
+    </h3>
+
+    <p>
+        Subjects, resources, attendance,
+        timetable and exam preparation.
+    </p>
+
+    <a
+        href="../academic/index.html"
+        class="category-link"
+    >
+        Open Academic Hub →
+    </a>
+
+</div>
+
+
+
+<div
+    class="category-card"
+    data-category="campus"
+>
+
+    <div class="category-icon">
+        🗺️
+    </div>
+
+    <h3>
+        Campus Help
+    </h3>
+
+    <p>
+        Find buildings, facilities,
+        important places and campus services.
+    </p>
+
+    <a
+        href="../campus/index.html"
+        class="category-link"
+    >
+        Open Campus Guide →
+    </a>
+
+</div>
+
+
+
+<div
+    class="category-card"
+    data-category="student"
+>
+
+    <div class="category-icon">
+        🧑‍🤝‍🧑
+    </div>
+
+    <h3>
+        Student Life
+    </h3>
+
+    <p>
+        Clubs, communities, tasks and
+        useful freshman resources.
+    </p>
+
+    <a
+        href="../student/index.html"
+        class="category-link"
+    >
+        Open Student Hub →
+    </a>
+
+</div>
+
+
+
+<div
+    class="category-card"
+    data-category="events"
+>
+
+    <div class="category-icon">
+        📅
+    </div>
+
+    <h3>
+        Events
+    </h3>
+
+    <p>
+        Discover workshops, hackathons,
+        sports and campus activities.
+    </p>
+
+    <a
+        href="../events/index.html"
+        class="category-link"
+    >
+        Explore Events →
+    </a>
+
+</div>
+
+
+
+<div
+    class="category-card"
+    data-category="lost"
+>
+
+    <div class="category-icon">
+        🔎
+    </div>
+
+    <h3>
+        Lost & Found
+    </h3>
+
+    <p>
+        Report missing belongings or
+        search items found around campus.
+    </p>
+
+    <a
+        href="../lost-found/index.html"
+        class="category-link"
+    >
+        Open Lost & Found →
+    </a>
+
+</div>
+
+
+
+<div
+    class="category-card"
+    data-category="community"
+>
+
+    <div class="category-icon">
+        💬
+    </div>
+
+    <h3>
+        Community
+    </h3>
+
+    <p>
+        Connect with other students and
+        get help from your campus community.
+    </p>
+
+    <button
+        class="category-link category-help-button"
+        style="
+            border:0;
+            background:none;
+            padding:0;
+            cursor:pointer;
+        "
+    >
+        Ask the community →
+    </button>
+
+</div>
+
+
+
+<div
+    class="category-card"
+>
+
+    <div class="category-icon">
+        💻
+    </div>
+
+    <h3>
+        Technical Help
+    </h3>
+
+    <p>
+        Problems with accounts, pages,
+        forms or FreshmanOS features.
+    </p>
+
+    <button
+        class="category-link category-help-button"
+        style="
+            border:0;
+            background:none;
+            padding:0;
+            cursor:pointer;
+        "
+    >
+        Report an issue →
+    </button>
+
+</div>
+
+
+
+<div
+    class="category-card"
+>
+
+    <div class="category-icon">
+        🛟
+    </div>
+
+    <h3>
+        General Support
+    </h3>
+
+    <p>
+        Not sure where to start?
+        Tell us what you need.
+    </p>
+
+    <button
+        class="category-link category-help-button"
+        style="
+            border:0;
+            background:none;
+            padding:0;
+            cursor:pointer;
+        "
+    >
+        Get help →
+    </button>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     IMPORTANT CONTACTS
+===================================================== -->
+
+<section class="contacts-section">
+
+
+<div class="contacts-box">
+
+
+<div class="contacts-header">
+
+<div>
+
+<h2>
+    Need help right now?
+</h2>
+
+<p>
+    For urgent situations, contact the appropriate
+    campus authority or emergency service directly.
+</p>
+
+</div>
+
+
+<div class="emergency-badge">
+    IMPORTANT CONTACTS
+</div>
+
+</div>
+
+
+
+<div class="contacts-grid">
+
+
+<div class="contact-card">
+
+    <div class="contact-icon">
+        🚨
+    </div>
+
+    <div>
+
+        <strong>
+            Emergency Services
+        </strong>
+
+        <span>
+            Use your local emergency number
+        </span>
+
+    </div>
+
+</div>
+
+
+
+<div class="contact-card">
+
+    <div class="contact-icon">
+        🏥
+    </div>
+
+    <div>
+
+        <strong>
+            Medical Help
+        </strong>
+
+        <span>
+            Campus medical centre / hospital
+        </span>
+
+    </div>
+
+</div>
+
+
+
+<div class="contact-card">
+
+    <div class="contact-icon">
+        🔐
+    </div>
+
+    <div>
+
+        <strong>
+            Security
+        </strong>
+
+        <span>
+            Campus security / hostel security
+        </span>
+
+    </div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="support-cta">
+
+
+<div class="cta-orb one"></div>
+<div class="cta-orb two"></div>
+
+
+<div class="cta-content">
+
+    <div class="cta-icon">
+        ✦
+    </div>
+
+    <h2>
+
+        Still stuck?
+
+        <span>
+            Just ask.
+        </span>
+
+    </h2>
+
+    <p>
+
+        Don't spend an hour trying to figure out
+        something that another student can answer
+        in a minute.
+
+    </p>
+
+
+    <button
+        class="primary-button"
+        id="ctaAskButton"
+    >
+
+        Ask for help
+
+        <span>
+            →
+        </span>
+
+    </button>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="footer-inner">
+
+
+<div class="footer-brand">
+
+<a
+    href="../index.html"
+    class="brand"
+>
+
+    <div class="brand-mark">
+        F
+    </div>
+
+    <span>
+        Freshman<span class="blue">OS</span>
+    </span>
+
+</a>
+
+
+<p>
+    Your college. Your resources.
+    Your community.
+</p>
+
+</div>
+
+
+
+<div class="footer-right">
+
+<span>
+    Open source • Student built
+</span>
+
+<span>
+    © 2026 FreshmanOS
+</span>
+
+</div>
+
+
+</div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     ASK FOR HELP MODAL
+===================================================== -->
+
+<div
+    class="modal-overlay"
+    id="modalOverlay"
+>
+
+
+<div class="modal">
+
+
+<div class="modal-header">
+
+<h3>
+    Ask for Help
+</h3>
+
+
+<button
+    class="close-modal"
+    id="closeModal"
+>
+    ×
+</button>
+
+</div>
+
+
+
+<form id="helpForm">
+
+
+<div class="form-group">
+
+<label>
+    What do you need help with?
+</label>
+
+<input
+    type="text"
+    id="helpTopic"
+    placeholder="e.g. I can't find my classroom"
+    required
+>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+    Tell us more
+</label>
+
+<textarea
+    id="helpMessage"
+    placeholder="Describe your problem..."
+    required
+></textarea>
+
+</div>
+
+
+
+<button
+    type="submit"
+    class="form-submit"
+>
+    Send request
+</button>
+
+
+</form>
+
+
+</div>
+
+</div>
+
+
+
+<script>
+
+/* =========================================================
+   THEME
+========================================================= */
+
+const themeToggle =
+    document.getElementById(
+        "themeToggle"
+    );
+
+
+const savedTheme =
+    localStorage.getItem(
+        "freshmanos-theme"
+    );
+
+
+if (savedTheme === "dark") {
+
+    document.body.classList.add(
+        "dark"
+    );
+
+}
+
+
+themeToggle?.addEventListener(
+    "click",
+    () => {
+
+        document.body.classList.toggle(
+            "dark"
+        );
+
+
+        const isDark =
+            document.body.classList.contains(
+                "dark"
+            );
+
+
+        localStorage.setItem(
+            "freshmanos-theme",
+            isDark
+                ? "dark"
+                : "light"
+        );
+
+    }
+);
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menuButton =
+    document.getElementById(
+        "menuButton"
+    );
+
+
+const mobileNav =
+    document.getElementById(
+        "mobileNav"
+    );
+
+
+menuButton?.addEventListener(
+    "click",
+    () => {
+
+        mobileNav.classList.toggle(
+            "active"
+        );
+
+    }
+);
+
+
+mobileNav
+    ?.querySelectorAll("a")
+    .forEach(link => {
+
+        link.addEventListener(
+            "click",
+            () => {
+
+                mobileNav.classList.remove(
+                    "active"
+                );
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   3D HERO
+========================================================= */
+
+const supportPanel =
+    document.getElementById(
+        "supportPanel"
+    );
+
+
+const heroVisual =
+    document.querySelector(
+        ".hero-visual"
+    );
+
+
+heroVisual?.addEventListener(
+    "mousemove",
+    event => {
+
+        if (!supportPanel) return;
+
+
+        const rect =
+            heroVisual.getBoundingClientRect();
+
+
+        const x =
+            event.clientX -
+            rect.left;
+
+
+        const y =
+            event.clientY -
+            rect.top;
+
+
+        const centerX =
+            rect.width / 2;
+
+
+        const centerY =
+            rect.height / 2;
+
+
+        const rotateY =
+            ((x - centerX) /
+                centerX) * 5;
+
+
+        const rotateX =
+            ((centerY - y) /
+                centerY) * 4;
+
+
+        supportPanel.style.transform =
+            `
+            rotateX(${rotateX + 7}deg)
+            rotateY(${rotateY - 7}deg)
+            `;
+
+    }
+);
+
+
+heroVisual?.addEventListener(
+    "mouseleave",
+    () => {
+
+        if (!supportPanel) return;
+
+
+        supportPanel.style.transform =
+            `
+            rotateX(7deg)
+            rotateY(-7deg)
+            `;
+
+    }
+);
+
+
+/* =========================================================
+   FAQ ACCORDION
+========================================================= */
+
+const faqCards =
+    document.querySelectorAll(
+        ".faq-card"
+    );
+
+
+faqCards.forEach(card => {
+
+    const question =
+        card.querySelector(
+            ".faq-question"
+        );
+
+
+    const answer =
+        card.querySelector(
+            ".faq-answer"
+        );
+
+
+    question.addEventListener(
+        "click",
+        () => {
+
+            const isOpen =
+                card.classList.contains(
+                    "open"
+                );
+
+
+            faqCards.forEach(
+                otherCard => {
+
+                    otherCard.classList.remove(
+                        "open"
+                    );
+
+
+                    const otherAnswer =
+                        otherCard.querySelector(
+                            ".faq-answer"
+                        );
+
+
+                    otherAnswer.style.maxHeight =
+                        null;
+
+                }
+            );
+
+
+            if (!isOpen) {
+
+                card.classList.add(
+                    "open"
+                );
+
+
+                answer.style.maxHeight =
+                    answer.scrollHeight +
+                    "px";
+
+            }
+
+        }
+    );
+
+});
+
+
+/* =========================================================
+   FAQ SEARCH
+========================================================= */
+
+const faqSearch =
+    document.getElementById(
+        "faqSearch"
+    );
+
+
+const noFaq =
+    document.getElementById(
+        "noFaq"
+    );
+
+
+function searchFaq() {
+
+    const query =
+        faqSearch.value
+            .toLowerCase()
+            .trim();
+
+
+    let visible = 0;
+
+
+    faqCards.forEach(card => {
+
+        const text =
+            (
+                card.dataset.search +
+                " " +
+                card.innerText
+            ).toLowerCase();
+
+
+        const matches =
+            text.includes(query);
+
+
+        card.style.display =
+            matches
+                ? ""
+                : "none";
+
+
+        if (matches) {
+            visible++;
+        }
+
+    });
+
+
+    noFaq.style.display =
+        visible === 0
+            ? "block"
+            : "none";
+
+}
+
+
+faqSearch?.addEventListener(
+    "input",
+    searchFaq
+);
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+const modalOverlay =
+    document.getElementById(
+        "modalOverlay"
+    );
+
+
+const askButton =
+    document.getElementById(
+        "askButton"
+    );
+
+
+const ctaAskButton =
+    document.getElementById(
+        "ctaAskButton"
+    );
+
+
+const closeModal =
+    document.getElementById(
+        "closeModal"
+    );
+
+
+function openModal() {
+
+    modalOverlay.classList.add(
+        "active"
+    );
+
+}
+
+
+function closeModalWindow() {
+
+    modalOverlay.classList.remove(
+        "active"
+    );
+
+}
+
+
+askButton?.addEventListener(
+    "click",
+    openModal
+);
+
+
+ctaAskButton?.addEventListener(
+    "click",
+    openModal
+);
+
+
+document
+    .querySelectorAll(
+        ".category-help-button"
+    )
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            openModal
+        );
+
+    });
+
+
+closeModal?.addEventListener(
+    "click",
+    closeModalWindow
+);
+
+
+modalOverlay?.addEventListener(
+    "click",
+    event => {
+
+        if (
+            event.target ===
+            modalOverlay
+        ) {
+
+            closeModalWindow();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   HELP FORM
+========================================================= */
+
+const helpForm =
+    document.getElementById(
+        "helpForm"
+    );
+
+
+helpForm?.addEventListener(
+    "submit",
+    event => {
+
+        event.preventDefault();
+
+
+        const topic =
+            document.getElementById(
+                "helpTopic"
+            ).value;
+
+
+        closeModalWindow();
+
+
+        helpForm.reset();
+
+
+        alert(
+            `Your help request has been submitted! 🚀\n\nTopic: ${topic}\n\nBackend/community integration can be connected later.`
+        );
+
+    }
+);
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const revealElements =
+    document.querySelectorAll(
+        ".faq-card, .category-card, .contact-card"
+    );
+
+
+const observer =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (
+                    entry.isIntersecting
+                ) {
+
+                    entry.target.style.opacity =
+                        "1";
+
+                    entry.target.style.transform =
+                        "translateY(0)";
+
+                }
+
+            });
+
+        },
+        {
+            threshold: .08
+        }
+    );
+
+
+revealElements.forEach(
+    element => {
+
+        element.style.opacity =
+            "0";
+
+        element.style.transform =
+            "translateY(18px)";
+
+        element.style.transition =
+            "opacity .5s ease, transform .5s ease";
+
+        observer.observe(element);
+
+    }
+);
+
+</script>
+
+</body>
+>>>>>>> 56f5145858debd42d87b399bd606563e5f77907b
 </html>

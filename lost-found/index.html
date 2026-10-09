@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -3961,4 +3962,3969 @@ revealElements.forEach(
 </script>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Lost & Found — FreshmanOS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+
+<style>
+
+/* =========================================================
+   FRESHMANOS — LOST & FOUND
+========================================================= */
+
+:root {
+
+    --bg: #ffffff;
+    --surface: #f8faff;
+    --surface2: #eef4ff;
+
+    --text: #172033;
+    --muted: #687286;
+
+    --border: #e3e8f0;
+
+    --blue: #1a73e8;
+    --green: #34a853;
+    --yellow: #fbbc04;
+    --red: #ea4335;
+    --purple: #8e63d2;
+
+    --shadow:
+        0 12px 35px rgba(36,54,86,.08);
+}
+
+
+body.dark {
+
+    --bg: #101217;
+    --surface: #171a21;
+    --surface2: #1d2330;
+
+    --text: #f5f7fb;
+    --muted: #a3abba;
+
+    --border: #292f3a;
+
+    --blue: #8ab4f8;
+    --green: #81c995;
+    --yellow: #fdd663;
+    --red: #f28b82;
+    --purple: #b99af7;
+
+    --shadow:
+        0 15px 40px rgba(0,0,0,.35);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+
+    font-family:
+        "Google Sans",
+        "Inter",
+        Arial,
+        sans-serif;
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    overflow-x: hidden;
+
+    transition:
+        background .3s ease,
+        color .3s ease;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+
+    position: fixed;
+
+    top: 14px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: calc(100% - 40px);
+
+    max-width: 1380px;
+
+    z-index: 1000;
+
+    background:
+        color-mix(
+            in srgb,
+            var(--bg) 90%,
+            transparent
+        );
+
+    backdrop-filter: blur(18px);
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.nav-inner {
+
+    height: 64px;
+
+    padding: 0 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* BRAND */
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    letter-spacing: -.6px;
+
+    white-space: nowrap;
+}
+
+
+.brand-mark {
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #4285f4,
+            #1a73e8
+        );
+
+    color: white;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 5px 14px
+        rgba(26,115,232,.25);
+}
+
+
+.blue {
+    color: var(--blue);
+}
+
+
+/* NAV */
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+}
+
+
+.nav-links a {
+
+    padding: 9px 10px;
+
+    border-radius: 9px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    transition: .2s ease;
+}
+
+
+.nav-links a:hover {
+
+    color: var(--text);
+
+    background: var(--surface);
+}
+
+
+.nav-links a.active {
+
+    color: var(--text);
+
+    background: var(--surface2);
+
+    font-weight: 600;
+}
+
+
+/* ACTIONS */
+
+.nav-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.theme-toggle {
+
+    width: 50px;
+    height: 29px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 999px;
+
+    background: var(--surface);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-around;
+
+    color: var(--muted);
+
+    cursor: pointer;
+}
+
+
+.theme-toggle span:first-child {
+    color: #f9ab00;
+}
+
+
+.theme-toggle span:last-child {
+    color: #4285f4;
+}
+
+
+.mobile-menu-btn {
+
+    display: none;
+
+    width: 34px;
+    height: 34px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 9px;
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+
+/* MOBILE NAV */
+
+.mobile-nav {
+
+    display: none;
+
+    padding: 10px 18px 18px;
+
+    border-top: 1px solid var(--border);
+
+    flex-direction: column;
+}
+
+
+.mobile-nav.active {
+    display: flex;
+}
+
+
+.mobile-nav a {
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+.mobile-nav a.active {
+
+    color: var(--blue);
+
+    background: var(--surface2);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.lost-hero {
+
+    max-width: 1250px;
+
+    min-height: 720px;
+
+    margin: auto;
+
+    padding:
+        155px 30px
+        80px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    align-items: center;
+
+    gap: 55px;
+}
+
+
+.hero-copy {
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+.eyebrow {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 13px;
+
+    border: 1px solid
+        color-mix(
+            in srgb,
+            var(--blue) 20%,
+            var(--border)
+        );
+
+    border-radius: 999px;
+
+    color: var(--blue);
+
+    background:
+        color-mix(
+            in srgb,
+            var(--blue) 6%,
+            transparent
+        );
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+.eyebrow-dot {
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(52,168,83,.1);
+}
+
+
+.hero-copy h1 {
+
+    max-width: 650px;
+
+    margin-top: 25px;
+
+    font-size:
+        clamp(
+            48px,
+            6vw,
+            74px
+        );
+
+    line-height: 1.02;
+
+    letter-spacing: -4px;
+
+    font-weight: 700;
+}
+
+
+.hero-copy h1 span {
+
+    display: block;
+
+    color: var(--blue);
+}
+
+
+.hero-copy > p {
+
+    max-width: 550px;
+
+    margin-top: 25px;
+
+    color: var(--muted);
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 28px;
+}
+
+
+.primary-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px 18px;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    background: var(--blue);
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px
+        rgba(26,115,232,.18);
+
+    transition: .25s ease;
+}
+
+
+.primary-button:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 14px 28px
+        rgba(26,115,232,.25);
+}
+
+
+.primary-button span {
+
+    font-size: 16px;
+
+    transition: .25s;
+}
+
+
+.primary-button:hover span {
+
+    transform:
+        translateX(4px);
+}
+
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.hero-visual {
+
+    position: relative;
+
+    height: 470px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    perspective: 1200px;
+}
+
+
+.hero-glow {
+
+    position: absolute;
+
+    width: 430px;
+    height: 430px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(66,133,244,.17),
+            transparent 68%
+        );
+
+    filter: blur(12px);
+}
+
+
+/* BOX */
+
+.find-box {
+
+    position: relative;
+
+    width: 400px;
+
+    min-height: 355px;
+
+    padding: 25px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 26px;
+
+    background: var(--surface);
+
+    box-shadow:
+        0 30px 70px
+        rgba(30,55,90,.14);
+
+    transform:
+        rotateX(7deg)
+        rotateY(-7deg);
+
+    transform-style: preserve-3d;
+
+    z-index: 3;
+
+    transition:
+        transform .2s ease;
+}
+
+
+.find-box-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-bottom: 17px;
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+.find-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.find-icon {
+
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 13px;
+
+    background: #e8f0fe;
+
+    font-size: 21px;
+}
+
+
+body.dark .find-icon {
+    background: var(--surface2);
+}
+
+
+.find-title strong {
+
+    display: block;
+
+    font-size: 13px;
+}
+
+
+.find-title span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--muted);
+
+    font-size: 8px;
+}
+
+
+.item-count {
+
+    padding: 6px 9px;
+
+    border-radius: 999px;
+
+    background:
+        rgba(52,168,83,.10);
+
+    color: var(--green);
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+/* MINI ITEMS */
+
+.mini-items {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+
+    margin-top: 17px;
+}
+
+
+.mini-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 10px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 13px;
+
+    background:
+        color-mix(
+            in srgb,
+            var(--surface2) 45%,
+            var(--surface)
+        );
+
+    transition: .2s;
+}
+
+
+.mini-item:hover {
+
+    transform:
+        translateX(4px);
+
+    border-color:
+        color-mix(
+            in srgb,
+            var(--blue) 30%,
+            var(--border)
+        );
+}
+
+
+.mini-item-icon {
+
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 10px;
+
+    background: var(--surface2);
+
+    font-size: 17px;
+}
+
+
+.mini-item-info {
+
+    flex: 1;
+}
+
+
+.mini-item-info strong {
+
+    display: block;
+
+    font-size: 10px;
+}
+
+
+.mini-item-info span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--muted);
+
+    font-size: 7px;
+}
+
+
+.item-status {
+
+    padding: 5px 7px;
+
+    border-radius: 7px;
+
+    font-size: 7px;
+
+    font-weight: 700;
+}
+
+
+.status-lost {
+
+    color: var(--red);
+
+    background:
+        rgba(234,67,53,.09);
+}
+
+
+.status-found {
+
+    color: var(--green);
+
+    background:
+        rgba(52,168,83,.09);
+}
+
+
+/* FLOATING CARDS */
+
+.floating-card {
+
+    position: absolute;
+
+    z-index: 10;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 10px 12px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.8);
+
+    border-radius: 13px;
+
+    background:
+        rgba(255,255,255,.85);
+
+    backdrop-filter: blur(12px);
+
+    color: #26344a;
+
+    box-shadow:
+        0 15px 35px
+        rgba(39,73,120,.12);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    animation:
+        float 5s ease-in-out infinite;
+}
+
+
+body.dark .floating-card {
+
+    background:
+        rgba(28,32,42,.93);
+
+    border-color:
+        rgba(255,255,255,.08);
+
+    color: white;
+}
+
+
+.float-icon {
+
+    width: 29px;
+    height: 29px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 9px;
+
+    background: #edf4ff;
+
+    font-size: 14px;
+}
+
+
+.float-one {
+
+    top: 70px;
+
+    left: -5px;
+}
+
+
+.float-two {
+
+    right: -5px;
+
+    bottom: 110px;
+
+    animation-delay: -1.5s;
+}
+
+
+.float-three {
+
+    left: 30px;
+
+    bottom: 40px;
+
+    animation-delay: -3s;
+}
+
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* =========================================================
+   MAIN SECTION
+========================================================= */
+
+.items-section {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding:
+        70px 30px
+        110px;
+}
+
+
+.section-header {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+.section-label {
+
+    margin-bottom: 12px;
+
+    color: var(--blue);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.3px;
+}
+
+
+.section-header h2 {
+
+    font-size:
+        clamp(
+            38px,
+            5vw,
+            56px
+        );
+
+    line-height: 1.05;
+
+    letter-spacing: -2.8px;
+}
+
+
+.section-header h2 span {
+
+    display: block;
+
+    color: var(--muted);
+}
+
+
+.section-header p {
+
+    margin-top: 16px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search-area {
+
+    max-width: 850px;
+
+    margin: 35px auto 0;
+
+    display: flex;
+
+    gap: 8px;
+}
+
+
+.search-box {
+
+    position: relative;
+
+    flex: 1;
+}
+
+
+.search-box span {
+
+    position: absolute;
+
+    left: 14px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--muted);
+
+    font-size: 15px;
+
+    pointer-events: none;
+}
+
+
+.search-input {
+
+    width: 100%;
+
+    height: 45px;
+
+    padding:
+        0 16px
+        0 40px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    font-size: 11px;
+
+    transition: .2s;
+}
+
+
+.search-input:focus {
+
+    border-color: var(--blue);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(26,115,232,.08);
+}
+
+
+.post-button {
+
+    padding:
+        0 17px;
+
+    border: 0;
+
+    border-radius: 12px;
+
+    background: var(--blue);
+
+    color: white;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+
+.post-button:hover {
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.filters {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 25px;
+}
+
+
+.filter-btn {
+
+    padding: 9px 15px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 999px;
+
+    background: var(--surface);
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+
+.filter-btn:hover {
+
+    color: var(--blue);
+
+    border-color: var(--blue);
+}
+
+
+.filter-btn.active {
+
+    background: var(--blue);
+
+    border-color: var(--blue);
+
+    color: white;
+}
+
+
+/* =========================================================
+   ITEMS GRID
+========================================================= */
+
+.items-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 14px;
+
+    margin-top: 30px;
+}
+
+
+/* ITEM CARD */
+
+.item-card {
+
+    position: relative;
+
+    min-height: 285px;
+
+    padding: 18px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 20px;
+
+    background: var(--surface);
+
+    overflow: hidden;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+
+.item-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        var(--shadow);
+
+    border-color:
+        color-mix(
+            in srgb,
+            var(--blue) 25%,
+            var(--border)
+        );
+}
+
+
+/* ITEM IMAGE */
+
+.item-image {
+
+    height: 130px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--surface2),
+            var(--surface)
+        );
+
+    font-size: 48px;
+
+    margin-bottom: 14px;
+}
+
+
+.item-card[data-type="electronics"]
+.item-image {
+
+    background:
+        linear-gradient(
+            135deg,
+            #e7f0ff,
+            #f3f7ff
+        );
+}
+
+
+.item-card[data-type="stationery"]
+.item-image {
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff3d7,
+            #fffaf0
+        );
+}
+
+
+.item-card[data-type="accessories"]
+.item-image {
+
+    background:
+        linear-gradient(
+            135deg,
+            #eee8ff,
+            #f8f5ff
+        );
+}
+
+
+.item-card[data-type="documents"]
+.item-image {
+
+    background:
+        linear-gradient(
+            135deg,
+            #e9f7ed,
+            #f5fcf7
+        );
+}
+
+
+body.dark .item-image {
+
+    background:
+        var(--surface2);
+}
+
+
+/* ITEM CONTENT */
+
+.item-top {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 8px;
+}
+
+
+.item-card h3 {
+
+    font-size: 15px;
+
+    letter-spacing: -.3px;
+}
+
+
+.item-badge {
+
+    flex-shrink: 0;
+
+    padding: 5px 7px;
+
+    border-radius: 7px;
+
+    font-size: 7px;
+
+    font-weight: 700;
+}
+
+
+.badge-lost {
+
+    color: var(--red);
+
+    background:
+        rgba(234,67,53,.09);
+}
+
+
+.badge-found {
+
+    color: var(--green);
+
+    background:
+        rgba(52,168,83,.09);
+}
+
+
+.item-description {
+
+    margin-top: 7px;
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    line-height: 1.6;
+}
+
+
+.item-meta {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    margin-top: 13px;
+
+    color: var(--muted);
+
+    font-size: 8px;
+}
+
+
+.item-meta span {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+.item-action {
+
+    position: absolute;
+
+    right: 18px;
+
+    bottom: 17px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: var(--blue);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.item-action:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   HOW IT WORKS
+========================================================= */
+
+.how-section {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding:
+        20px 30px
+        110px;
+}
+
+
+.steps {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 13px;
+
+    margin-top: 42px;
+}
+
+
+.step {
+
+    position: relative;
+
+    padding: 24px;
+
+    min-height: 200px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 20px;
+
+    background: var(--surface);
+
+    text-align: center;
+
+    transition: .25s;
+}
+
+
+.step:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.step-number {
+
+    width: 42px;
+    height: 42px;
+
+    margin: auto;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 13px;
+
+    background: var(--surface2);
+
+    color: var(--blue);
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+
+.step h3 {
+
+    margin-top: 17px;
+
+    font-size: 16px;
+}
+
+
+.step p {
+
+    margin-top: 8px;
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   REPORT CTA
+========================================================= */
+
+.report-section {
+
+    max-width: 1150px;
+
+    min-height: 360px;
+
+    margin:
+        20px auto
+        100px;
+
+    padding: 35px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 50% 15%,
+            rgba(66,133,244,.16),
+            transparent 46%
+        ),
+        var(--surface);
+}
+
+
+.report-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 620px;
+}
+
+
+.report-icon {
+
+    margin-bottom: 12px;
+
+    color: var(--blue);
+
+    font-size: 31px;
+}
+
+
+.report-content h2 {
+
+    font-size:
+        clamp(
+            40px,
+            5vw,
+            58px
+        );
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+}
+
+
+.report-content h2 span {
+
+    color: var(--blue);
+}
+
+
+.report-content p {
+
+    max-width: 480px;
+
+    margin:
+        18px auto
+        26px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+.report-orb {
+
+    position: absolute;
+
+    border-radius: 50%;
+}
+
+
+.orb-one {
+
+    width: 190px;
+    height: 190px;
+
+    left: -65px;
+    bottom: -75px;
+
+    background:
+        rgba(66,133,244,.12);
+}
+
+
+.orb-two {
+
+    width: 230px;
+    height: 230px;
+
+    right: -85px;
+    top: -95px;
+
+    background:
+        rgba(52,168,83,.08);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    border-top:
+        1px solid var(--border);
+
+    background: var(--surface);
+}
+
+
+.footer-inner {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding:
+        40px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.footer-brand p {
+
+    margin-top: 10px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+.footer-right {
+
+    display: flex;
+
+    gap: 30px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(10,15,25,.55);
+
+    backdrop-filter: blur(8px);
+}
+
+
+.modal-overlay.active {
+
+    display: flex;
+}
+
+
+.modal {
+
+    width: min(
+        480px,
+        100%
+    );
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 25px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 23px;
+
+    background: var(--surface);
+
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,.25);
+}
+
+
+.modal-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+}
+
+
+.modal-header h3 {
+
+    font-size: 20px;
+
+    letter-spacing: -.5px;
+}
+
+
+.close-modal {
+
+    width: 31px;
+    height: 31px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 9px;
+
+    background: var(--surface2);
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+
+.form-group {
+
+    margin-top: 14px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    font-weight: 600;
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    padding: 11px;
+
+    font-size: 10px;
+
+    transition: .2s;
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: var(--blue);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(26,115,232,.08);
+}
+
+
+.form-group textarea {
+
+    min-height: 85px;
+
+    resize: vertical;
+}
+
+
+.form-submit {
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 12px;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    background: var(--blue);
+
+    color: white;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .nav-links a {
+
+        padding: 8px 5px;
+
+        font-size: 10px;
+    }
+
+    .lost-hero {
+
+        gap: 10px;
+    }
+
+    .find-box {
+
+        transform:
+            scale(.88)
+            rotateX(7deg)
+            rotateY(-7deg);
+    }
+
+    .items-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+}
+
+
+@media (max-width: 850px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .lost-hero {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding-top: 135px;
+    }
+
+    .hero-copy {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .hero-copy > p {
+        max-width: 600px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        margin-top: 10px;
+    }
+
+    .items-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 560px) {
+
+    .navbar {
+
+        width:
+            calc(100% - 20px);
+
+        top: 8px;
+    }
+
+    .nav-inner {
+        height: 58px;
+    }
+
+    .lost-hero {
+
+        padding:
+            120px 18px
+            40px;
+    }
+
+    .hero-copy h1 {
+
+        font-size: 45px;
+
+        letter-spacing: -2.5px;
+    }
+
+    .hero-copy > p {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .primary-button {
+
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .hero-visual {
+
+        height: 410px;
+
+        overflow: hidden;
+    }
+
+    .find-box {
+
+        width: 365px;
+
+        transform:
+            scale(.72)
+            rotateX(6deg)
+            rotateY(-5deg);
+    }
+
+    .float-one {
+        left: -5px;
+    }
+
+    .float-two {
+        right: -5px;
+    }
+
+    .items-section {
+
+        padding:
+            60px 18px
+            80px;
+    }
+
+    .search-area {
+
+        flex-direction: column;
+    }
+
+    .search-input {
+        height: 44px;
+    }
+
+    .post-button {
+
+        height: 44px;
+    }
+
+    .filters {
+
+        justify-content: flex-start;
+
+        flex-wrap: nowrap;
+
+        overflow-x: auto;
+
+        padding-bottom: 5px;
+    }
+
+    .filter-btn {
+
+        flex-shrink: 0;
+    }
+
+    .how-section {
+
+        padding:
+            20px 18px
+            80px;
+    }
+
+    .report-section {
+
+        margin:
+            20px 15px
+            70px;
+
+        min-height: 330px;
+
+        padding: 25px;
+    }
+
+    .footer-inner {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+    }
+
+    .footer-right {
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+<div class="nav-inner">
+
+
+<a
+    href="../index.html"
+    class="brand"
+>
+
+    <div class="brand-mark">
+        F
+    </div>
+
+    <span>
+        Freshman<span class="blue">OS</span>
+    </span>
+
+</a>
+
+
+
+<nav class="nav-links">
+
+    <a href="../index.html">
+        Home
+    </a>
+
+    <a href="../academic/index.html">
+        Academic Hub
+    </a>
+
+    <a href="../campus/index.html">
+        Campus Guide
+    </a>
+
+    <a href="../student/index.html">
+        Student Hub
+    </a>
+
+    <a href="../events/index.html">
+        Events
+    </a>
+
+    <a
+        href="index.html"
+        class="active"
+    >
+        Lost & Found
+    </a>
+
+    <a href="../help/index.html">
+        Help
+    </a>
+
+</nav>
+
+
+
+<div class="nav-actions">
+
+    <button
+        class="theme-toggle"
+        id="themeToggle"
+    >
+
+        <span>☀</span>
+        <span>☾</span>
+
+    </button>
+
+
+    <button
+        class="mobile-menu-btn"
+        id="menuButton"
+    >
+        ☰
+    </button>
+
+</div>
+
+</div>
+
+
+
+<div
+    class="mobile-nav"
+    id="mobileNav"
+>
+
+    <a href="../index.html">
+        Home
+    </a>
+
+    <a href="../academic/index.html">
+        Academic Hub
+    </a>
+
+    <a href="../campus/index.html">
+        Campus Guide
+    </a>
+
+    <a href="../student/index.html">
+        Student Hub
+    </a>
+
+    <a href="../events/index.html">
+        Events
+    </a>
+
+    <a
+        href="index.html"
+        class="active"
+    >
+        Lost & Found
+    </a>
+
+    <a href="../help/index.html">
+        Help
+    </a>
+
+</div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<main>
+
+
+<section class="lost-hero">
+
+
+<div class="hero-copy">
+
+
+<div class="eyebrow">
+
+    <span class="eyebrow-dot"></span>
+
+    CAMPUS LOST & FOUND
+
+</div>
+
+
+<h1>
+
+    Lost something?
+
+    <span>
+        Let's find it.
+    </span>
+
+</h1>
+
+
+<p>
+
+    A simple place for students to report lost
+    belongings, share found items and help things
+    get back to their owners.
+
+</p>
+
+
+<div class="hero-buttons">
+
+    <a
+        href="#items"
+        class="primary-button"
+    >
+
+        Browse items
+
+        <span>
+            →
+        </span>
+
+    </a>
+
+</div>
+
+
+</div>
+
+
+
+<!-- HERO VISUAL -->
+
+<div class="hero-visual">
+
+<div class="hero-glow"></div>
+
+
+<div
+    class="find-box"
+    id="findBox"
+>
+
+
+<div class="find-box-header">
+
+
+<div class="find-title">
+
+    <div class="find-icon">
+        🔎
+    </div>
+
+    <div>
+
+        <strong>
+            Lost & Found
+        </strong>
+
+        <span>
+            Recent campus reports
+        </span>
+
+    </div>
+
+</div>
+
+
+<div class="item-count">
+    12 ACTIVE
+</div>
+
+
+</div>
+
+
+
+<div class="mini-items">
+
+
+<div class="mini-item">
+
+    <div class="mini-item-icon">
+        🎧
+    </div>
+
+    <div class="mini-item-info">
+
+        <strong>
+            Wireless Earbuds
+        </strong>
+
+        <span>
+            Library • Today
+        </span>
+
+    </div>
+
+    <div class="item-status status-lost">
+        LOST
+    </div>
+
+</div>
+
+
+
+<div class="mini-item">
+
+    <div class="mini-item-icon">
+        🎒
+    </div>
+
+    <div class="mini-item-info">
+
+        <strong>
+            Black Backpack
+        </strong>
+
+        <span>
+            Block B • Yesterday
+        </span>
+
+    </div>
+
+    <div class="item-status status-found">
+        FOUND
+    </div>
+
+</div>
+
+
+
+<div class="mini-item">
+
+    <div class="mini-item-icon">
+        🪪
+    </div>
+
+    <div class="mini-item-info">
+
+        <strong>
+            Student ID Card
+        </strong>
+
+        <span>
+            Cafeteria • 2 days ago
+        </span>
+
+    </div>
+
+    <div class="item-status status-found">
+        FOUND
+    </div>
+
+</div>
+
+
+
+<div class="mini-item">
+
+    <div class="mini-item-icon">
+        🔑
+    </div>
+
+    <div class="mini-item-info">
+
+        <strong>
+            Keychain
+        </strong>
+
+        <span>
+            Hostel Block C
+        </span>
+
+    </div>
+
+    <div class="item-status status-lost">
+        LOST
+    </div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<div class="floating-card float-one">
+
+    <span class="float-icon">
+        🔍
+    </span>
+
+    Search campus items
+
+</div>
+
+
+<div class="floating-card float-two">
+
+    <span class="float-icon">
+        ✓
+    </span>
+
+    Item returned!
+
+</div>
+
+
+<div class="floating-card float-three">
+
+    <span class="float-icon">
+        📍
+    </span>
+
+    Found near library
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ITEMS
+===================================================== -->
+
+<section
+    class="items-section"
+    id="items"
+>
+
+
+<div class="section-header">
+
+    <div class="section-label">
+        CAMPUS REPORTS
+    </div>
+
+    <h2>
+
+        Help things
+
+        <span>
+            find their way home.
+        </span>
+
+    </h2>
+
+    <p>
+
+        Search through recently reported lost
+        and found belongings around campus.
+
+    </p>
+
+</div>
+
+
+
+<!-- SEARCH -->
+
+<div class="search-area">
+
+<div class="search-box">
+
+    <span>
+        🔎
+    </span>
+
+    <input
+        type="text"
+        class="search-input"
+        id="searchInput"
+        placeholder="Search for an item..."
+    >
+
+</div>
+
+
+<button
+    class="post-button"
+    id="postButton"
+>
+    + Post item
+</button>
+
+</div>
+
+
+
+<!-- FILTERS -->
+
+<div class="filters">
+
+<button
+    class="filter-btn active"
+    data-filter="all"
+>
+    All
+</button>
+
+<button
+    class="filter-btn"
+    data-filter="lost"
+>
+    🔴 Lost
+</button>
+
+<button
+    class="filter-btn"
+    data-filter="found"
+>
+    🟢 Found
+</button>
+
+<button
+    class="filter-btn"
+    data-filter="electronics"
+>
+    💻 Electronics
+</button>
+
+<button
+    class="filter-btn"
+    data-filter="documents"
+>
+    🪪 Documents
+</button>
+
+<button
+    class="filter-btn"
+    data-filter="accessories"
+>
+    🎒 Accessories
+</button>
+
+</div>
+
+
+
+<!-- ITEMS GRID -->
+
+<div
+    class="items-grid"
+    id="itemsGrid"
+>
+
+
+<!-- ITEM 1 -->
+
+<article
+    class="item-card"
+    data-status="lost"
+    data-type="electronics"
+    data-search="wireless earbuds bluetooth black electronics lost library"
+>
+
+<div class="item-image">
+    🎧
+</div>
+
+
+<div class="item-top">
+
+<h3>
+    Wireless Earbuds
+</h3>
+
+<span class="item-badge badge-lost">
+    LOST
+</span>
+
+</div>
+
+
+<p class="item-description">
+
+    Black wireless earbuds in a small charging
+    case. Might have been left near the library.
+
+</p>
+
+
+<div class="item-meta">
+
+<span>
+    📍 Central Library
+</span>
+
+<span>
+    🕐 Today, 2:30 PM
+</span>
+
+</div>
+
+
+<button
+    class="item-action"
+    data-item="Wireless Earbuds"
+>
+    View details →
+</button>
+
+</article>
+
+
+
+<!-- ITEM 2 -->
+
+<article
+    class="item-card"
+    data-status="found"
+    data-type="accessories"
+    data-search="black backpack bag found block b accessories"
+>
+
+<div class="item-image">
+    🎒
+</div>
+
+
+<div class="item-top">
+
+<h3>
+    Black Backpack
+</h3>
+
+<span class="item-badge badge-found">
+    FOUND
+</span>
+
+</div>
+
+
+<p class="item-description">
+
+    Black college backpack with a small
+    blue keychain attached to it.
+
+</p>
+
+
+<div class="item-meta">
+
+<span>
+    📍 Block B
+</span>
+
+<span>
+    🕐 Yesterday, 5:10 PM
+</span>
+
+</div>
+
+
+<button
+    class="item-action"
+    data-item="Black Backpack"
+>
+    View details →
+</button>
+
+</article>
+
+
+
+<!-- ITEM 3 -->
+
+<article
+    class="item-card"
+    data-status="found"
+    data-type="documents"
+    data-search="student id card identity found cafeteria document"
+>
+
+<div class="item-image">
+    🪪
+</div>
+
+
+<div class="item-top">
+
+<h3>
+    Student ID Card
+</h3>
+
+<span class="item-badge badge-found">
+    FOUND
+</span>
+
+</div>
+
+
+<p class="item-description">
+
+    Student ID card found near the cafeteria.
+    Name is partially visible.
+
+</p>
+
+
+<div class="item-meta">
+
+<span>
+    📍 Main Cafeteria
+</span>
+
+<span>
+    🕐 2 days ago
+</span>
+
+</div>
+
+
+<button
+    class="item-action"
+    data-item="Student ID Card"
+>
+    View details →
+</button>
+
+</article>
+
+
+
+<!-- ITEM 4 -->
+
+<article
+    class="item-card"
+    data-status="lost"
+    data-type="accessories"
+    data-search="keys keychain lost hostel block c accessories"
+>
+
+<div class="item-image">
+    🔑
+</div>
+
+
+<div class="item-top">
+
+<h3>
+    Keychain
+</h3>
+
+<span class="item-badge badge-lost">
+    LOST
+</span>
+
+</div>
+
+
+<p class="item-description">
+
+    Small metal keychain with three keys.
+    Last seen around Hostel Block C.
+
+</p>
+
+
+<div class="item-meta">
+
+<span>
+    📍 Hostel Block C
+</span>
+
+<span>
+    🕐 Yesterday
+</span>
+
+</div>
+
+
+<button
+    class="item-action"
+    data-item="Keychain"
+>
+    View details →
+</button>
+
+</article>
+
+
+
+<!-- ITEM 5 -->
+
+<article
+    class="item-card"
+    data-status="lost"
+    data-type="electronics"
+    data-search="calculator casio scientific calculator lost classroom electronics"
+>
+
+<div class="item-image">
+    🧮
+</div>
+
+
+<div class="item-top">
+
+<h3>
+    Scientific Calculator
+</h3>
+
+<span class="item-badge badge-lost">
+    LOST
+</span>
+
+</div>
+
+
+<p class="item-description">
+
+    Casio scientific calculator with a
+    transparent protective cover.
+
+</p>
+
+
+<div class="item-meta">
+
+<span>
+    📍 Lecture Hall 4
+</span>
+
+<span>
+    🕐 3 days ago
+</span>
+
+</div>
+
+
+<button
+    class="item-action"
+    data-item="Scientific Calculator"
+>
+    View details →
+</button>
+
+</article>
+
+
+
+<!-- ITEM 6 -->
+
+<article
+    class="item-card"
+    data-status="found"
+    data-type="accessories"
+    data-search="water bottle found bottle sports ground accessories"
+>
+
+<div class="item-image">
+    🥤
+</div>
+
+
+<div class="item-top">
+
+<h3>
+    Water Bottle
+</h3>
+
+<span class="item-badge badge-found">
+    FOUND
+</span>
+
+</div>
+
+
+<p class="item-description">
+
+    Silver insulated bottle with a black
+    cap. Found after evening sports practice.
+
+</p>
+
+
+<div class="item-meta">
+
+<span>
+    📍 Sports Ground
+</span>
+
+<span>
+    🕐 3 days ago
+</span>
+
+</div>
+
+
+<button
+    class="item-action"
+    data-item="Water Bottle"
+>
+    View details →
+</button>
+
+</article>
+
+
+</div>
+
+
+<div
+    id="noResults"
+    style="
+        display:none;
+        text-align:center;
+        padding:60px 20px;
+    "
+>
+
+    <div style="font-size:34px;">
+        🔎
+    </div>
+
+    <h3 style="margin-top:12px;">
+        Nothing found
+    </h3>
+
+    <p
+        style="
+            margin-top:7px;
+            color:var(--muted);
+            font-size:10px;
+        "
+    >
+        Try another search or category.
+    </p>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     HOW IT WORKS
+===================================================== -->
+
+<section class="how-section">
+
+
+<div class="section-header">
+
+    <div class="section-label">
+        HOW IT WORKS
+    </div>
+
+    <h2>
+
+        Three steps.
+
+        <span>
+            One less headache.
+        </span>
+
+    </h2>
+
+</div>
+
+
+
+<div class="steps">
+
+
+<div class="step">
+
+    <div class="step-number">
+        01
+    </div>
+
+    <h3>
+        Post it
+    </h3>
+
+    <p>
+        Lost something or found something?
+        Add a quick report with the important details.
+    </p>
+
+</div>
+
+
+
+<div class="step">
+
+    <div class="step-number">
+        02
+    </div>
+
+    <h3>
+        Find a match
+    </h3>
+
+    <p>
+        Search reports by item, category or
+        location to find a possible match.
+    </p>
+
+</div>
+
+
+
+<div class="step">
+
+    <div class="step-number">
+        03
+    </div>
+
+    <h3>
+        Get it back
+    </h3>
+
+    <p>
+        Connect with the person who reported
+        the item and arrange a safe handover.
+    </p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     REPORT CTA
+===================================================== -->
+
+<section class="report-section">
+
+
+<div class="report-orb orb-one"></div>
+
+<div class="report-orb orb-two"></div>
+
+
+<div class="report-content">
+
+    <div class="report-icon">
+        ✦
+    </div>
+
+    <h2>
+
+        Lost something?
+
+        <span>
+            Don't wait.
+        </span>
+
+    </h2>
+
+    <p>
+
+        Post a report and let the campus community
+        help you get it back.
+
+    </p>
+
+
+    <button
+        class="primary-button"
+        id="reportButton"
+    >
+
+        Report an item
+
+        <span>
+            →
+        </span>
+
+    </button>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="footer-inner">
+
+
+<div class="footer-brand">
+
+<a
+    href="../index.html"
+    class="brand"
+>
+
+    <div class="brand-mark">
+        F
+    </div>
+
+    <span>
+        Freshman<span class="blue">OS</span>
+    </span>
+
+</a>
+
+
+<p>
+    Your college. Your resources.
+    Your community.
+</p>
+
+</div>
+
+
+
+<div class="footer-right">
+
+<span>
+    Open source • Student built
+</span>
+
+<span>
+    © 2026 FreshmanOS
+</span>
+
+</div>
+
+
+</div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     POST ITEM MODAL
+===================================================== -->
+
+<div
+    class="modal-overlay"
+    id="modalOverlay"
+>
+
+
+<div class="modal">
+
+
+<div class="modal-header">
+
+<h3>
+    Post a Lost / Found Item
+</h3>
+
+
+<button
+    class="close-modal"
+    id="closeModal"
+>
+    ×
+</button>
+
+</div>
+
+
+
+<form id="reportForm">
+
+
+<div class="form-group">
+
+<label>
+    Item name
+</label>
+
+<input
+    type="text"
+    id="itemName"
+    placeholder="e.g. Black wallet"
+    required
+>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+    Status
+</label>
+
+<select
+    id="itemStatus"
+    required
+>
+
+<option value="">
+    Select status
+</option>
+
+<option value="Lost">
+    I lost this
+</option>
+
+<option value="Found">
+    I found this
+</option>
+
+</select>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+    Location
+</label>
+
+<input
+    type="text"
+    id="itemLocation"
+    placeholder="e.g. Library"
+    required
+>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+    Description
+</label>
+
+<textarea
+    id="itemDescription"
+    placeholder="Describe the item..."
+    required
+></textarea>
+
+</div>
+
+
+
+<button
+    type="submit"
+    class="form-submit"
+>
+    Submit report
+</button>
+
+
+</form>
+
+
+</div>
+
+</div>
+
+
+
+<script>
+
+/* =========================================================
+   THEME
+========================================================= */
+
+const themeToggle =
+    document.getElementById(
+        "themeToggle"
+    );
+
+
+const savedTheme =
+    localStorage.getItem(
+        "freshmanos-theme"
+    );
+
+
+if (savedTheme === "dark") {
+
+    document.body.classList.add(
+        "dark"
+    );
+
+}
+
+
+themeToggle?.addEventListener(
+    "click",
+    () => {
+
+        document.body.classList.toggle(
+            "dark"
+        );
+
+
+        const isDark =
+            document.body.classList.contains(
+                "dark"
+            );
+
+
+        localStorage.setItem(
+            "freshmanos-theme",
+            isDark
+                ? "dark"
+                : "light"
+        );
+
+    }
+);
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menuButton =
+    document.getElementById(
+        "menuButton"
+    );
+
+
+const mobileNav =
+    document.getElementById(
+        "mobileNav"
+    );
+
+
+menuButton?.addEventListener(
+    "click",
+    () => {
+
+        mobileNav.classList.toggle(
+            "active"
+        );
+
+    }
+);
+
+
+mobileNav
+    ?.querySelectorAll("a")
+    .forEach(link => {
+
+        link.addEventListener(
+            "click",
+            () => {
+
+                mobileNav.classList.remove(
+                    "active"
+                );
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   3D HERO
+========================================================= */
+
+const findBox =
+    document.getElementById(
+        "findBox"
+    );
+
+
+const heroVisual =
+    document.querySelector(
+        ".hero-visual"
+    );
+
+
+heroVisual?.addEventListener(
+    "mousemove",
+    event => {
+
+        if (!findBox) return;
+
+
+        const rect =
+            heroVisual.getBoundingClientRect();
+
+
+        const x =
+            event.clientX -
+            rect.left;
+
+
+        const y =
+            event.clientY -
+            rect.top;
+
+
+        const centerX =
+            rect.width / 2;
+
+
+        const centerY =
+            rect.height / 2;
+
+
+        const rotateY =
+            ((x - centerX) /
+                centerX) * 5;
+
+
+        const rotateX =
+            ((centerY - y) /
+                centerY) * 4;
+
+
+        findBox.style.transform =
+            `
+            rotateX(${rotateX + 7}deg)
+            rotateY(${rotateY - 7}deg)
+            `;
+
+    }
+);
+
+
+heroVisual?.addEventListener(
+    "mouseleave",
+    () => {
+
+        if (!findBox) return;
+
+
+        findBox.style.transform =
+            `
+            rotateX(7deg)
+            rotateY(-7deg)
+            `;
+
+    }
+);
+
+
+/* =========================================================
+   SEARCH + FILTER
+========================================================= */
+
+const searchInput =
+    document.getElementById(
+        "searchInput"
+    );
+
+
+const filterButtons =
+    document.querySelectorAll(
+        ".filter-btn"
+    );
+
+
+const itemCards =
+    document.querySelectorAll(
+        ".item-card"
+    );
+
+
+const noResults =
+    document.getElementById(
+        "noResults"
+    );
+
+
+let currentFilter = "all";
+
+
+function filterItems() {
+
+    const query =
+        searchInput.value
+            .toLowerCase()
+            .trim();
+
+
+    let visible = 0;
+
+
+    itemCards.forEach(card => {
+
+        const status =
+            card.dataset.status;
+
+
+        const type =
+            card.dataset.type;
+
+
+        const searchable =
+            card.dataset.search
+                .toLowerCase();
+
+
+        const filterMatch =
+            currentFilter === "all" ||
+
+            status === currentFilter ||
+
+            type === currentFilter;
+
+
+        const searchMatch =
+            searchable.includes(
+                query
+            );
+
+
+        const show =
+            filterMatch &&
+            searchMatch;
+
+
+        card.style.display =
+            show
+                ? ""
+                : "block";
+
+
+        if (show) {
+            visible++;
+        }
+
+    });
+
+
+    noResults.style.display =
+        visible === 0
+            ? "block"
+            : "none";
+
+}
+
+
+searchInput?.addEventListener(
+    "input",
+    filterItems
+);
+
+
+filterButtons.forEach(button => {
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            filterButtons.forEach(
+                btn =>
+                    btn.classList.remove(
+                        "active"
+                    )
+            );
+
+
+            button.classList.add(
+                "active"
+            );
+
+
+            currentFilter =
+                button.dataset.filter;
+
+
+            filterItems();
+
+        }
+    );
+
+});
+
+
+/* =========================================================
+   ITEM DETAILS
+========================================================= */
+
+document
+    .querySelectorAll(
+        ".item-action"
+    )
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                const item =
+                    button.dataset.item;
+
+
+                alert(
+                    item +
+                    "\n\nContact and item-matching details will be connected to the FreshmanOS backend. 🚀"
+                );
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+const modalOverlay =
+    document.getElementById(
+        "modalOverlay"
+    );
+
+
+const postButton =
+    document.getElementById(
+        "postButton"
+    );
+
+
+const reportButton =
+    document.getElementById(
+        "reportButton"
+    );
+
+
+const closeModal =
+    document.getElementById(
+        "closeModal"
+    );
+
+
+function openModal() {
+
+    modalOverlay.classList.add(
+        "active"
+    );
+
+}
+
+
+function closeModalWindow() {
+
+    modalOverlay.classList.remove(
+        "active"
+    );
+
+}
+
+
+postButton?.addEventListener(
+    "click",
+    openModal
+);
+
+
+reportButton?.addEventListener(
+    "click",
+    openModal
+);
+
+
+closeModal?.addEventListener(
+    "click",
+    closeModalWindow
+);
+
+
+modalOverlay?.addEventListener(
+    "click",
+    event => {
+
+        if (
+            event.target ===
+            modalOverlay
+        ) {
+
+            closeModalWindow();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   REPORT FORM
+========================================================= */
+
+const reportForm =
+    document.getElementById(
+        "reportForm"
+    );
+
+
+reportForm?.addEventListener(
+    "submit",
+    event => {
+
+        event.preventDefault();
+
+
+        const itemName =
+            document.getElementById(
+                "itemName"
+            ).value;
+
+
+        const status =
+            document.getElementById(
+                "itemStatus"
+            ).value;
+
+
+        closeModalWindow();
+
+
+        reportForm.reset();
+
+
+        alert(
+            `Thanks! Your ${status.toLowerCase()} report for "${itemName}" has been submitted.\n\nBackend submission will be connected later. 🚀`
+        );
+
+    }
+);
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const revealElements =
+    document.querySelectorAll(
+        ".item-card, .step"
+    );
+
+
+const observer =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (
+                    entry.isIntersecting
+                ) {
+
+                    entry.target.style.opacity =
+                        "1";
+
+                    entry.target.style.transform =
+                        "translateY(0)";
+
+                }
+
+            });
+
+        },
+        {
+            threshold: .1
+        }
+    );
+
+
+revealElements.forEach(
+    element => {
+
+        element.style.opacity =
+            "0";
+
+        element.style.transform =
+            "translateY(18px)";
+
+        element.style.transition =
+            "opacity .5s ease, transform .5s ease";
+
+        observer.observe(element);
+
+    }
+);
+
+</script>
+
+</body>
+>>>>>>> 56f5145858debd42d87b399bd606563e5f77907b
 </html>
