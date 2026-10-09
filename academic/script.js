@@ -7,6 +7,63 @@
    THEME
 ========================================================= */
 
+// Add this to academic/script.js or in a <script> tag in academic/index.html
+
+const API = "http://localhost:5000"; // Change to your Render URL later
+
+// Fetch subjects for a branch
+async function loadAcademics(branch) {
+    try {
+        const response = await fetch(`${API}/api/academic/${branch}`);
+        const data = await response.json();
+        
+        // Display the data
+        displaySubjects(data.subjects);
+        
+    } catch (error) {
+        console.error('Error:', error);
+        document.getElementById('results').innerHTML = 
+            '<p>Error loading data. Make sure backend is running.</p>';
+    }
+}
+
+// Display subjects in the UI
+function displaySubjects(subjects) {
+    const container = document.getElementById('results');
+    
+    if (!subjects || subjects.length === 0) {
+        container.innerHTML = '<p>No subjects found.</p>';
+        return;
+    }
+    
+    container.innerHTML = subjects.map(subject => `
+        <div class="subject-card">
+            <h3>${subject.name || subject.title || 'Subject'}</h3>
+            <p>${subject.description || subject.desc || ''}</p>
+            <div class="subject-details">
+                <span>Credits: ${subject.credits || 'N/A'}</span>
+                <span>Code: ${subject.code || 'N/A'}</span>
+            </div>
+        </div>
+    `).join('');
+}
+
+// Add event listener for branch selection
+document.addEventListener('DOMContentLoaded', function() {
+    const branchSelect = document.getElementById('branchSelect');
+    const loadButton = document.getElementById('loadButton');
+    
+    if (loadButton) {
+        loadButton.addEventListener('click', function() {
+            const selectedBranch = branchSelect.value;
+            if (selectedBranch) {
+                loadAcademics(selectedBranch);
+            }
+        });
+    }
+});
+
+
 const themeToggle =
     document.getElementById("themeToggle");
 
