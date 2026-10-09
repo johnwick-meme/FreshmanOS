@@ -9,7 +9,7 @@
 
 // Add this to academic/script.js or in a <script> tag in academic/index.html
 
-const API = "http://localhost:5000"; // Change to your Render URL later
+const API = "https://freshmanos.onrender.com"; // Change to your Render URL later
 
 // Fetch subjects for a branch
 async function loadAcademics(branch) {
