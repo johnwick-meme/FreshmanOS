@@ -1,0 +1,783 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login — FreshmanOS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --blue: #1a73e8;
+    --blue-hover: #1557b0;
+    --bg: #f6f8fc;
+    --card: #ffffff;
+    --text: #202124;
+    --muted: #6b7280;
+    --border: #e1e5ed;
+    --input: #ffffff;
+    --soft-blue: #e8f0fe;
+    --shadow: 0 20px 70px rgba(30, 64, 175, .10);
+}
+
+body.dark {
+    --bg: #101318;
+    --card: #191d25;
+    --text: #f1f3f4;
+    --muted: #a5adbb;
+    --border: #343a46;
+    --input: #202530;
+    --soft-blue: #202e49;
+    --shadow: 0 20px 70px rgba(0, 0, 0, .28);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: background .25s, color .25s;
+}
+
+button, input { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+
+.topbar {
+    height: 82px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    text-decoration: none;
+    color: var(--text);
+    font-family: 'Google Sans', sans-serif;
+    font-weight: 700;
+    font-size: 21px;
+}
+
+.brand-mark {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    background: var(--blue);
+    color: white;
+    font-size: 23px;
+    box-shadow: 0 5px 14px #1a73e833;
+}
+
+.blue { color: var(--blue); }
+
+.top-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.back-link {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.back-link:hover { color: var(--blue); }
+
+.theme-toggle {
+    border: 1px solid var(--border);
+    color: var(--text);
+    background: var(--card);
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.page {
+    min-height: calc(100vh - 82px);
+    padding: 25px 6% 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layout {
+    width: 100%;
+    max-width: 1040px;
+    min-height: 590px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 27px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.visual {
+    position: relative;
+    overflow: hidden;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    background: linear-gradient(145deg, #1765cc, #1a73e8 55%, #5c9cf4);
+}
+
+.visual::before,
+.visual::after {
+    content: "";
+    position: absolute;
+    border: 1px solid #ffffff30;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.visual::before {
+    width: 400px;
+    height: 400px;
+    right: -150px;
+    top: 80px;
+}
+
+.visual::after {
+    width: 300px;
+    height: 300px;
+    right: -100px;
+    top: 130px;
+}
+
+.visual-content { position: relative; z-index: 1; }
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 13px;
+    border-radius: 30px;
+    background: #ffffff20;
+    border: 1px solid #ffffff35;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .7px;
+    text-transform: uppercase;
+}
+
+.tag-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #a7f3d0;
+}
+
+.visual h1 {
+    margin-top: 30px;
+    max-width: 390px;
+    font-family: 'Google Sans', sans-serif;
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.14;
+    letter-spacing: -1.8px;
+}
+
+.visual h1 span { color: #c8e0ff; }
+
+.visual p {
+    max-width: 340px;
+    margin-top: 18px;
+    color: #e1edff;
+    line-height: 1.8;
+    font-size: 13px;
+}
+
+.mini-dashboard {
+    position: relative;
+    z-index: 1;
+    margin-top: 45px;
+    padding: 18px;
+    border: 1px solid #ffffff40;
+    background: #ffffff16;
+    border-radius: 18px;
+    backdrop-filter: blur(12px);
+    transform: rotate(-2deg);
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50% { transform: translateY(-8px) rotate(-1deg); }
+}
+
+.dash-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.dash-pill {
+    background: #b7f7d2;
+    color: #146c43;
+    padding: 5px 8px;
+    border-radius: 20px;
+    font-size: 9px;
+}
+
+.dash-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 9px;
+    margin-top: 16px;
+}
+
+.dash-card {
+    padding: 13px 9px;
+    background: #ffffff20;
+    border-radius: 11px;
+}
+
+.dash-card span { display: block; font-size: 18px; }
+.dash-card small { display: block; margin-top: 8px; font-size: 9px; color: #e1edff; }
+
+.visual-bottom {
+    position: relative;
+    z-index: 1;
+    margin-top: 28px;
+    font-size: 11px;
+    color: #e1edff;
+}
+
+.form-side {
+    padding: 48px clamp(25px, 5vw, 58px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-heading { margin-bottom: 27px; }
+
+.form-heading h2 {
+    font-family: 'Google Sans', sans-serif;
+    font-size: 29px;
+    letter-spacing: -.8px;
+}
+
+.form-heading p {
+    color: var(--muted);
+    margin-top: 9px;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    padding: 5px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    margin-bottom: 24px;
+}
+
+.tab {
+    padding: 11px;
+    border: none;
+    border-radius: 9px;
+    background: transparent;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.tab.active {
+    color: var(--blue);
+    background: var(--card);
+    box-shadow: 0 2px 8px #0000000b;
+}
+
+.field { margin-bottom: 16px; }
+
+.field label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.field input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    background: var(--input);
+    color: var(--text);
+    outline: none;
+    font-size: 12px;
+    transition: border .2s, box-shadow .2s;
+}
+
+.field input:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px #1a73e81c;
+}
+
+.password-wrap { position: relative; }
+
+.password-wrap input { padding-right: 65px; }
+
+.show-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: var(--blue);
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 4px 0 21px;
+    font-size: 10px;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--muted);
+}
+
+.remember input { accent-color: var(--blue); }
+
+.text-link {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.primary-btn {
+    width: 100%;
+    padding: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    border-radius: 11px;
+    background: var(--blue);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 5px 13px #1a73e829;
+    transition: background .2s, transform .2s;
+}
+
+.primary-btn:hover {
+    background: var(--blue-hover);
+    transform: translateY(-1px);
+}
+
+.primary-btn:disabled { opacity: .6; cursor: wait; }
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 21px 0;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+.google-btn {
+    width: 100%;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    color: var(--text);
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: border .2s, background .2s;
+}
+
+.google-btn:hover { border-color: var(--blue); background: var(--bg); }
+
+.google-icon { font-weight: 800; font-size: 16px; color: #4285f4; }
+
+.message {
+    display: none;
+    margin-top: 15px;
+    padding: 11px 12px;
+    border-radius: 9px;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.message.show { display: block; }
+.message.error { color: #b42318; background: #fef3f2; }
+.message.success { color: #067647; background: #ecfdf3; }
+
+body.dark .message.error { color: #ffb4ab; background: #452522; }
+body.dark .message.success { color: #a6f4c5; background: #123b2b; }
+
+.terms {
+    margin-top: 22px;
+    color: var(--muted);
+    font-size: 9px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.terms a { color: var(--blue); text-decoration: none; }
+
+@media (max-width: 760px) {
+    .topbar { height: 70px; padding: 0 5%; }
+    .page { padding: 15px 4% 35px; }
+    .layout { max-width: 460px; grid-template-columns: 1fr; }
+    .visual { display: none; }
+    .form-side { padding: 35px 26px; }
+    .form-heading h2 { font-size: 27px; }
+}
+
+@media (max-width: 380px) {
+    .form-side { padding: 28px 19px; }
+    .brand { font-size: 18px; }
+    .back-link { font-size: 11px; }
+}
+</style>
+</head>
+
+<body>
+<header class="topbar">
+    <a href="../index.html" class="brand">
+        <span class="brand-mark">F</span>
+        <span>Freshman<span class="blue">OS</span></span>
+    </a>
+
+    <div class="top-actions">
+        <a class="back-link" href="../index.html">← Back to home</a>
+        <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">☾</button>
+    </div>
+</header>
+
+<main class="page">
+    <section class="layout">
+        <aside class="visual">
+            <div class="visual-content">
+                <div class="tag"><span class="tag-dot"></span> YOUR COLLEGE, CONNECTED</div>
+                <h1>Everything starts <span>with you.</span></h1>
+                <p>Your notes, campus resources, student community and college life — all in one simple place.</p>
+
+                <div class="mini-dashboard">
+                    <div class="dash-top">
+                        <span>Your student dashboard</span>
+                        <span class="dash-pill">ALL IN ONE</span>
+                    </div>
+                    <div class="dash-cards">
+                        <div class="dash-card"><span>📚</span><small>Academics</small></div>
+                        <div class="dash-card"><span>🗺️</span><small>Campus</small></div>
+                        <div class="dash-card"><span>👥</span><small>Community</small></div>
+                    </div>
+                </div>
+            </div>
+            <div class="visual-bottom">✦ &nbsp; Built by students, for students.</div>
+        </aside>
+
+        <div class="form-side">
+            <div class="form-heading">
+                <h2 id="formTitle">Welcome back.</h2>
+                <p id="formSubtitle">Sign in to continue your college journey.</p>
+            </div>
+
+            <div class="tabs">
+                <button class="tab active" id="loginTab" type="button">Log in</button>
+                <button class="tab" id="signupTab" type="button">Create account</button>
+            </div>
+
+            <form id="authForm">
+                <div class="field">
+                    <label for="email">College or personal email</label>
+                    <input id="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+                </div>
+
+                <div class="field">
+                    <label for="password">Password</label>
+                    <div class="password-wrap">
+                        <input id="password" type="password" placeholder="Enter your password" autocomplete="current-password" minlength="6" required>
+                        <button class="show-password" type="button" data-target="password">Show</button>
+                    </div>
+                </div>
+
+                <div class="field" id="confirmField" hidden>
+                    <label for="confirmPassword">Confirm password</label>
+                    <div class="password-wrap">
+                        <input id="confirmPassword" type="password" placeholder="Repeat your password" autocomplete="new-password" minlength="6">
+                        <button class="show-password" type="button" data-target="confirmPassword">Show</button>
+                    </div>
+                </div>
+
+                <div class="form-options" id="loginOptions">
+                    <label class="remember"><input type="checkbox" id="remember" checked> Remember me</label>
+                    <a href="#" class="text-link" id="forgotPassword">Forgot password?</a>
+                </div>
+
+                <button class="primary-btn" id="submitBtn" type="submit">
+                    <span id="submitText">Log in</span><span>→</span>
+                </button>
+
+                <div class="message" id="message" role="status"></div>
+            </form>
+
+            <div class="divider">OR CONTINUE WITH</div>
+
+            <button class="google-btn" id="googleBtn" type="button">
+                <span class="google-icon">G</span> Continue with Google
+            </button>
+
+            <p class="terms">
+                By continuing, you agree to our
+                <a href="#">Terms of Service</a> and
+                <a href="#">Privacy Policy</a>.
+            </p>
+        </div>
+    </section>
+</main>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+import {
+    getAuth,
+    setPersistence,
+    browserLocalPersistence,
+    browserSessionPersistence,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    GoogleAuthProvider,
+    signInWithPopup,
+    sendPasswordResetEmail,
+    updateProfile
+} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
+
+/* Replace these placeholders with your Firebase project's web config. */
+const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_PROJECT_ID.firebasestorage.app",
+    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+    appId: "YOUR_APP_ID"
+};
+
+const configReady = Object.values(firebaseConfig).every(
+    value => value && !value.startsWith("YOUR_")
+);
+
+let auth = null;
+let googleProvider = null;
+
+if (configReady) {
+    const app = initializeApp(firebaseConfig);
+    auth = getAuth(app);
+    googleProvider = new GoogleAuthProvider();
+    googleProvider.setCustomParameters({ prompt: "select_account" });
+}
+
+const $ = id => document.getElementById(id);
+let mode = "login";
+
+function showMessage(text, type = "error") {
+    const box = $("message");
+    box.textContent = text;
+    box.className = `message show ${type}`;
+}
+
+function clearMessage() {
+    $("message").className = "message";
+    $("message").textContent = "";
+}
+
+function requireFirebase() {
+    if (!auth) {
+        showMessage("Firebase isn't configured yet. Add your Firebase web config in this file first.");
+        return false;
+    }
+    return true;
+}
+
+function setMode(nextMode) {
+    mode = nextMode;
+    const isSignup = mode === "signup";
+
+    $("loginTab").classList.toggle("active", !isSignup);
+    $("signupTab").classList.toggle("active", isSignup);
+    $("formTitle").textContent = isSignup ? "Create your account." : "Welcome back.";
+    $("formSubtitle").textContent = isSignup
+        ? "Join your campus community in a few steps."
+        : "Sign in to continue your college journey.";
+    $("submitText").textContent = isSignup ? "Create account" : "Log in";
+    $("confirmField").hidden = !isSignup;
+    $("confirmPassword").required = isSignup;
+    $("loginOptions").style.display = isSignup ? "none" : "flex";
+    $("password").autocomplete = isSignup ? "new-password" : "current-password";
+    clearMessage();
+}
+
+$("loginTab").addEventListener("click", () => setMode("login"));
+$("signupTab").addEventListener("click", () => setMode("signup"));
+
+document.querySelectorAll(".show-password").forEach(button => {
+    button.addEventListener("click", () => {
+        const input = $(button.dataset.target);
+        const visible = input.type === "password";
+        input.type = visible ? "text" : "password";
+        button.textContent = visible ? "Hide" : "Show";
+    });
+});
+
+$("themeToggle").addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    const isDark = document.body.classList.contains("dark");
+    $("themeToggle").textContent = isDark ? "☀" : "☾";
+    try {
+        localStorage.setItem("freshmanos-theme", isDark ? "dark" : "light");
+    } catch {}
+});
+
+try {
+    const savedTheme = localStorage.getItem("freshmanos-theme");
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark");
+        $("themeToggle").textContent = "☀";
+    }
+} catch {}
+
+$("authForm").addEventListener("submit", async event => {
+    event.preventDefault();
+    clearMessage();
+    if (!requireFirebase()) return;
+
+    const email = $("email").value.trim();
+    const password = $("password").value;
+    const button = $("submitBtn");
+
+    if (mode === "signup" && password !== $("confirmPassword").value) {
+        showMessage("Your passwords don't match.");
+        return;
+    }
+
+    button.disabled = true;
+    $("submitText").textContent = "Please wait...";
+
+    try {
+        const persistence = $("remember").checked
+            ? browserLocalPersistence
+            : browserSessionPersistence;
+
+        await setPersistence(auth, persistence);
+
+        if (mode === "signup") {
+            const credential = await createUserWithEmailAndPassword(auth, email, password);
+            await updateProfile(credential.user, {
+                displayName: email.split("@")[0]
+            });
+        } else {
+            await signInWithEmailAndPassword(auth, email, password);
+        }
+
+        showMessage("Success! Taking you to FreshmanOS...", "success");
+        window.location.href = "../index.html?welcome=1";
+    } catch (error) {
+        const messages = {
+            "auth/invalid-email": "Please enter a valid email address.",
+            "auth/invalid-credential": "Incorrect email or password.",
+            "auth/email-already-in-use": "An account with this email already exists.",
+            "auth/weak-password": "Choose a password with at least 6 characters.",
+            "auth/too-many-requests": "Too many attempts. Please try again later.",
+            "auth/network-request-failed": "Network error. Check your internet connection."
+        };
+        showMessage(messages[error.code] || error.message);
+    } finally {
+        button.disabled = false;
+        $("submitText").textContent = mode === "signup" ? "Create account" : "Log in";
+    }
+});
+
+$("googleBtn").addEventListener("click", async () => {
+    clearMessage();
+    if (!requireFirebase()) return;
+
+    try {
+        await signInWithPopup(auth, googleProvider);
+        window.location.href = "../index.html?welcome=1";
+    } catch (error) {
+        showMessage(error.code === "auth/popup-closed-by-user"
+            ? "The Google sign-in window was closed."
+            : error.message);
+    }
+});
+
+$("forgotPassword").addEventListener("click", async event => {
+    event.preventDefault();
+    clearMessage();
+
+    const email = $("email").value.trim();
+    if (!email) {
+        showMessage("Enter your email address first, then click Forgot password.");
+        $("email").focus();
+        return;
+    }
+    if (!requireFirebase()) return;
+
+    try {
+        await sendPasswordResetEmail(auth, email);
+        showMessage("Password reset email sent. Check your inbox.", "success");
+    } catch (error) {
+        showMessage(error.message);
+    }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,527 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FreshmanOS — Your College. Your Community.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Login button styling -->
+    <style>
+        .login-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            padding: 10px 16px;
+            border-radius: 11px;
+            background: #1a73e8;
+            color: #ffffff !important;
+            font-size: 12px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-decoration: none;
+            transition: background .2s ease, transform .2s ease;
+        }
+
+        .login-link:hover {
+            background: #1557b0;
+            color: #ffffff !important;
+            transform: translateY(-2px);
+        }
+
+        .mobile-login-link {
+            display: block;
+            margin-top: 8px;
+            padding: 12px;
+            border-radius: 10px;
+            background: #1a73e8;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .mobile-login-link:hover {
+            background: #1557b0 !important;
+            color: #ffffff !important;
+        }
+
+        @media (max-width: 850px) {
+            .desktop-login {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="nav-inner">
+
+        <a href="#home" class="brand">
+            <div class="brand-mark">F</div>
+            <span>Freshman<span class="blue">OS</span></span>
+        </a>
+
+        <nav class="nav-links">
+            <a class="active" href="#home">Home</a>
+            <a href="academic/index.html">Academic Hub</a>
+            <a href="#campus">Campus Guide</a>
+            <a href="#student">Student Hub</a>
+            <a href="#events">Events</a>
+            <a href="#lost">Lost &amp; Found</a>
+            <a href="#help">Help</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <!-- NEW: Login button for desktop -->
+            <a href="login/index.html" class="login-link desktop-login">
+                Log in ↗
+            </a>
+
+            <button
+                class="theme-toggle"
+                id="themeToggle"
+                aria-label="Toggle dark mode"
+                title="Toggle theme"
+            >
+                <span>☀</span>
+                <span>☾</span>
+            </button>
+
+            <button
+                class="mobile-menu-btn"
+                id="menuButton"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="mobile-nav" id="mobileNav">
+
+        <a href="#home">Home</a>
+        <a href="academic/index.html">Academic Hub</a>
+        <a href="#campus">Campus Guide</a>
+        <a href="#student">Student Hub</a>
+        <a href="#events">Events</a>
+        <a href="#lost">Lost &amp; Found</a>
+        <a href="#help">Help</a>
+
+        <!-- NEW: Login button for mobile -->
+        <a href="login/index.html" class="mobile-login-link">
+            Log in ↗
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<main>
+
+<section class="hero" id="home">
+
+    <div class="hero-left">
+
+        <div class="eyebrow">
+            <span class="live-dot"></span>
+            Made for your first year
+        </div>
+
+        <h1>
+            College is easier
+            <span>when everything</span>
+            is in one place.
+        </h1>
+
+        <p class="hero-description">
+            FreshmanOS brings academic resources, campus information,
+            student communities and essential college services together
+            in one simple place.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#features" class="primary-button">
+                Explore FreshmanOS
+                <span>→</span>
+            </a>
+
+            <a href="#features" class="text-button">
+                See what's inside
+                <span>↓</span>
+            </a>
+        </div>
+
+        <div class="hero-note">
+            <div class="tiny-avatars">
+                <span>👨🏻‍💻</span>
+                <span>👩🏻‍🎓</span>
+                <span>🧑🏽‍💻</span>
+            </div>
+
+            <span>Built by students, for students.</span>
+        </div>
+
+    </div>
+
+
+    <!-- INTERACTIVE 3D HERO -->
+
+    <div class="hero-right">
+
+        <div class="scene" id="scene">
+
+            <div class="float-card book-card">
+                <div class="object">📚</div>
+                <span>Notes</span>
+            </div>
+
+            <div class="float-card map-card">
+                <div class="object">📍</div>
+                <span>Campus</span>
+            </div>
+
+            <div class="float-card people-card">
+                <div class="object">👥</div>
+                <span>Community</span>
+            </div>
+
+            <div class="float-card event-card">
+                <div class="object">🎉</div>
+                <span>Events</span>
+            </div>
+
+            <div class="campus-orb">
+
+                <div class="orb-ring ring-one"></div>
+                <div class="orb-ring ring-two"></div>
+
+                <div class="campus-building">
+
+                    <div class="building-roof"></div>
+
+                    <div class="building-body">
+
+                        <div class="window-row">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="window-row">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="door"></div>
+
+                    </div>
+
+                </div>
+
+                <div class="orbit-dot dot-one"></div>
+                <div class="orbit-dot dot-two"></div>
+                <div class="orbit-dot dot-three"></div>
+
+            </div>
+
+            <div class="ground-shadow"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features" id="features">
+
+    <div class="section-header">
+
+        <div class="section-label">
+            EXPLORE FRESHMANOS
+        </div>
+
+        <h2>
+            Everything you need.
+            <span>Nothing you don't.</span>
+        </h2>
+
+        <p>
+            Six simple spaces for the things that matter most
+            during your college journey.
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+        <!-- ACADEMIC HUB -->
+
+        <article class="feature-card tilt-card academic" id="academic">
+
+            <div class="card-top">
+                <div class="feature-emoji">📚</div>
+                <span class="card-number">01</span>
+            </div>
+
+            <h3>Academic Hub</h3>
+
+            <p>
+                Notes, PYQs, lab resources and academic
+                material without the endless searching.
+            </p>
+
+            <a href="academic/index.html"
+               class="card-arrow"
+               aria-label="Academic Hub">→</a>
+
+        </article>
+
+
+        <!-- CAMPUS GUIDE -->
+
+        <article class="feature-card tilt-card campus" id="campus">
+
+            <div class="card-top">
+                <div class="feature-emoji">🗺️</div>
+                <span class="card-number">02</span>
+            </div>
+
+            <h3>Campus Guide</h3>
+
+            <p>
+                Find departments, labs, hostels, library
+                and important campus locations.
+            </p>
+
+            <button class="card-arrow" aria-label="Campus Guide">→</button>
+
+        </article>
+
+
+        <!-- STUDENT HUB -->
+
+        <article class="feature-card tilt-card student" id="student">
+
+            <div class="card-top">
+                <div class="feature-emoji">👥</div>
+                <span class="card-number">03</span>
+            </div>
+
+            <h3>Student Hub</h3>
+
+            <p>
+                Meet students, find teammates and ask
+                questions from people who get it.
+            </p>
+
+            <button class="card-arrow" aria-label="Student Hub">→</button>
+
+        </article>
+
+
+        <!-- EVENTS -->
+
+        <article class="feature-card tilt-card events" id="events">
+
+            <div class="card-top">
+                <div class="feature-emoji">🎉</div>
+                <span class="card-number">04</span>
+            </div>
+
+            <h3>Events</h3>
+
+            <p>
+                Discover upcoming college events,
+                clubs, workshops and activities.
+            </p>
+
+            <button class="card-arrow" aria-label="Events">→</button>
+
+        </article>
+
+
+        <!-- LOST & FOUND -->
+
+        <article class="feature-card tilt-card lost" id="lost">
+
+            <div class="card-top">
+                <div class="feature-emoji">🔍</div>
+                <span class="card-number">05</span>
+            </div>
+
+            <h3>Lost &amp; Found</h3>
+
+            <p>
+                Report lost belongings and help someone
+                get their stuff back.
+            </p>
+
+            <button class="card-arrow" aria-label="Lost and Found">→</button>
+
+        </article>
+
+
+        <!-- HELP -->
+
+        <article class="feature-card tilt-card help" id="help">
+
+            <div class="card-top">
+                <div class="feature-emoji">🆘</div>
+                <span class="card-number">06</span>
+            </div>
+
+            <h3>Help &amp; Support</h3>
+
+            <p>
+                Important contacts, emergency information
+                and support resources.
+            </p>
+
+            <button class="card-arrow" aria-label="Help and Support">→</button>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= COMMUNITY ================= -->
+
+<section class="community">
+
+    <div class="community-visual">
+
+        <div class="community-circle">
+
+            <div class="orbit orbit-a"></div>
+            <div class="orbit orbit-b"></div>
+
+            <div class="community-person person-one">🧑🏻‍💻</div>
+            <div class="community-person person-two">👩🏻‍🎓</div>
+            <div class="community-person person-three">🧑🏽‍🎨</div>
+
+            <div class="community-center">✦</div>
+
+        </div>
+
+    </div>
+
+
+    <div class="community-text">
+
+        <div class="section-label">
+            YOUR COMMUNITY
+        </div>
+
+        <h2>
+            Starting college shouldn't feel like
+            <span>starting alone.</span>
+        </h2>
+
+        <p>
+            Find classmates, discover events, ask questions,
+            find teammates and make your campus feel a little
+            more like home.
+        </p>
+
+        <a href="#student" class="primary-button">
+            Meet your community
+            <span>→</span>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="final-cta">
+
+    <div class="cta-content">
+
+        <div class="cta-star">✦</div>
+
+        <h2>
+            Welcome to
+            <span>your college.</span>
+        </h2>
+
+        <p>
+            One place to find your resources,
+            your people and your way around.
+        </p>
+
+        <a href="#features" class="primary-button">
+            Explore FreshmanOS
+            <span>→</span>
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div class="footer-brand">
+
+            <a href="#home" class="brand">
+                <div class="brand-mark">F</div>
+                <span>Freshman<span class="blue">OS</span></span>
+            </a>
+
+            <p>
+                Your college. Your resources.
+                Your community.
+            </p>
+
+        </div>
+
+
+        <div class="footer-right">
+            <span>Open source • Student built</span>
+            <span>© 2026 FreshmanOS</span>
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
